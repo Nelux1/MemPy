@@ -11,6 +11,7 @@ A partir de un menú y una opción elegida, realizará diferentes operaciones so
 
 ## Uso
 **1. Instalar los requerimientos**
+
 _Realizar desde la carpeta Actividad 1_
 
 * _Windows_
@@ -22,7 +23,8 @@ py -m pip install -r requirements.txt
 python -m pip install -r requirements.txt
 ```
 **2. Ejecutar el script**
-_Realizar desde la carpeta Actividad 1/src
+
+_Realizar desde la carpeta Actividad 1/src_
 
 * _Windows_
 ```python
