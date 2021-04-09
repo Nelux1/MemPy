@@ -3,7 +3,10 @@ TEXTO_RANGO_INVALIDO = f'\N{cross mark} Por favor, especifique un rango numéric
 
 
 def imprimir_reporte(tipo, rango):
-    """Imprime en consola los resultados del reporte."""
+    """Imprime en consola los resultados del reporte.
+    
+        Si el rango no es válido, muestra un mensaje de error.
+    """
     from . import utilidades, MENSAJE_PARA_CONTINUAR
     
     inicio, fin = rango
@@ -17,7 +20,11 @@ def imprimir_reporte(tipo, rango):
 
 
 def realizar_reporte(tipo, inicio, fin):
-    """Retorna lista de los alumnos que entren en el rango (inicio, fin) según tipo."""
+    """Retorna lista de los alumnos que entren en el rango (inicio, fin) según tipo.
+    
+        Si tipo es un número, entonces se da por hecho que se desea ordenar por
+        las notas de una evaluación dada.
+    """
     from datos.datos import lista_alumnos
     
     if tipo == 'nota_final':

@@ -151,10 +151,12 @@ def limpiar_string(string_valores):
 
 
 def crear_alumno(nombre, notas):
+    """Retorna un dict con los datos del alumno."""
     return {'nombre': nombre, 'notas': notas, 'nota_final': sum(notas)}
 
 
 def obtener_estructura_alumnos(nombres, *notas):
+    """Retorna una lista de dict de alumnos."""
     return [crear_alumno(nombres[i], [int(notas[j][i]) for j in range(len(notas))]) for i in range(len(nombres))]    
 
 

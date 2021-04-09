@@ -13,7 +13,11 @@ TEXTO_ITEM_REALIZAR = 'Guardar y realizar el reporte'
 
 
 def crear_menu_configurar_reporte(tipo):
-    """Crea el menú pensando para utilizar junto a menu_reportes."""    
+    """Crea el menú pensando para utilizar junto a menu_reportes.
+    
+        El menú tiene que retener los valores del rango y el tipo,
+        hasta que se seleccione la opción de realizar.
+    """    
     
     from . import VENTANA_PRINCIPAL, MENSAJE_VOLVER_ATRAS
 

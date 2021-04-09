@@ -2,6 +2,7 @@
 from consolemenu.validators.base import BaseValidator
 
 def iniciar_configuracion(tipo):
+    """Abre el menú de configuración para el reporte."""
     # abre el menú de configuración enviándole el tipo de reporte
     from menus.menu_configurar_reporte import crear_menu_configurar_reporte
     crear_menu_configurar_reporte(tipo).show()
@@ -27,7 +28,12 @@ class ValidatorNumero(BaseValidator):
     
 
 def obtener_numero(indice, mensaje, lista):
-    """Lee un número (mostrando el mensaje) y lo guarda en lista[indice]."""
+    """Lee un número (mostrando el mensaje) y lo guarda en lista[indice].
+    
+        La lista que recibe proviene del menú. El menú guarda los resultados
+        en base al return de las funciones que llama, por eso no basta
+        sólo con modificarla.
+    """
     lista[indice] = leer_numero_valido(mensaje)
 
     return lista

@@ -25,8 +25,8 @@ def crear_menu_orden():
         exit_option_text=MENSAJE_VOLVER_ATRAS
     )
 
-    from funciones.funciones_orden import imprimir_datos_ordenados # TODO implementar la función 'imprimir_datos_ordenados'
-
+    from funciones.funciones_orden import imprimir_datos_ordenados
+    
     menu.append_item(FunctionItem(TEXTO_ITEM_ORDEN_NOMBRES, imprimir_datos_ordenados, ['nombre']))
     menu.append_item(FunctionItem(TEXTO_ITEM_ORDEN_EVAL1, imprimir_datos_ordenados, ['eval1']))
     menu.append_item(FunctionItem(TEXTO_ITEM_ORDEN_EVAL2, imprimir_datos_ordenados, ['eval2']))
