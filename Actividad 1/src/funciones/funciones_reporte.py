@@ -1,9 +1,3 @@
-def iniciar_configuracion(tipo):
-    # abre el menú de configuración enviándole el tipo de reporte
-    from menus.menu_configurar_reporte import crear_menu_configurar_reporte
-    crear_menu_configurar_reporte(tipo).show()
-
-
 #  mensaje que se muestra si el rango para hacer el reporte no es válido.
 TEXTO_RANGO_INVALIDO = f'\N{cross mark} Por favor, especifique un rango numérico válido. FIN >= INICIO\n'
 

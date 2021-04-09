@@ -1,6 +1,11 @@
 """Funciones para configurar los valores de inicio/fin para un reporte."""
 from consolemenu.validators.base import BaseValidator
 
+def iniciar_configuracion(tipo):
+    # abre el menú de configuración enviándole el tipo de reporte
+    from menus.menu_configurar_reporte import crear_menu_configurar_reporte
+    crear_menu_configurar_reporte(tipo).show()
+
 
 # un validator para los números
 class ValidatorNumero(BaseValidator):
