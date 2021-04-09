@@ -28,8 +28,8 @@ def crear_menu_orden():
     from funciones.funciones_orden import imprimir_datos_ordenados
     
     menu.append_item(FunctionItem(TEXTO_ITEM_ORDEN_NOMBRES, imprimir_datos_ordenados, ['nombre']))
-    menu.append_item(FunctionItem(TEXTO_ITEM_ORDEN_EVAL1, imprimir_datos_ordenados, ['eval1']))
-    menu.append_item(FunctionItem(TEXTO_ITEM_ORDEN_EVAL2, imprimir_datos_ordenados, ['eval2']))
+    menu.append_item(FunctionItem(TEXTO_ITEM_ORDEN_EVAL1, imprimir_datos_ordenados, [1]))
+    menu.append_item(FunctionItem(TEXTO_ITEM_ORDEN_EVAL2, imprimir_datos_ordenados, [1]))
     menu.append_item(FunctionItem(TEXTO_ITEM_ORDEN_FINAL, imprimir_datos_ordenados, ['nota_final']))
 
     return menu
