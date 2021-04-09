@@ -16,7 +16,11 @@ TEXTO_ITEM_ORDENAR = 'Ordenar y visualizar los datos de los alumnos'
 
 
 def crear_menu_inicial():
-    """Crea el menú pensando para mostrarse al principio del programa."""
+    """Crea el menú pensando para mostrarse al principio del programa.
+    
+        El menú contiene las 3 acciones principales.
+        Cada acción desencadenará en otros menús/acciones.
+    """
 
     from menus import VENTANA_PRINCIPAL
 
@@ -29,7 +33,7 @@ def crear_menu_inicial():
         exit_option_text=MENSAJE_SALIDA_PROGRAMA
     )
 
-    from funciones.funciones_promedio import imprimir_promedio # TODO implementar la función 'imprimir_promedio'
+    from funciones.funciones_promedio import imprimir_promedio
     from .menu_reportes import crear_menu_reportes
     from .menu_orden import crear_menu_orden
 
