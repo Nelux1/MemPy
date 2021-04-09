@@ -9,6 +9,13 @@ A partir de un menú y una opción elegida, realizará diferentes operaciones so
 
 **Los detalles de la actividad están listados en Actividad1.pdf** :book:
 
+## Imágenes
+![Imágen de la pantalla principal del programa](./resources/Captura1.PNG?raw=true "Pantalla inicial")
+
+![Imágen de la pantalla reportes del programa](./resources/Captura2.PNG?raw=true "Pantalla reportes")
+
+![Imágen de la pantalla orden del programa](./resources/Captura3.PNG?raw=true "Pantalla orden")
+
 ## Uso
 **1. Instalar los requerimientos**
 
