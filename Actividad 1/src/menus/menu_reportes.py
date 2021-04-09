@@ -24,7 +24,7 @@ def crear_menu_reportes():
         exit_option_text=MENSAJE_VOLVER_ATRAS
     )
 
-    from funciones.funciones_reporte import iniciar_configuracion
+    from funciones.funciones_configurar_reporte import iniciar_configuracion
 
     menu.append_item(FunctionItem(TEXTO_ITEM_REPORTE_EVAL1, iniciar_configuracion, [1]))
     menu.append_item(FunctionItem(TEXTO_ITEM_REPORTE_EVAL2, iniciar_configuracion, [2]))
