@@ -23,6 +23,13 @@ def imprimir_datos_ordenados(criterio):
     
        
 def ordenar(criterio):
+    """Retorna la lista de alumnos ordenada segun el criterio dado.txt
+    
+        Si recibe un int, se supone que se desea ordenar en base a
+        los resultados de una evaluación.
+        
+        Si no, puede ser por nombre o por nota final.
+    """
     if isinstance(criterio, int):
         return sorted(lista_alumnos, key=lambda dicc: dicc['notas'][criterio - 1])
     else:
