@@ -1,7 +1,6 @@
-
-nom= open('/home/nelux/facu/grupo50/Actividad 1/resources/nombres.txt','r+')
-ev1= open('/home/nelux/facu/grupo50/Actividad 1/resources/eval1.txt','r+')
-ev2= open('/home/nelux/facu/grupo50/Actividad 1/resources/eval2.txt','r+')
+nom= open('../resources/nombres.txt','r', encoding='utf-8')
+ev1= open('../resources/eval1.txt','r', encoding='utf-8')
+ev2= open('../resources/eval2.txt','r', encoding='utf-8')
 
 
 def limpiar_string(string_valores):
