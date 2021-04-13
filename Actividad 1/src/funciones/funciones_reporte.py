@@ -53,7 +53,7 @@ def imprimir_reporte(tipo, rango):
 
     utilidades.println(f'Reporte sobre {tipo_str(reporte["tipo"])}, en el rango {reporte["rango"]}\n{"-" * 50}\n')
 
-    if reporte['nombres'] != None:
+    if reporte['nombres'] is not None:
         if not reporte['nombres']:
             utilidades.println('No entraron alumnos en el reporte.')
 
