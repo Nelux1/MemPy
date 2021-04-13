@@ -1,6 +1,9 @@
 from consolemenu import ConsoleMenu
 from consolemenu.items import FunctionItem
 
+from . import VENTANA_PRINCIPAL, MENSAJE_VOLVER_ATRAS
+from funciones.funciones_configurar_reporte import obtener_numero
+from funciones.funciones_reporte import imprimir_reporte, realizar_reporte
 
 # pseudo constantes -> texto del menu_configurar_reporte
 TITULO_CONFIGURAR = 'Elección de rango del reporte'
@@ -18,8 +21,6 @@ def crear_menu_configurar_reporte(tipo):
         El menú tiene que retener los valores del rango y el tipo,
         hasta que se seleccione la opción de realizar.
     """    
-    
-    from . import VENTANA_PRINCIPAL, MENSAJE_VOLVER_ATRAS
 
     menu = ConsoleMenu(
         title=TITULO_CONFIGURAR,
@@ -27,8 +28,7 @@ def crear_menu_configurar_reporte(tipo):
         prologue_text=PROLOGO_CONFIGURAR,
         exit_option_text=MENSAJE_VOLVER_ATRAS
     )
-    
-    from funciones.funciones_configurar_reporte import obtener_numero
+
     
     # para guardar los datos que recolecta
     menu.returned_value = [0, 0]
@@ -36,9 +36,6 @@ def crear_menu_configurar_reporte(tipo):
     menu.append_item(FunctionItem(TEXTO_ITEM_VALOR_INICIO, function=obtener_numero, args=[0, 'Indicar valor de comienzo: ', menu.returned_value]))
     menu.append_item(FunctionItem(TEXTO_ITEM_VALOR_FIN, function=obtener_numero, args=[1, 'Indicar valor de fin: ', menu.returned_value]))
 
-
-    from funciones.funciones_reporte import imprimir_reporte
-    
     menu.append_item(FunctionItem(TEXTO_ITEM_REALIZAR, function=imprimir_reporte, args=[tipo, menu.returned_value], should_exit=True))
     
     return menu

@@ -1,46 +1,36 @@
+from datos.datos import lista_alumnos
+from . import utilidades, MENSAJE_PARA_CONTINUAR
+
 #  mensaje que se muestra si el rango para hacer el reporte no es válido.
-TEXTO_RANGO_INVALIDO = f'\N{cross mark} Por favor, especifique un rango numérico válido. FIN >= INICIO\n'
+TEXTO_RANGO_INVALIDO = f'\N{cross mark} No pudo realizarse el reporte. Por favor, especifique un rango numérico válido. FIN >= INICIO\n'
+    
+
+def realizar_reporte_nota_final(inicio, fin):
+    return list(filter(lambda alumno: alumno['nota_final'] >= inicio and alumno['nota_final'] <= fin, lista_alumnos))
 
 
-def imprimir_reporte(tipo, rango):
-    """Imprime en consola los resultados del reporte.
-    
-        Si el rango no es válido, muestra un mensaje de error.
-    """
-    from . import utilidades, MENSAJE_PARA_CONTINUAR
-    
-    inicio, fin = rango
-    
-    if fin < inicio:
-        utilidades.println(TEXTO_RANGO_INVALIDO)
-    else:
-        utilidades.println(f'Reporte sobre {tipo_str(tipo)}, en el rango ({inicio}, {fin})\n{"-" * 50}\n')
-        
-        reporte = realizar_reporte(tipo, inicio, fin)
-        
-        # imprimo en 2 columnas
-        for i in range(1, len(reporte)):
-            utilidades.println(f'{reporte[i - 1]["nombre"]:<15}{reporte[i]["nombre"]}')
-        
-        utilidades.println()
-        
-    utilidades.enter_to_continue(MENSAJE_PARA_CONTINUAR)
+def realizar_reporte_eval(numero, inicio, fin):
+    return list(filter(lambda alumno: alumno['notas'][numero] >= inicio and alumno['notas'][numero] <= fin, lista_alumnos))
 
 
 def realizar_reporte(tipo, inicio, fin):
-    """Retorna lista de los alumnos que entren en el rango (inicio, fin) según tipo.
+    """Retorna lista de nombres de quienes entran en el reporte.
     
-        Si tipo es un número, entonces se da por hecho que se desea ordenar por
-        las notas de una evaluación dada.
+        Return:
+            reporte : dict
+                {'tipo': tipo, 'rango': (inicio, fin), 'nombres': []/None}
+
+        Si el reporte es inválido -> 'nombres' == None
     """
-    from datos.datos import lista_alumnos
+    reporte = {'tipo': tipo, 'rango': (inicio, fin), 'nombres': None}
     
-    if tipo == 'nota_final':
-        funcion = lambda alumno: alumno[tipo] >= inicio and alumno[tipo] <= fin
-    else:
-        funcion = lambda alumno: alumno['notas'][tipo - 1] >= inicio and alumno['notas'][tipo - 1] <= fin
-                                  
-    return list(filter(funcion, lista_alumnos))
+    if inicio <= fin:
+        if isinstance(tipo, int):
+            reporte['nombres'] = realizar_reporte_eval(tipo, inicio, fin)
+        else:
+            reporte['nombres'] = realizar_reporte_nota_final(inicio, fin)
+ 
+    return reporte
 
 
 def tipo_str(tipo):
@@ -48,4 +38,31 @@ def tipo_str(tipo):
     if tipo == 'nota_final':
         return 'nota final'
     
-    return f'evaluación {tipo}'
+    return f'evaluación {tipo + 1}'
+
+
+def imprimir_reporte(tipo, rango):
+    """Imprime en consola los resultados de un reporte.
+
+        Antes de imprimir, debe realizar el reporte.
+
+        Antes de imprimir, verifica que el reporte sea válido.
+        (La lista de nombres exista).
+    """
+    reporte = realizar_reporte(tipo, *rango)
+
+    utilidades.println(f'Reporte sobre {tipo_str(reporte["tipo"])}, en el rango {reporte["rango"]}\n{"-" * 50}\n')
+
+    if reporte['nombres'] != None:
+        if not reporte['nombres']:
+            utilidades.println('No entraron alumnos en el reporte.')
+
+        # imprimo en 2 columnas
+        for i in range(1, len(reporte['nombres'])):
+            utilidades.println(f'{reporte["nombres"][i - 1]["nombre"]:<15}{reporte["nombres"][i]["nombre"]}')
+    else:
+        utilidades.println(TEXTO_RANGO_INVALIDO)
+
+    utilidades.println()
+        
+    utilidades.enter_to_continue(MENSAJE_PARA_CONTINUAR)

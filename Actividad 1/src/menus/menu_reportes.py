@@ -26,8 +26,8 @@ def crear_menu_reportes():
 
     from funciones.funciones_configurar_reporte import iniciar_configuracion
 
-    menu.append_item(FunctionItem(TEXTO_ITEM_REPORTE_EVAL1, iniciar_configuracion, [1]))
-    menu.append_item(FunctionItem(TEXTO_ITEM_REPORTE_EVAL2, iniciar_configuracion, [2]))
+    menu.append_item(FunctionItem(TEXTO_ITEM_REPORTE_EVAL1, iniciar_configuracion, [0]))
+    menu.append_item(FunctionItem(TEXTO_ITEM_REPORTE_EVAL2, iniciar_configuracion, [1]))
     menu.append_item(FunctionItem(TEXTO_ITEM_REPORTE_FINAL, iniciar_configuracion, ['nota_final']))
     
     return menu
