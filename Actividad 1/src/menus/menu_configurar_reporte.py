@@ -3,7 +3,7 @@ from consolemenu.items import FunctionItem
 
 from . import VENTANA_PRINCIPAL, MENSAJE_VOLVER_ATRAS
 from funciones.funciones_configurar_reporte import obtener_numero
-from funciones.funciones_reporte import imprimir_reporte, realizar_reporte
+from funciones.funciones_reporte import generar_e_imprimir_reporte
 
 # pseudo constantes -> texto del menu_configurar_reporte
 TITULO_CONFIGURAR = 'Elección de rango del reporte'
@@ -36,6 +36,6 @@ def crear_menu_configurar_reporte(tipo):
     menu.append_item(FunctionItem(TEXTO_ITEM_VALOR_INICIO, function=obtener_numero, args=[0, 'Indicar valor de comienzo: ', menu.returned_value]))
     menu.append_item(FunctionItem(TEXTO_ITEM_VALOR_FIN, function=obtener_numero, args=[1, 'Indicar valor de fin: ', menu.returned_value]))
 
-    menu.append_item(FunctionItem(TEXTO_ITEM_REALIZAR, function=imprimir_reporte, args=[tipo, menu.returned_value], should_exit=True))
+    menu.append_item(FunctionItem(TEXTO_ITEM_REALIZAR, function=generar_e_imprimir_reporte, args=[tipo, menu.returned_value], should_exit=True))
     
     return menu
