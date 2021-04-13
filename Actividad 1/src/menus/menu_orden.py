@@ -25,11 +25,11 @@ def crear_menu_orden():
         exit_option_text=MENSAJE_VOLVER_ATRAS
     )
 
-    from funciones.funciones_orden import imprimir_datos_ordenados
+    from funciones.funciones_orden import imprimir_alumnos, ordenar_por_clave, ordenar_por_evaluacion
     
-    menu.append_item(FunctionItem(TEXTO_ITEM_ORDEN_NOMBRES, imprimir_datos_ordenados, ['nombre']))
-    menu.append_item(FunctionItem(TEXTO_ITEM_ORDEN_EVAL1, imprimir_datos_ordenados, [1]))
-    menu.append_item(FunctionItem(TEXTO_ITEM_ORDEN_EVAL2, imprimir_datos_ordenados, [2]))
-    menu.append_item(FunctionItem(TEXTO_ITEM_ORDEN_FINAL, imprimir_datos_ordenados, ['nota_final']))
+    menu.append_item(FunctionItem(TEXTO_ITEM_ORDEN_NOMBRES, imprimir_alumnos, [ordenar_por_clave('nombre')]))
+    menu.append_item(FunctionItem(TEXTO_ITEM_ORDEN_EVAL1, imprimir_alumnos, [ordenar_por_evaluacion(1)]))
+    menu.append_item(FunctionItem(TEXTO_ITEM_ORDEN_EVAL2, imprimir_alumnos, [ordenar_por_evaluacion(2)]))
+    menu.append_item(FunctionItem(TEXTO_ITEM_ORDEN_FINAL, imprimir_alumnos, [ordenar_por_clave('nota_final')]))
 
     return menu
