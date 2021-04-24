@@ -28,3 +28,7 @@ class Configuration:
         """Setea las configuraciones enviadas en kwargs"""
         for key, value in kwargs.items():
             self.__dict__[key] = value
+            
+    def __iter__(self):
+        for key, value in self.__dict__.items():
+            yield (key, value)
