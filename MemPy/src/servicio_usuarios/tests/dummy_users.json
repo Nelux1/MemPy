@@ -1,18 +1,97 @@
 [
     {
-      "username": "priscila",
-      "age": 21,
-      "gender": "mujer",
-      "config": {
-        "win_message": "¡Ganaste!",
-        "loss_message": "¡Perdiste!",
-        "grid_size_per_level": [8, 16, 20],
-        "coincidences": 2,
-        "elements_type": "imagenes",
-        "hints": true,
-        "time": 180,
-        "theme": "dark blue 1"
-      }
+        "username": "priscila",
+        "age": 21,
+        "gender": "mujer",
+        "config": {
+            "win_message": "\u00a1Ganaste!",
+            "loss_message": "\u00a1Perdiste!",
+            "grid_size_per_level": [
+                8,
+                16,
+                20
+            ],
+            "coincidences": 2,
+            "elements_type": "imagenes",
+            "hints": true,
+            "time": 180,
+            "theme": "dark blue 1"
+        }
+    },
+    {
+        "username": "Priscila",
+        "gender": "mujer",
+        "age": 21,
+        "config": {
+            "win_message": "\u00a1Ganaste!",
+            "loss_message": "\u00a1Perdiste!",
+            "grid_size_per_level": [
+                8,
+                16,
+                20
+            ],
+            "coincidences": 2,
+            "elements_type": "imagenes",
+            "hints": true,
+            "time": 180,
+            "theme": "dark blue 1"
+        }
+    },
+    {
+        "username": "Priscila",
+        "gender": "mujer",
+        "age": 21,
+        "config": {
+            "win_message": "\u00a1Ganaste!",
+            "loss_message": "\u00a1Perdiste!",
+            "grid_size_per_level": [
+                8,
+                16,
+                20
+            ],
+            "coincidences": 2,
+            "elements_type": "imagenes",
+            "hints": true,
+            "time": 180,
+            "theme": "dark blue 1"
+        }
+    },
+    {
+        "username": "Priscila",
+        "gender": "mujer",
+        "age": 21,
+        "config": {
+            "win_message": "\u00a1Ganaste!",
+            "loss_message": "\u00a1Perdiste!",
+            "grid_size_per_level": [
+                8,
+                16,
+                20
+            ],
+            "coincidences": 2,
+            "elements_type": "imagenes",
+            "hints": true,
+            "time": 180,
+            "theme": "dark blue 1"
+        }
+    },
+    {
+        "username": "Ezequiel",
+        "gender": "mujer",
+        "age": 21,
+        "config": {
+            "win_message": "\u00a1Ganaste!",
+            "loss_message": "\u00a1Perdiste!",
+            "grid_size_per_level": [
+                8,
+                16,
+                20
+            ],
+            "coincidences": 2,
+            "elements_type": "imagenes",
+            "hints": true,
+            "time": 180,
+            "theme": "dark blue 1"
+        }
     }
 ]
-  
