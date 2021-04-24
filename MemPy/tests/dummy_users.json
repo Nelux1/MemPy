@@ -6,11 +6,11 @@
       "config": {
         "win_message": "¡Ganaste!",
         "loss_message": "¡Perdiste!",
-        "casillas_nivel": [8, 16, 20],
-        "coincidencias": 2,
-        "tipo_elementos": "imagenes",
-        "ayudas": true,
-        "tiempo": 180,
+        "grid_size_per_level": [8, 16, 20],
+        "coincidences": 2,
+        "elements_type": "imagenes",
+        "hints": true,
+        "time": 180,
         "theme": "dark blue 1"
       }
     }
