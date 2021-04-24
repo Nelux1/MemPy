@@ -1,4 +1,4 @@
-from .configuration import Configuration
+from src.servicio_usuarios.main.configuration import Configuration
 
 
 class User:
@@ -16,4 +16,12 @@ class User:
             el mismo username. Se supone que no debe haber
             repetidos en la BD.
         """
-        return self.username == user.username
+        if user:
+            return self.username == user.username
+        return False
+    
+    def __iter__(self):
+        yield ('username', self.username)
+        yield ('gender', self.gender)
+        yield ('age', self.age)
+        yield ('config', dict(self.config))
