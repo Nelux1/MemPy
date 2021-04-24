@@ -1,8 +1,9 @@
 import unittest
 
-from tests.test_servicio_usuarios import TestUsersDB
+# test cases
+from src.servicio_usuarios.tests.test_user_repository import TestUsersRepository
 
 
 if __name__=='__main__':
-    suite = unittest.TestSuite((TestUsersDB(), ))
+    suite = unittest.TestSuite((TestUsersRepository(), ))
     unittest.TextTestRunner().run(suite)
