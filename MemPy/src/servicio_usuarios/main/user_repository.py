@@ -48,8 +48,24 @@ class UserRepository:
         ----------
             user : User
                 El usuario que se va a agregar
+                
+        Return
+        ------
+            True o False según si se agregó correctamente.
         """
-        pass
+        if user:
+            with open(file=self.connection, mode='r', encoding='utf-8') as f:
+                try:
+                    users = json.load(f)
+                except:
+                    users = []
+            users.append(dict(user))
+            
+            with open(file=self.connection, mode='w', encoding='utf-8') as f:
+                json.dump(users, f)
+            return True
+        
+        return False
     
     def delete_user(self, username):
         """Elimina el usuario de la BD.
@@ -57,7 +73,11 @@ class UserRepository:
         Parámetros
         ----------
             username : str
-                El usuario que se va a eliminar. 
+                El usuario que se va a eliminar.
+                
+        Return
+        ------
+            True o False según si se eliminó el usuario.
         """
         pass
     
@@ -67,6 +87,6 @@ class UserRepository:
         Parámetros
         ----------
             username : str
-                El usuario que se va a modificar .     
+                El usuario que se va a modificar.
         """
         pass
