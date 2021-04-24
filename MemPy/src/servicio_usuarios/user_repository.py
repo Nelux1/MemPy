@@ -25,8 +25,8 @@ class UserRepository:
         
         Parámetros
         ----------
-            user : User
-                El usuario que se va a modificar
+            username : str
+                El usuario que se está buscando
         """
         if username:
             with open(file=self.connection, mode='r', encoding='utf-8') as f:
