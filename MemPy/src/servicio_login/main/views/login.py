@@ -1,47 +1,65 @@
 import PySimpleGUI as sg
 
 
+# global settings
+sg.set_options(
+    font='Fixedsys',
+    button_color=('#FFF', '#238FFB'),
+    auto_size_buttons=False,
+    button_element_size=(15, 3),
+    margins=(0, 0),
+    element_padding=(0, 0)
+)
+
+
 def build_header():
-    """Retorna un elemento header(Column), para agregar a un layout."""
-
-    # Layout for the elements.
-    layout = [
-        [sg.Text('MemPy', background_color='#238FFB', justification='center', font=('Fixedsys', 40))],
-        [sg.Text('El Clásico Juego de la Memoria', background_color='#238FFB', justification='center', font=('Fixedsys', 10))]
+    """Retorna una columna que contiene el header."""
+    top_filler = sg.Text('',                  size=(0, 4), background_color='#238FFB')
+    title = sg.Text('MemPy',                              background_color='#238FFB', font=('Fixedsys', 50))
+    subtitle = sg.Text('El Clásico Juego de la Memoria', background_color='#238FFB', font=('Fixedsys', 20))
+    bottom_filler = sg.Text('',               size=(0, 4), background_color='#238FFB')
+    
+    header_elements = [
+        [top_filler],
+        [title],
+        [subtitle],
+        [bottom_filler]
     ]
-
-    # Container for the elements.
-    elements_container = sg.Column(layout, pad=(113, 75), background_color='#238FFB', element_justification='center')
-
-    # Container of the header (used for centering & coloring the background).
-    header = sg.Column([[elements_container]], pad=(0, 0), size=(475, 250), background_color='#238FFB', element_justification='center')
-
-    return header
+    
+    header_container = sg.Column(layout=header_elements, background_color='#238FFB', expand_x=True, element_justification='c')
+    
+    return header_container
 
 
 def build_body():
-    """Retorna un elemento body(Column), para agregar a un layout."""
+    """Retorna una columna que contiene el body."""
+    top_filler = sg.Text('', size=(0, 4), background_color='#FFF')
     
-    # Layout for the elements.
-    layout = [
-        [sg.Text('Nombre de Usuario', background_color='#FFF', text_color='#238FFB')],
-        [sg.Input(key='-USERNAME-', pad=(0, 15), text_color='#1F1F1F', size=(15, 2), font=('Fixedsys', 17), justification='center')],
-        [sg.Button('Ingresar', button_color='#238FFB', size=(10, 2)), sg.T('', background_color='#FFF', size=(1, 0)), sg.Exit('Salir', size=(10, 2), button_color='#238FFB')]
+    username_text =  sg.Text('Nombre de Usuario', background_color='#FFF',                text_color='#238FFB', font=('Fixedsys', 17))
+    input_username = sg.Input(key='-USERNAME-', size=(20, None), pad=(0, 15),             text_color='#1F1F1F', font=('Fixedsys', 17), justification='c')
+    
+    login_bttn = sg.Button('Entrar')
+    exit_bttn =  sg.Button('Salir', pad=(12, 0))
+    middle_filler = sg.Text('', size=(5, 5), background_color='#FFF')
+    
+    body_elements = [
+        [top_filler],
+        [username_text],
+        [input_username],
+        [login_bttn, middle_filler, exit_bttn]
     ]
+    
+    body_container = sg.Column(layout=body_elements, background_color='#FFFFFF', expand_x=True, expand_y=True, element_justification='c')
 
-    # Container for the elements
-    elements_container = sg.Column(layout, pad=(113, 50), background_color='#FFF', element_justification='center')
-
-    # Container of the header (used for centering & coloring the background).
-    body = sg.Column([[elements_container]], pad=(0, 0), size=(475, 400), background_color='#FFF', element_justification='center') 
-
-    return body
-
+    return body_container
 
 def build():
-    layout = [[build_header()], [build_body()]]
+    layout = [
+        [build_header()],
+        [build_body()]
+    ]
     
-    window = sg.Window('', layout=layout, alpha_channel = 0.97, no_titlebar=True, grab_anywhere=True, size=(475, 475), margins=(0, 0), element_justification='center', font=('Fixedsys', 15))
+    window = sg.Window('', layout=layout, alpha_channel = 0.97, no_titlebar=True, grab_anywhere=True, size=(600, 600))
     
     return window
 
