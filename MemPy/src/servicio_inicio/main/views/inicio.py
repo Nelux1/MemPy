@@ -12,10 +12,12 @@ sg.set_options(
 )
 
 
-def build_exit_bar():
+def build_bar():
     """Retorna una columna que contiene un barra con botón de salida."""
-    exit_bttn = sg.Button('', pad=(8, 8), border_width=0, button_color=('#238FFB', '#238FFB'), image_filename='resources\icons\outline_close_black_24dp.png', image_size=(17, 17), image_subsample=2)
-    return sg.Column([[exit_bttn]], background_color='#238FFB', expand_x=True, element_justification='r')
+    logout_bttn =  sg.Button('', key='-LOGOUT-', tooltip='Cambiar de Usuario', pad=((0, 10), (10, 0)), border_width=0, button_color=('#238FFB', '#238FFB'), image_filename='resources\icons\outline_logout_white_48dp.png', image_size=(20, 20), image_subsample=4)
+    exit_bttn = sg.Button('', key='-SALIR-', tooltip='Salir del Juego', pad=((0, 10), (10, 0)), border_width=0, button_color=('#238FFB', '#238FFB'), image_filename='resources\icons\outline_cancel_white_48dp.png', image_size=(20, 20), image_subsample=4)
+    
+    return sg.Column([[logout_bttn, exit_bttn]], background_color='#238FFB', expand_x=True, element_justification='r')
 
 
 def build_header():
@@ -65,7 +67,7 @@ def build_body():
 
 def build():
     layout = [
-        [build_exit_bar()],
+        [build_bar()],
         [build_header()],
         [build_body()]
     ]
