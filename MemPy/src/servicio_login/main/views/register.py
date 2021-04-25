@@ -7,7 +7,7 @@ sg.set_options(
     font='Fixedsys',
     button_color=('#FFF', '#238FFB'),
     auto_size_buttons=False,
-    button_element_size=(15, 3),
+    button_element_size=(16, 3),
     margins=(0, 0),
     element_padding=(0, 0)
 )
@@ -37,12 +37,12 @@ def build_body():
     top_filler = sg.Text('',                  size=(0, 2), background_color='#FFF')
     
     gender_text = sg.Text('Género', background_color='#FFF', text_color='#238FFB', font=('Fixedsys', 17))
-    gender_input = sg.Input(key='-GENDER-', pad=((0, 0), (3, 10)), text_color='#1F1F1F', size=(15, 2), font=('Fixedsys', 17), justification='center')
+    gender_input = sg.Input(key='-GENDER-', text_color='#1F1F1F', size=(20, None), font=('Fixedsys', 17), justification='center')
     
     inputs_middle_filler = bttns_middle_filler = sg.Text('', size=(0, 1), background_color='#FFF')
     
     age_text = sg.Text('Edad', background_color='#FFF', text_color='#238FFB', font=('Fixedsys', 17))
-    age_input = sg.Input(key='-AGE-', pad=((0, 0), (3, 10)), text_color='#1F1F1F', size=(15, 2), font=('Fixedsys', 17), justification='center')
+    age_input = sg.Input(key='-AGE-', text_color='#1F1F1F', size=(20, None), font=('Fixedsys', 17), justification='center')
     
     register_bttn = sg.Button('Registrarse')
     bttns_middle_filler = sg.Text('', size=(5, 8), background_color='#FFF')
