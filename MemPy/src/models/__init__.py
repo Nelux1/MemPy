@@ -1,0 +1,1 @@
+"""Contiene modelos de los objetos de la aplicación."""

@@ -1,0 +1,1 @@
+"""Contiene las interfaces de la aplicación."""

@@ -1,0 +1,35 @@
+[
+    {
+        "win_message": "¡Ganaste!",
+        "loss_message": "¡Perdiste!",
+        "timeleft_message": "¡Quedan {} segundos!",
+        "casillas_nivel": 8,
+        "coincidencias": 2,
+        "tipo_elementos": "imagenes",
+        "ayudas": true,
+        "tiempo": 180,
+        "theme": "dark blue 1"
+    },
+    {
+        "win_message": "¡Ganaste!",
+        "loss_message": "¡Perdiste!",
+        "timeleft_message": "¡Quedan {} segundos!",
+        "casillas_nivel": 16,
+        "coincidencias": 2,
+        "tipo_elementos": "imagenes",
+        "ayudas": true,
+        "tiempo": 180,
+        "theme": "dark blue 1"
+    },
+    {
+        "win_message": "¡Ganaste!",
+        "loss_message": "¡Perdiste!",
+        "timeleft_message": "¡Quedan {} segundos!",
+        "casillas_nivel": 20,
+        "coincidencias": 2,
+        "tipo_elementos": "imagenes",
+        "ayudas": true,
+        "tiempo": 180,
+        "theme": "dark blue 1"
+    }
+]
