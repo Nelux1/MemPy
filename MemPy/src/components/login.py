@@ -23,8 +23,10 @@ def start():
             # si no existe, lo registra
             if not UserRepository().existe_usuario(username):
                 # si se registró bien, puede abrir la ventana inicio
+                window.hide()
                 if registro.start(username):
                     break
+                window.un_hide()
             # si existía, puede abrir la ventana inicio
             else:
                 break

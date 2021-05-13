@@ -4,14 +4,28 @@ from src.models.user import User
 from src.models.user_repository import UserRepository
 
 
-def start (username):
+def start(username):
     window = registro.build()
-    event,values= window.read(close = True)
-    if event == '-REGISTRARSE-':
-        usu_gen=values['-GENERO-']
-        usu_edad=values['-EDAD-']
-        repositorio = UserRepository()
-        user = User(username,usu_gen,usu_edad)
-        repositorio.agregar_usuario(user)
+
+    while True:
+        event, values = window.read()
+
+        if event in ('-SALIR-', '-BACK-'):
+            break
+
+        if event == '-REGISTRARSE-':
+            edad = values['-EDAD-']
+            genero = values['-GENERO-']
+
+            # pequeña validación de los datos ingresados
+            if not edad.isdigit() or not genero:
+                print('Datos inválidos')
+            else:
+                UserRepository().agregar_usuario(User(username, genero, edad))
+                break
+        
+    window.close()
+
+    if event not in ('-SALIR-', '-BACK-'):
         return True
     return False
