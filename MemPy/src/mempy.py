@@ -3,7 +3,7 @@
 from src.components import login
 
 # def run():
-#     login.start()
+login.start()
 
 import PySimpleGUI as sg
 

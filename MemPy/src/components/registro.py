@@ -16,3 +16,5 @@ def start (username):
         repositorio = UserRepository()
         user = User(username,usu_gen,usu_edad)
         repositorio.agregar_usuario(user)
+        return True
+    return False
