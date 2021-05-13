@@ -11,15 +11,6 @@ from src.windows.widgets import input_widget, exitbar_widget, separator_widget
 REGISTER_ICON = os.path.join('resources', 'icons', 'outline_account_circle_black_48dp.png')
 
 
-# opciones globales de la ventana
-sg.set_options(
-    button_element_size=(30, 2),
-    button_color=(colors.WHITE, colors.SECONDARY),
-    font=('courier', 10),
-    border_width=0
-)
-
-
 def build():
     """Construye y retorna la ventana de registro."""
     logo = sg.Image(
