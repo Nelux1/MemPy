@@ -6,9 +6,9 @@ from src.windows import registro
 from src.models.user_repository import UserRepository
 from src.models.user import User
 
-window = registro.build()
 
 def start (username):
+    window = registro.build()
     event,values= window.read(close = True)
     if event == '-REGISTRARSE-':
         usu_gen=values['-GENERO-']
