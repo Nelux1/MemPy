@@ -66,7 +66,7 @@ def build():
 
     gender_input = input_widget.build(
         '- GÉNERO -', 
-        '-GENDER-', 
+        '-GENERO-', 
         colors.PRIMARY_LIGHT, 
         colors.BLACK, 
         True
@@ -77,7 +77,7 @@ def build():
 
     age_input = input_widget.build(
         '- EDAD -', 
-        '-AGE-', 
+        '-EDAD-', 
         colors.PRIMARY_LIGHT, 
         colors.BLACK, 
         False

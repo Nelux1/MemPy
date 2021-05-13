@@ -1,6 +1,5 @@
 import os
 import json
-
     
 class UserRepository:
     """Realiza las operaciones de lectura/escritura de usuarios."""
