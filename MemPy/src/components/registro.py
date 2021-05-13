@@ -1,10 +1,7 @@
-from tkinter import Event
-from src.models import user_repository
-from src.models.user_repository import UserRepository
-from src import windows
 from src.windows import registro
-from src.models.user_repository import UserRepository
+
 from src.models.user import User
+from src.models.user_repository import UserRepository
 
 
 def start (username):

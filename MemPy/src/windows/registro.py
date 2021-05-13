@@ -3,8 +3,8 @@ import os
 
 import PySimpleGUI as sg
 
-from src.windows.widgets import input_widget, exitbar_widget, separator_widget
 from src.windows import colors
+from src.windows.widgets import input_widget, exitbar_widget, separator_widget
 
 
 # path del icon que usa esta ventana
@@ -128,7 +128,8 @@ def build():
         no_titlebar=True, 
         grab_anywhere=True,
         element_justification='c',
-        background_color=colors.PRIMARY_LIGHT
+        background_color=colors.PRIMARY_LIGHT,
+        finalize=True
     )
     
     return window

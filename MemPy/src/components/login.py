@@ -1,22 +1,36 @@
-from src.windows import login
 import PySimpleGUI as sg
-from src.models.user_repository import UserRepository
-from src.components import registro, inicio
 
+from src.windows import login
+from src.components import registro, inicio
+from src.models.user_repository import UserRepository
 
 
 def start():
-    window= login.build()
+    window = login.build()
+
     while True:
-        event,values= window.read()
+        event, values = window.read()
+
         if event == '-SALIR-':
             break
-        usu=values['-USERNAME-']  
-        repository= UserRepository()
-        objusuario=repository.existe_usuario(usu)
-        if objusuario is False:
-            reg_exito = registro.start(usu)
-        if objusuario or reg_exito:
-            break  
+
+        username = values['-USERNAME-']
+
+        # inválido = input vacío.
+        if not username:
+            print('Usuario inválido')
+        else:
+            # si no existe, lo registra
+            if not UserRepository().existe_usuario(username):
+                # si se registró bien, puede abrir la ventana inicio
+                if registro.start(username):
+                    break
+            # si existía, puede abrir la ventana inicio
+            else:
+                break
+
     window.close()
-    inicio.start()  
+
+    # sólo se abre la ventana inicio si el evento no fue de salir
+    if event != '-SALIR-':    
+        inicio.start()

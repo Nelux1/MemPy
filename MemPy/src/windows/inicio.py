@@ -3,8 +3,8 @@ import os
 
 import PySimpleGUI as sg
 
-from src.windows.widgets import exitbar_widget, separator_widget
 from src.windows import colors
+from src.windows.widgets import exitbar_widget, separator_widget
 
 HOME_ICON = os.path.join('resources', 'icons', 'outline_home_black_48dp.png')
 
@@ -67,7 +67,8 @@ def build():
         keep_on_top=True,
         grab_anywhere=True,
         background_color=colors.PRIMARY_LIGHT,
-        element_justification='c'
+        element_justification='c',
+        finalize=True
     )
     
     return window

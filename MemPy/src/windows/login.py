@@ -109,7 +109,8 @@ def build():
         no_titlebar=True, 
         grab_anywhere=True,
         background_color=colors.PRIMARY_LIGHT,
-        element_justification='c'
+        element_justification='c',
+        finalize=True
     )
     
     return window
