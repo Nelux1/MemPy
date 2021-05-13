@@ -5,13 +5,14 @@ import json
 class User:
     """Usuario de la aplicación."""
 
-    def __init__(self, username, gender=None, age=None):
+    def __init__(self, username, gender=None, age=None, puntaje=0):
         """Crea nuevo usuario con configuraciones default."""
         self.defaults = os.path.join(os.getcwd(), 'default_config.json')
 
         self.username = username
         self.gender = gender
         self.age = age
+        self.puntaje = puntaje
         
         self.set_default_config()
 
@@ -25,5 +26,6 @@ class User:
             "username": self.username,
             "gender": self.gender,
             "age": self.age,
+            "puntaje": self.puntaje,
             "config": self.config
         }
