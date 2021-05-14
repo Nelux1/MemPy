@@ -1,7 +1,7 @@
 """Loop de la ventana de configuraciones."""
 from src.windows import config
 
-from src.components import config_mensajes, config_partida
+from src.components import config_mensajes, config_partida, config_estilo
 
 
 def start():
@@ -18,8 +18,8 @@ def start():
             config_mensajes.start()
         elif event == '-PARTIDA-':
             config_partida.start()
-        # else:
-        #     config_personalizacion.start()
+        else:
+            config_estilo.start()
         window.un_hide()
 
 
