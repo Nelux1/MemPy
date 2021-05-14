@@ -19,12 +19,12 @@ def build():
     """Construye y retorna la ventana principal del juego."""
     logo = sg.Image(
         filename=HOME_ICON, 
-        background_color=colors.PRIMARY_LIGHT
+        background_color=colors.BACKGROUND
     )
 
     title = sg.Text(
         text='INICIO', 
-        background_color=colors.PRIMARY_LIGHT, 
+        background_color=colors.BACKGROUND, 
         size=(20, None),
         justification='c', 
         font=('Courier', 50, ''), 
@@ -37,11 +37,11 @@ def build():
             [
                 button('JUGAR', '-JUGAR-'), 
                 button('PUNTAJES', '-PUNTAJES-'), 
-                button('ESTADíSTICAS', '-STATS-'), 
+                button('ESTADíSTICAS', '-ESTADISTICAS-'), 
                 button('CONFIGURACIÓN', '-CONFIG-')
             ]
         ], 
-        background_color=colors.PRIMARY_LIGHT,
+        background_color=colors.BACKGROUND,
         expand_x=True, 
         element_justification='c'
     )
@@ -49,21 +49,21 @@ def build():
     return sg.Window(
         title='', 
         layout= [
-            [exitbar_widget.build(colors.PRIMARY_LIGHT)],
-            [separator_widget.estilo1(colors.PRIMARY_LIGHT, colors.BLACK, 100)],
-            [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 2)],
+            [exitbar_widget.build(colors.BACKGROUND)],
+            [separator_widget.estilo1(colors.BACKGROUND, colors.BLACK, 100)],
+            [separator_widget.invisible_horizontal(colors.BACKGROUND, 2)],
             [logo],
             [title],
-            [separator_widget.estilo2(colors.PRIMARY_LIGHT, colors.BLACK)],
-            [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 2)],
+            [separator_widget.estilo2(colors.BACKGROUND, colors.BLACK)],
+            [separator_widget.invisible_horizontal(colors.BACKGROUND, 2)],
             [buttons],
-            [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 2)],
-            [separator_widget.estilo1(colors.PRIMARY_LIGHT, colors.BLACK, 100)],
-            [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 2)]
+            [separator_widget.invisible_horizontal(colors.BACKGROUND, 2)],
+            [separator_widget.estilo1(colors.BACKGROUND, colors.BLACK, 100)],
+            [separator_widget.invisible_horizontal(colors.BACKGROUND, 2)]
         ], 
         no_titlebar=True,
         keep_on_top=True,
-        background_color=colors.PRIMARY_LIGHT,
+        background_color=colors.BACKGROUND,
         element_justification='c',
         finalize=True
     )
@@ -77,7 +77,7 @@ def button(text, key):
         key=key, 
         font=('courier', 10), 
         size=(18, 2), 
-        button_color=(colors.WHITE, colors.SECONDARY), 
-        mouseover_colors=(colors.BLACK, colors.PRIMARY),
+        button_color=(colors.WHITE, colors.BLACK), 
+        mouseover_colors=(colors.BLACK, colors.PRIMARY_LIGHT),
         pad=((10, 10), (0, 0))
     )

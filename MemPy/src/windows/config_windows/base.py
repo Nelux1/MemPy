@@ -22,7 +22,7 @@ def build(title, opciones):
     title = sg.Text(
         text='Configuración de\nmensajes',
         justification='c',
-        background_color=colors.PRIMARY_LIGHT,
+        background_color=colors.BACKGROUND,
         text_color=colors.BLACK,
         font=('times', 30, 'bold'),
         size=(25, None)
@@ -46,19 +46,19 @@ def build(title, opciones):
     return sg.Window(
         title='',
         layout=[
-            [exitbar_widget.build(colors.PRIMARY_LIGHT)],
+            [exitbar_widget.build(colors.BACKGROUND)],
             [title],
-            [separator_widget.estilo2(colors.PRIMARY_LIGHT, colors.BLACK)],
-            [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 2)],
+            [separator_widget.estilo2(colors.BACKGROUND, colors.BLACK)],
+            [separator_widget.invisible_horizontal(colors.BACKGROUND, 2)],
             [opciones],
-            [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 2)],
+            [separator_widget.invisible_horizontal(colors.BACKGROUND, 2)],
             [guardar, cancelar],
-            [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 2)],
+            [separator_widget.invisible_horizontal(colors.BACKGROUND, 2)],
         ],
         no_titlebar=True,
         keep_on_top=True,
         grab_anywhere=True,
-        background_color=colors.PRIMARY_LIGHT,
+        background_color=colors.BACKGROUND,
         element_justification='c',
         finalize=True
     )

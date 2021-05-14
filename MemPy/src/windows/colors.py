@@ -1,9 +1,9 @@
 """Colores utilizados en las ventanas."""
-PRIMARY = '#3498db'
-PRIMARY_LIGHT = '#ecf0f1'
+PRIMARY_LIGHT = '#3498db'
 PRIMARY_DARK = '#2980b9'
 
-SECONDARY = '#212121'
 
-BLACK = '#000000'
+BLACK = '#212121'
 WHITE = '#ffffff'
+
+BACKGROUND = '#ecf0f1'

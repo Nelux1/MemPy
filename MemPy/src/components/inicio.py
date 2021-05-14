@@ -1,5 +1,5 @@
 from src.windows import inicio
-from src.components import config
+from src.components import config, puntajes, estadisticas
 
 def start():
     window = inicio.build()
@@ -14,6 +14,12 @@ def start():
 
         if event == '-CONFIG-':
             config.start()
+        elif event == '-ESTADISTICAS-':
+            estadisticas.start()
+        elif event == '-PUNTAJES-':
+            puntajes.start()
+        else: # -JUGAR-
+            pass
 
         window.un_hide()
 

@@ -29,7 +29,7 @@ def build():
         border_width=0, 
         font=('courier', 10), 
         size=(30, 2), 
-        button_color=(colors.WHITE, colors.SECONDARY), 
+        button_color=(colors.WHITE, colors.BLACK), 
         bind_return_key=True
     )
 
@@ -37,24 +37,24 @@ def build():
         text='combine letras, números, puntos y guiones bajos\nmínimo 3 caracteres', 
         justification='center', 
         font=('courier', '10'), 
-        background_color=colors.PRIMARY_LIGHT, 
+        background_color=colors.BACKGROUND, 
         text_color=colors.BLACK
     )
 
     return sg.Window(
         title='MemPy', 
         layout=[
-            [exitbar_widget.build(colors.PRIMARY)],
+            [exitbar_widget.build(colors.PRIMARY_DARK)],
             [header],
             [input_widget.build('- NOMBRE DE USUARIO -', '-USERNAME-')],
             [login_bttn],
-            [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 2)],
+            [separator_widget.invisible_horizontal(colors.BACKGROUND, 2)],
             [footer],
-            [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 1)]
+            [separator_widget.invisible_horizontal(colors.BACKGROUND, 1)]
         ], 
         keep_on_top=True, 
         no_titlebar=True,
-        background_color=colors.PRIMARY_LIGHT,
+        background_color=colors.BACKGROUND,
         element_justification='c',
         finalize=True
     )

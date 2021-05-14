@@ -29,7 +29,7 @@ def build(label_text, key,):
     # texto indicador arriba del campo de input
     label = sg.Text(
         text=label_text, 
-        background_color=colors.PRIMARY_LIGHT, 
+        background_color=colors.BACKGROUND, 
         text_color=colors.BLACK, 
         font=LABEL_FONT
     )
@@ -39,7 +39,7 @@ def build(label_text, key,):
         key=key, 
         size=(15, None), 
         border_width=0, 
-        background_color=colors.PRIMARY_LIGHT,
+        background_color=colors.BACKGROUND,
         text_color=colors.BLACK, 
         font=INPUT_FONT, 
         justification='c'
@@ -49,19 +49,19 @@ def build(label_text, key,):
     input_underline = sg.Text(
         '_'*248,
         text_color=colors.BLACK,
-        background_color=colors.PRIMARY_LIGHT, 
+        background_color=colors.BACKGROUND, 
         font=INPUT_UNDERLINE
     )
         
     return sg.Column(
         layout=[
-            [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 2)],
+            [separator_widget.invisible_horizontal(colors.BACKGROUND, 2)],
             [label], 
-            [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 1)], 
+            [separator_widget.invisible_horizontal(colors.BACKGROUND, 1)], 
             [input_elem], 
             [input_underline],
-            [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 2)]
+            [separator_widget.invisible_horizontal(colors.BACKGROUND, 2)]
         ], 
-        background_color=colors.PRIMARY_LIGHT,
+        background_color=colors.BACKGROUND,
         element_justification='c'
     )

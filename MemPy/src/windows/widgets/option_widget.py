@@ -14,18 +14,18 @@ def build(text, key, values, default):
         text=text,
         text_color=colors.BLACK,
         font=('times', 18),
-        background_color=colors.PRIMARY_LIGHT
+        background_color=colors.BACKGROUND
     )
     
     return sg.Column(
         layout=[
-            [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 1)],
+            [separator_widget.invisible_horizontal(colors.BACKGROUND, 1)],
             [label],
             [custom_combo(values, default, key)],
-            [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 1)]
+            [separator_widget.invisible_horizontal(colors.BACKGROUND, 1)]
         ],
         element_justification='c',
-        background_color=colors.PRIMARY_LIGHT
+        background_color=colors.BACKGROUND
     )
     
 

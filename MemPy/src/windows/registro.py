@@ -26,18 +26,18 @@ def build():
     return sg.Window(
         title='MemPy',
         layout=[
-            [exitbar_widget.build(colors.PRIMARY)],
+            [exitbar_widget.build(colors.PRIMARY_DARK)],
             [header],
             [input_widget.build('- GÉNERO -', '-GENERO-')],
             [input_widget.build('- EDAD -', '-EDAD-')],
             [sg.Button('REGISTRARSE', k='-REGISTRARSE-', bind_return_key=True)],
-            [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 1)],
+            [separator_widget.invisible_horizontal(colors.BACKGROUND, 1)],
             [sg.Button('VOLVER ATRÁS', k='-BACK-')],
-            [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 1)]
+            [separator_widget.invisible_horizontal(colors.BACKGROUND, 1)]
         ],
         keep_on_top=True,
         no_titlebar=True,
         element_justification='c',
-        background_color=colors.PRIMARY_LIGHT,
+        background_color=colors.BACKGROUND,
         finalize=True
     )

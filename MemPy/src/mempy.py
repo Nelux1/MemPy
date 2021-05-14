@@ -16,7 +16,7 @@ def run():
         margins=(0, 0),
         element_padding=(0, 0),
         button_element_size=(30, 2),
-        button_color=(colors.WHITE, colors.SECONDARY),
+        button_color=(colors.WHITE, colors.BLACK),
         font=('courier', 10),
         border_width=0
     )

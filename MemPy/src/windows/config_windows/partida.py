@@ -51,7 +51,7 @@ def build():
 
     pistas = sg.Checkbox(
         text='Pistas',
-        background_color=colors.PRIMARY_LIGHT,
+        background_color=colors.BACKGROUND,
         font=('courier', 20),
         text_color=colors.BLACK
     )
@@ -66,6 +66,6 @@ def build():
                 [tiempo],
                 [pistas]
             ],
-            background_color=colors.PRIMARY_LIGHT
+            background_color=colors.BACKGROUND
         )
     )

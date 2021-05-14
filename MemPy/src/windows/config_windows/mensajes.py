@@ -54,7 +54,7 @@ def build():
                 [derrota],
                 [restante]
             ],
-            background_color=colors.PRIMARY_LIGHT,
+            background_color=colors.BACKGROUND,
             justification='c'
         )
     )
