@@ -1,3 +1,7 @@
+"""Ventana que lleva a los diferentes tipos de configuraciones.
+
+    Interactua con las ventanas en windows/config_windows
+"""
 import PySimpleGUI as sg
 
 from src.windows import colors
@@ -5,6 +9,7 @@ from src.windows.widgets import exitbar_widget, separator_widget, option_widget
 
 
 def build():
+    """Construye y retorna la ventana de inicio de configuraciones."""
     title = sg.Text(
         text='Configuraciones',
         font=('times', 30, 'bold'),
@@ -21,32 +26,29 @@ def build():
         1
     )
 
-    config_mensaje = config_option('Mensajes', '-MENSAJES-')
-    config_partida = config_option('Partida', '-PARTIDA-')
-    config_estilo = config_option('Estilos', '-ESTILO-')
-
     return sg.Window(
         title='',
         layout=[
             [exitbar_widget.build(colors.PRIMARY_LIGHT)],
             [title],
-            [separator_widget.separator2(colors.PRIMARY_LIGHT, colors.BLACK)],
+            [separator_widget.estilo2(colors.PRIMARY_LIGHT, colors.BLACK)],
             [level_select],
-            [config_mensaje],
-            [config_partida],
-            [config_estilo],
+            [option_button('Mensajes', '-MENSAJES-')],
+            [option_button('Partida', '-PARTIDA-')],
+            [option_button('Estilos', '-ESTILO-')],
+            [option_button('Volver', '-BACK-')],
             [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 2)],
         ],
         no_titlebar=True,
         keep_on_top=True,
-        grab_anywhere=True,
         element_justification='c',
         background_color=colors.PRIMARY_LIGHT,
         finalize=True
     )
 
 
-def config_option(text, key):
+def option_button(text, key):
+    """Botones utilizados unicamente por esta ventana."""
     return sg.Button(
         button_text=text,
         key=key,

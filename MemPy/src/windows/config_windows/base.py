@@ -1,10 +1,24 @@
+"""Ventana básica para mostrar y manejar configuraciones.
+
+    Es útil porque las ventanas de configuración tienen
+    el mismo estilo. Se busca extraer lo común.
+"""
 import PySimpleGUI as sg
 
 from src.windows import colors
-from src.windows.widgets import option_widget, separator_widget, exitbar_widget
+from src.windows.widgets import exitbar_widget,separator_widget
 
 
-def build():
+def build(title, opciones):
+    """Crea una ventana de configuraciones.
+
+        Parametros
+        ----------
+            title : str
+                El titulo de la ventana
+            opciones : sg.Column
+                Un contenedor de las opciones que se desea presentar.
+    """
     title = sg.Text(
         text='Configuración de\nmensajes',
         justification='c',
@@ -14,21 +28,13 @@ def build():
         size=(25, None)
     )
 
-    tema = option_widget.build(
-        'Tema', 
-        '-TEMA-', 
-        ['Claro', 'Oscuro'], 
-        'Claro'
-    )
-
     guardar = sg.Button(
         button_text='Guardar',
         key='-GUARDAR-',
         font=('courier', 13),
-        size=(25, 3)
+        size=(25, 3),
+        pad=(20, 0)
     )
-
-    mid_sep = sg.Text(background_color=colors.PRIMARY_LIGHT, size=(1, None))
 
     cancelar = sg.Button(
         button_text='Cancelar',
@@ -37,22 +43,22 @@ def build():
         size=(25, 3)
     )
 
-
     return sg.Window(
         title='',
         layout=[
             [exitbar_widget.build(colors.PRIMARY_LIGHT)],
             [title],
-            [separator_widget.separator2(colors.PRIMARY_LIGHT, colors.BLACK)],
+            [separator_widget.estilo2(colors.PRIMARY_LIGHT, colors.BLACK)],
             [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 2)],
-            [tema],
+            [opciones],
             [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 2)],
-            [guardar, mid_sep, cancelar],
+            [guardar, cancelar],
             [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 2)],
         ],
-        background_color=colors.PRIMARY_LIGHT,
         no_titlebar=True,
         keep_on_top=True,
         grab_anywhere=True,
-        element_justification='c'
+        background_color=colors.PRIMARY_LIGHT,
+        element_justification='c',
+        finalize=True
     )

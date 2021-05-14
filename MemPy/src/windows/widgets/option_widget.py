@@ -1,3 +1,7 @@
+""""Elementos que permiten elegir entre varias opciones.
+
+    Utilizados en las ventanas de configuración.
+"""
 import PySimpleGUI as sg
 
 from src.windows import colors
@@ -5,20 +9,19 @@ from src.windows.widgets import separator_widget
 
 
 def build(text, key, values, default):
+    """Elemento de selección con un label."""
     label = sg.Text(
         text=text,
         text_color=colors.BLACK,
         font=('times', 18),
         background_color=colors.PRIMARY_LIGHT
     )
-
-    combo = custom_combo(values, default, key)
-
+    
     return sg.Column(
         layout=[
             [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 1)],
             [label],
-            [combo],
+            [custom_combo(values, default, key)],
             [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 1)]
         ],
         element_justification='c',
@@ -27,6 +30,7 @@ def build(text, key, values, default):
     
 
 def custom_combo(values, default, key):
+    """Combo únicamente utilizado por este widget."""
     return sg.Combo(
         key=key,
         values=values,

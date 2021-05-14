@@ -6,6 +6,7 @@ def start():
     
     while True:
         event, values = window.read()
+        
         if event == '-SALIR-':
             break
         

@@ -1,6 +1,8 @@
+"""Inputs personalizados, utilizados en las ventanas login.py y registro.py"""
 import PySimpleGUI as sg
 
 from src.windows import colors
+from src.windows.widgets import separator_widget
 
 
 LABEL_FONT = ('Courier', 13)
@@ -8,13 +10,13 @@ INPUT_FONT = ('Courier', 20)
 INPUT_UNDERLINE = ('Courier', 1, 'underline')
 
 
-def build(text, key, background_color, text_color, focus=False):
+def build(label_text, key,):
     """Retorna una barra de input con estilo pseudo moderno.
     
     
         Parametros
         ----------
-            text : str
+            label : str
                 texto indicador arriba del input
             key : str
                 clave que va a tener el objeto input
@@ -26,42 +28,40 @@ def build(text, key, background_color, text_color, focus=False):
 
     # texto indicador arriba del campo de input
     label = sg.Text(
-        text=text, 
-        background_color=background_color, 
-        text_color=text_color, 
+        text=label_text, 
+        background_color=colors.PRIMARY_LIGHT, 
+        text_color=colors.BLACK, 
         font=LABEL_FONT
     )
-
-    # espacio entre label y el campo de input
-    space = sg.Text('', size=(0, 1), background_color=background_color)
 
     # el objeto input
     input_elem = sg.Input(
         key=key, 
         size=(15, None), 
         border_width=0, 
-        background_color=background_color,
-        text_color=text_color, 
+        background_color=colors.PRIMARY_LIGHT,
+        text_color=colors.BLACK, 
         font=INPUT_FONT, 
-        justification='c', 
-        focus=focus
+        justification='c'
     )
 
     # imaginar que es parte del obj input también
     input_underline = sg.Text(
         '_'*248,
         text_color=colors.BLACK,
-        background_color=background_color, 
+        background_color=colors.PRIMARY_LIGHT, 
         font=INPUT_UNDERLINE
     )
         
     return sg.Column(
         layout=[
+            [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 2)],
             [label], 
-            [space], 
+            [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 1)], 
             [input_elem], 
-            [input_underline]
+            [input_underline],
+            [separator_widget.invisible_horizontal(colors.PRIMARY_LIGHT, 2)]
         ], 
-        background_color=background_color,
+        background_color=colors.PRIMARY_LIGHT,
         element_justification='c'
     )
