@@ -3,33 +3,33 @@
         "-WIN_MESSAGE-": "¡Ganaste!",
         "-LOSS_MESSAGE-": "¡Perdiste!",
         "-TIMELEFT_MESSAGE-": "¡Quedan {} segundos!",
-        "-CASILLAS-": 8,
+        "-CASILLAS-": "8x8",
         "-COINCIDENCIAS-": 2,
-        "-ELEMENTOS-": "imagenes",
-        "-PISTAS-": true,
-        "-TIEMPO_SEG": 180,
-        "-TEMA-": "dark blue 1"
+        "-ELEMENTOS-": "Imagenes",
+        "-PISTAS-": false,
+        "-TIEMPO_MIN-": "2 minutos",
+        "-TEMA-": "Claro"
     },
     {
         "-WIN_MESSAGE-": "¡Ganaste!",
         "-LOSS_MESSAGE-": "¡Perdiste!",
         "-TIMELEFT_MESSAGE-": "¡Quedan {} segundos!",
-        "-CASILLAS-": 16,
+        "-CASILLAS-": "16x16",
         "-COINCIDENCIAS-": 2,
-        "-ELEMENTOS-": "imagenes",
-        "-PISTAS-": true,
-        "-TIEMPO_SEG": 180,
-        "-TEMA-": "dark blue 1"
+        "-ELEMENTOS-": "Imagenes",
+        "-PISTAS-": false,
+        "-TIEMPO_MIN-": "2 minutos",
+        "-TEMA-": "Claro"
     },
     {
         "-WIN_MESSAGE-": "¡Ganaste!",
         "-LOSS_MESSAGE-": "¡Perdiste!",
         "-TIMELEFT_MESSAGE-": "¡Quedan {} segundos!",
-        "-CASILLAS-": 20,
+        "-CASILLAS-": "20x20",
         "-COINCIDENCIAS-": 2,
-        "-ELEMENTOS-": "imagenes",
-        "-PISTAS-": true,
-        "-TIEMPO_SEG": 180,
-        "-TEMA-": "dark blue 1"
+        "-ELEMENTOS-": "Imagenes",
+        "-PISTAS-": false,
+        "-TIEMPO_MIN-": "2 minutos",
+        "-TEMA-": "Claro"
     }
 ]

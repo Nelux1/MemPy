@@ -38,7 +38,7 @@ def build():
 
     tiempo = option_widget.build(
         text='Duración de la Partida',
-        key='-TIEMPO-',
+        key='-TIEMPO_MIN-',
         values=[
             '1 minuto', 
             '1:30 minutos', 
