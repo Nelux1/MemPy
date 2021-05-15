@@ -18,7 +18,7 @@ cd grupo50
 ### Windows
 ```py -m pip install -r requirements.txt```
 
-## Ejecución
+###### Ejecución
 
 ### Unix/macOS
 ```python run.py```
