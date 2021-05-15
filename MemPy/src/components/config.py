@@ -18,14 +18,12 @@ def start():
 
         window.hide()
 
+        nivel = values['-NIVEL-'] - 1
         if event == '-MENSAJES-':
-            nivel= values['-NIVEL-']
             mensajes.start(nivel)
         elif event == '-PARTIDA-':
-            nivel= values['-NIVEL-']
             partida.start(nivel)
         else:
-            nivel= values['-NIVEL-']
             estilos.start(nivel)
 
         window.un_hide()
