@@ -51,6 +51,7 @@ def build():
 
     pistas = sg.Checkbox(
         text='Pistas',
+        key= '-PISTAS-',
         background_color=colors.BACKGROUND,
         font=('courier', 20),
         text_color=colors.BLACK
