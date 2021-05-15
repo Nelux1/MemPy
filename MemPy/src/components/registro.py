@@ -2,10 +2,18 @@ from src.windows import registro
 
 from src.models.user import User
 from src.models.user_repository import UserRepository
+from src.handlers import validation_handlers as validation
 
 
 def start(username):
+    window, usuario = loop(username)
+    window.close()
+    return usuario
+
+
+def loop(username):
     window = registro.build()
+    usuario = None
 
     while True:
         event, values = window.read()
@@ -13,19 +21,11 @@ def start(username):
         if event in ('-SALIR-', '-BACK-'):
             break
 
-        if event == '-REGISTRARSE-':
-            edad = values['-EDAD-']
-            genero = values['-GENERO-']
+        edad = values['-EDAD-']
+        genero = values['-GENERO-']
 
-            # pequeña validación de los datos ingresados
-            if not edad.isdigit() or not genero:
-                print('Datos inválidos')
-            else:
-                UserRepository().agregar_usuario(User(username, genero, edad))
-                break
+        if validation.are_valid_credentials(edad, genero):
+            UserRepository.agregar_usuario((usuario := User(username, genero, edad)))
+            break
         
-    window.close()
-
-    if event not in ('-SALIR-', '-BACK-'):
-        return True
-    return False
+    return (window, usuario)

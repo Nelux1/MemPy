@@ -1,18 +1,14 @@
+from src.windows import popup
+
 from src.windows.config_windows import estilos
-from src.components import config_json
+
+from src.handlers import configuration_handlers
 
 
 def start(nivel):
-    window = estilos.build()
+    event, values = estilos.build().read(close=True)
 
-    while True:
-        event, values = window.read()
+    if event not in ('-SALIR-', '-FIN-'):
+        configuration_handlers.set_config_estilo(nivel, values['-TEMA-'])
 
-        if event in ('-SALIR-', '-CANCELAR-'):
-            break
-        if event == '-GUARDAR-':
-            tema=values['-TEMA-']
-            config_json.set_config_config(nivel,tema)
-            break
-
-    window.close()
+        popup.build('Se guardó\ncorrectamente').read(close=True)

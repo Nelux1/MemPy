@@ -4,6 +4,8 @@
 """
 from src.windows import configuraciones
 
+from src.models.user_repository import UserRepository
+
 from src.components.config_components import mensajes, partida, estilos
 
 
@@ -26,9 +28,10 @@ def start():
         else:
             estilos.start(nivel)
 
+        # serializa las configuraciones hechas
+        UserRepository.serializar_actual()
+
         window.un_hide()
-
-
     window.close()
 
 

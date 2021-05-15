@@ -1,3 +1,4 @@
+from src.models.user import User
 import PySimpleGUI as sg
 
 from src.windows import login
@@ -16,23 +17,26 @@ def start():
 
         username = values['-USERNAME-']
 
-        # inválido = input vacío.
-        if not username:
-            print('Usuario inválido')
-        else:
-            # si no existe, lo registra
-            if not UserRepository().existe_usuario(username):
-                # si se registró bien, puede abrir la ventana inicio
-                window.hide()
-                if registro.start(username):
-                    break
-                window.un_hide()
-            # si existía, puede abrir la ventana inicio
-            else:
+        # si se ingresó un nombre de usuario
+        if username:
+            usuario = UserRepository.obtener_usuario(username)
+
+            window.hide()
+
+            # si el usuario no está registrado
+            if not usuario:
+                usuario = registro.start(username)
+            
+            # si el usuario existía o se registró correctamente
+            if usuario:
+                UserRepository.current_user = usuario
                 break
+
+            window.un_hide()
+        
 
     window.close()
 
-    # sólo se abre la ventana inicio si el evento no fue de salir
-    if event != '-SALIR-':    
+    # si se logeo un usuario
+    if event != '-SALIR-':
         inicio.start()

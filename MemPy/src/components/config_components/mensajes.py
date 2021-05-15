@@ -1,21 +1,19 @@
+from src.windows import popup
+
 from src.windows.config_windows import mensajes
-from src.components import config_json
+
+from src.handlers import configuration_handlers
+
 
 def start(nivel):
-    window = mensajes.build()
+    event, values = mensajes.build().read(close=True)
 
-    while True:
-        event, values = window.read()
+    if event not in ('-SALIR-', '-FIN-'):
+        configuration_handlers.set_config_mensajes(
+            nivel, 
+            values['-WIN_MESSAGE-'], 
+            values['-LOSS_MESSAGE-'], 
+            values['-TIMELEFT_MESSAGE-']
+        )
 
-        if event in ('-SALIR-', '-CANCELAR-'):
-            break
-        if event == '-GUARDAR-':
-
-            ganador= values['-WIN_MESSAGE-']
-            perdedor=values['-LOSS_MESSAGE-']
-            tiempo= values['-TIMELEFT_MESSAGE-']
-            config_json.set_config_mensajes(nivel,ganador,perdedor,tiempo)
-            break          
-
-
-    window.close()
+        popup.build('Se guardó\ncorrectamente').read(close=True)

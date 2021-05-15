@@ -37,8 +37,8 @@ def build(title, opciones):
     )
 
     cancelar = sg.Button(
-        button_text='Cancelar',
-        key='-CANCELAR-',
+        button_text='Terminar',
+        key='-FIN-',
         font=('courier', 13),
         size=(25, 3)
     )

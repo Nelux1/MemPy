@@ -1,23 +1,20 @@
+from src.windows import popup
 from src.windows.config_windows import partida
-from src.components import config_json
+
+from src.handlers import configuration_handlers
 
 
 def start(nivel):
-    window = partida.build()
+    event, values = partida.build().read(close=True)
 
-    while True:
-        event, values = window.read()
+    if event not in ('-SALIR-', '-FIN-'):
+        configuration_handlers.set_config_partida(
+            nivel, 
+            values['-CASILLAS-'], 
+            values['-COINCIDENCIAS-'], 
+            values['-ELEMENTOS-'], 
+            values['-TIEMPO_MIN-'], 
+            values['-PISTAS-']
+        )
 
-        if event in ('-SALIR-', '-CANCELAR-'):
-            break
-
-        if event == '-GUARDAR-':
-            casillas = values['-CASILLAS-']
-            coincidencias = values['-COINCIDENCIAS-']
-            elementos = values['-ELEMENTOS-']
-            tiempo = values['-TIEMPO_MIN-']
-            pistas = values['-PISTAS-']
-            config_json.set_config_partida(nivel, casillas, coincidencias, elementos, tiempo, pistas)
-            break
-        
-    window.close()
+        popup.build('Se guardó\ncorrectamente').read(close=True)
