@@ -1,11 +1,18 @@
 # MemPy
 
-# Ejecución y Requerimientos
+# Para el uso del juego su sistema debe tener instalado git. Link de descarga:
+https://www.hostinger.com.ar/tutoriales/instalar-git-en-distintos-sistemas-operativos
+
+## Instalacion,  Requerimientos y ejecucion
 Para ejecutar la aplicación primero hay que instalar los requerimientos.
 
-## Requerimientos
+###Instalacion
+git clone git@gitlab.catedras.linti.unlp.edu.ar:python/entregas/grupo50.git
+cd grupo50
 
-### Unix/macOS
+#### Requerimientos
+
+##### Unix/macOS
 ```python -m pip install -r requirements.txt```
 
 ### Windows
