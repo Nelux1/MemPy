@@ -2,16 +2,37 @@
 import datetime
 
 from src.criterios.datasets import pokemon, marvel, dc, simpsons
+from src.criterios.datasets import steam, tv_shows, spotify, disney
 
 
 class Criterios:
     """Permite obtener los datos para las fichas según día y hora."""
 
     criterios = {
-        0: '',
-        1: '',
-        2: '',
-        3: '',
+        0: {
+                ('madrugada', ): steam.criterios['criterio1'],
+                ('mañana', ): spotify.criterios['criterio1'],
+                ('tarde', ): disney.criterios['criterio1'],
+                ('noche', ): tv_shows.criterios['criterio1']  
+            },
+        1: {
+                ('madrugada', ): spotify.criterios['criterio2'],
+                ('mañana', ): steam.criterios['criterio2'],
+                ('tarde', ): tv_shows.criterios['criterio2'],
+                ('noche', ): disney.criterios['criterio2']
+            },
+        2: {
+                ('madrugada', ): tv_shows.criterios['criterio3'],
+                ('mañana', ): steam.criterios['criterio3'],
+                ('tarde', ): spotify.criterios['criterio3'],
+                ('noche', ): disney.criterios['criterio3']
+            },
+        3: {
+                ('madrugada', ): spotify.criterios['criterio4'],
+                ('mañana', ): tv_shows.criterios['criterio4'],
+                ('tarde', ): disney.criterios['criterio4'],
+                ('noche', ): steam.criterios['criterio4']  
+            },
         4: {
                 ('madrugada', ): pokemon.criterios['criterio1'],
                 ('mañana', ): marvel.criterios['criterio1'],
@@ -38,16 +59,31 @@ class Criterios:
     }
 
     @classmethod
-    def seleccion_ahora(cls):
-        """Retorna una lista con los datos de hoy."""
-        dia_semana, hora = cls.dia_semana_y_hora()
+    def seleccion_en(cls, dia_semana, hora):
+        """Retorna la seleccion para el dia y la hora dadas.
+        
+            Parametros
+            ---------
+                dia_semana : int
+                    entre 0 y 6, siendo lunes el 0
+                hora : int
+                    entre 0 y 24
 
+            Return 
+            ------
+                tuple -> (<nombre del criterio> : str, <lista de resultados> : list)
+        """
         rango_horario = cls.get_rango_horario(hora)
         seleccion_hoy = cls.criterios[dia_semana]
 
         for keys, values in seleccion_hoy.items():
             if rango_horario in keys:
-                return values['funcion'](*values['parametros'])
+                return (values['criterio'], values['funcion'](*values['parametros']))
+
+    @classmethod
+    def seleccion_ahora(cls):
+        """Retorna la selección de ahora."""
+        return Criterios.seleccion_en(*cls.dia_semana_y_hora())
 
     @classmethod
     def dia_semana_y_hora(cls):

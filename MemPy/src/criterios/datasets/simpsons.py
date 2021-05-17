@@ -6,7 +6,7 @@ import random
 simpsons_path = os.path.join('resources', 'datasets', 'simpsons')
 
 
-def obtener_imgs_de(nombre, cant_imagenes):
+def obtener_imgs_de(nombre):
     """Retorna 50 imagenes random del nombre dado.
     
         Nombres posibles son:
@@ -26,16 +26,16 @@ criterios = {
     'criterio1': {
         'criterio': '50 imagenes random de Homero Simpson', 
         'funcion': obtener_imgs_de, 
-        'parametros': ['homer', 2245]
+        'parametros': ['homer']
     },
     'criterio2': {
         'criterio': '50 imagenes random de Marge Simpson', 
         'funcion': obtener_imgs_de, 
-        'parametros': ['marge', 1290]
+        'parametros': ['marge']
     },
     'criterio3': {
         'criterio': '50 imagenes random de Bart Simpson', 
         'funcion': obtener_imgs_de, 
-        'parametros': ['bart', 1341]
+        'parametros': ['bart']
     }
 }
