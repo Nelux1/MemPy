@@ -1,27 +1,30 @@
 # MemPy
 
-# Para el uso del juego su sistema debe tener instalado git. Link de descarga:
-```https://www.hostinger.com.ar/tutoriales/instalar-git-en-distintos-sistemas-operativos```
+## Requerimientos y ejecucion
 
-## Instalacion,  Requerimientos y ejecucion
-Para ejecutar la aplicación primero hay que instalar los requerimientos.
+1. Es necesario tener [git](https://git-scm.com/) instalado.
+2. **Clonar el repositorio:**
 
-###Instalacion
-```git clone git@gitlab.catedras.linti.unlp.edu.ar:python/entregas/grupo50.git```
-```cd grupo50```
+    ```
+    git clone https://gitlab.catedras.linti.unlp.edu.ar/python/entregas/grupo50.git
+    ```
+---
+3. **Instalar los requerimientos:**
+    1. Entrar en la carpeta que contiene **requirements.txt**: ```cd grupo50```
+    
+    2. **Instalar:**
 
-#### Requerimientos
+        Unix/macOS: ```python -m pip install -r requirements.txt```
 
-##### Unix/macOS
-```python -m pip install -r requirements.txt```
+        Windows: ```py -m pip install -r requirements.txt```
+---      
+4. **Ejecutar:**
 
-### Windows
-```py -m pip install -r requirements.txt```
+    1. Entrar a la carpeta que contiene **run.py**: ```cd MemPy ```
+    
+    2. **Ejecutar el script:**
+    
+        Unix/macOS: ```python run.py```
 
-###### Ejecución
-
-### Unix/macOS
-```python run.py```
-
-### Windows
-```py run.py```
+        Windows: ```py run.py```
+---

@@ -1,0 +1,1 @@
+"""Contiene los criterios de selección de fichas."""
