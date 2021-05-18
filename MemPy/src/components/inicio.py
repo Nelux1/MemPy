@@ -1,5 +1,7 @@
+from src.models.user import User
 from src.windows import inicio
 from src.components import config, puntajes, estadisticas,jugar
+from src.models.user_repository import UserRepository
 
 def start():
     window = inicio.build()
@@ -19,7 +21,7 @@ def start():
         elif event == '-PUNTAJES-':
             puntajes.start()
         elif event == '-JUGAR-':
-            jugar.start()
+            jugar.start(UserRepository.current_user.username)
 
         window.un_hide()
 

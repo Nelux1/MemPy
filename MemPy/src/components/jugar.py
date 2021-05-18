@@ -4,8 +4,8 @@ from src.windows import colors
 from src.windows import jugar
 
 
-def start():
-    window = jugar.build()
+def start(username):
+    window = jugar.build(username)
 
     while True:
         event, values = window.read()
@@ -15,6 +15,4 @@ def start():
         elif event == ("-imagen-"):
             pass
                         
-
-
     window.close()
