@@ -1,7 +1,13 @@
-from src.handlers.tableros import tablero_casillas
+import os
 import PySimpleGUI as sg
 from src.windows import colors
 from src.windows.widgets import exitbar_widget, separator_widget
+
+CART = os.path.join(
+    'resources', 
+    'icons', 
+    'oculta.png'
+)
 
 
 def build(username):
@@ -19,7 +25,7 @@ def build(username):
         expand_y=True,
     )
     game_column = sg.Column(
-                    layout=[[sg.Button('??????', size=(6, 3), pad=(5, 5), button_color=
+                    layout=[[sg.Button( CART , size=(6, 3), pad=(5, 5), button_color=
                     (colors.WHITE, colors.PRIMARY_LIGHT), mouseover_colors=(colors.PRIMARY_LIGHT, colors.WHITE)) 
                     for x in range (8)] for y in range(8)],
                     background_color=colors.BACKGROUND,

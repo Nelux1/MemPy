@@ -20,4 +20,3 @@ def positions():
  
  return lista
 
-print(positions())
