@@ -1,10 +1,15 @@
 import os
-from tkinter import Image
 import PySimpleGUI as sg
-from PySimpleGUI.PySimpleGUI import ConvertArgsToSingleString
+from PySimpleGUI.PySimpleGUI import ConvertArgsToSingleString, button_color_to_tuple
 from src.windows import colors
 from src.windows.widgets import exitbar_widget, separator_widget
 
+
+cart= os.path.join(
+    'resources', 
+    'icons', 
+    'inte.png'
+)
 
 def build(username):
     column_info = sg.Column(
@@ -15,19 +20,20 @@ def build(username):
             [sg.Text('Tiempo total {}', background_color=colors.BACKGROUND, text_color=colors.BLACK, font=('times', 15, 'bold'))],
             [sg.Text('Elementos encontrados {} de {}', background_color=colors.BACKGROUND, text_color=colors.BLACK, font=('times', 15, 'bold'))],
             [separator_widget.invisible_horizontal(colors.BACKGROUND, 10)],
+            [sg.Button('PISTA',font=('times'), button_color=colors.BLACK)]
         ],
         background_color=colors.BACKGROUND,
         element_justification='c',
         expand_y=True,
-    )
+    ) 
     game_column = sg.Column(
-                    layout=[[sg.Button('?', size=(6, 3), pad=(5, 5), button_color=
-                    (colors.WHITE, colors.PRIMARY_LIGHT), mouseover_colors=(colors.PRIMARY_LIGHT, colors.WHITE)) 
+                    layout=[[sg.Button(image_filename=cart,image_size=(50,50),pad= (5,5),button_color=
+                    (colors.WHITE,colors.WHITE),mouseover_colors=(colors.PRIMARY_LIGHT, colors.PRIMARY_LIGHT)) 
                     for x in range (8)] for y in range(8)],
-                    background_color=colors.BACKGROUND,
+                    background_color=colors.WHITE,
                     element_justification='c',
                     expand_y=True,
-                    pad=(20, 0)
+                    pad=(20, 10)
                 )
     layout=[
         [exitbar_widget.build(colors.PRIMARY_DARK)],
