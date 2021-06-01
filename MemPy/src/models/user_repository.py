@@ -20,7 +20,7 @@ class UserRepository:
                 except:
                     pass
         return []
-
+ 
     @classmethod
     def obtener_usuario(cls, username):
         """Retorna un obj User si el usuario existe, None en caso contrario."""
@@ -34,6 +34,20 @@ class UserRepository:
         """"Escribe la lista de usuarios recibida por parámetros."""
         with open(file=cls.json_path, mode='w', encoding='utf-8') as f:
             json.dump(users, f)
+
+    @classmethod
+    def obtener_puntaje(cls,puntaje):
+       """Retorna un obj User el puntaje del usuario"""
+       for points in cls.get_usuarios():
+           if points['puntaje'] == puntaje:
+               return User(**points)
+       return None
+
+    @classmethod
+    def escribir_puntaje(cls, points):
+        """"Escribe la lista los puntajes de  los usuarios recibida por parámetros."""
+        with open(file=cls.json_path, mode='w', encoding='utf-8') as f:
+            json.dump(points, f)           
     
     @classmethod
     def agregar_usuario(cls, user):
@@ -51,6 +65,9 @@ class UserRepository:
         users = cls.get_usuarios()
         for i in range(len(users)):
             if users[i]['username'] == cls.current_user.username:
+                users[i] = cls.current_user.to_dict()
+                break
+            if users[i]['puntaje'] == cls.current_user.puntaje:
                 users[i] = cls.current_user.to_dict()
                 break
         cls.escribir_usuarios(users)

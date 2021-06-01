@@ -1,8 +1,8 @@
 from src.windows import puntajes
 
 
-def start():
-    window = puntajes.build()
+def start(username,puntaje):
+    window = puntajes.build(username,puntaje)
 
     while True:
         event, values = window.read()

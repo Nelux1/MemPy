@@ -1,0 +1,17 @@
+[
+  {
+   "-NOMBRE-": "LEONARDO",
+   "-PUESTO-": 1,
+   "-PUNTAJE-":"150"
+  },
+  {
+   "-NOMBRE-": "FEDERICO",
+   "-PUESTO-": 2,
+   "-PUNTAJE-":"100"
+  },
+  {
+   "-NOMBRE-": "CLAUDIA",
+   "-PUESTO-": 3,
+   "-PUNTAJE-":"90"
+  }
+]

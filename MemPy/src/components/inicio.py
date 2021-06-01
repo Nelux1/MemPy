@@ -19,7 +19,8 @@ def start():
         elif event == '-ESTADISTICAS-':
             estadisticas.start()
         elif event == '-PUNTAJES-':
-            puntajes.start()
+            puntajes.start(UserRepository.current_user.username , 
+                           UserRepository.current_user.puntaje)
         elif event == '-JUGAR-':
             jugar.start(UserRepository.current_user.username)
 
