@@ -1,4 +1,3 @@
-import time
 
 
 def tiempos(t):
@@ -13,3 +12,4 @@ def tiempos(t):
  elif t[0]["-TIEMPO_MIN-"] == "1:30 minutos":
      minutos= 90    
  return minutos
+
