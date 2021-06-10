@@ -33,7 +33,7 @@ class UserRepository:
     def escribir_usuarios(cls, users):
         """"Escribe la lista de usuarios recibida por parámetros."""
         with open(file=cls.json_path, mode='w', encoding='utf-8') as f:
-            json.dump(users, f)
+            json.dump(users, f)    
 
     @classmethod
     def obtener_puntaje(cls,puntaje):
@@ -41,6 +41,14 @@ class UserRepository:
        for points in cls.get_usuarios():
            if points['puntaje'] == puntaje:
                return User(**points)
+       return None
+    
+    @classmethod
+    def obtener_config(cls,configu):
+       """Retorna un obj User el puntaje del usuario"""
+       for conf in cls.get_usuarios():
+           if conf['puntaje'] == configu:
+               return User(**conf)
        return None
 
     @classmethod
@@ -68,6 +76,9 @@ class UserRepository:
                 users[i] = cls.current_user.to_dict()
                 break
             if users[i]['puntaje'] == cls.current_user.puntaje:
+                users[i] = cls.current_user.to_dict()
+                break
+            if users[i]['config'] == cls.current_user.config:
                 users[i] = cls.current_user.to_dict()
                 break
         cls.escribir_usuarios(users)

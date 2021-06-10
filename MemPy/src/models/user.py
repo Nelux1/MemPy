@@ -23,7 +23,7 @@ class User:
 
     def get_default_config(self):
         with open(file=self.defaults, mode='r', encoding='utf-8') as f:
-            return json.load(f)
+            return json.load(f)        
 
     def to_dict(self):
         return {

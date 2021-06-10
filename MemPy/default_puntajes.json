@@ -1,17 +1,22 @@
 [
-  {
-   "-NOMBRE-": "LEONARDO",
-   "-PUESTO-": 1,
-   "-PUNTAJE-":"150"
-  },
-  {
-   "-NOMBRE-": "FEDERICO",
-   "-PUESTO-": 2,
-   "-PUNTAJE-":"100"
-  },
-  {
-   "-NOMBRE-": "CLAUDIA",
-   "-PUESTO-": 3,
-   "-PUNTAJE-":"90"
-  }
+    {
+        "NOMBRE": "LEONARDO",
+        "PUNTAJE": 150,
+        "PUESTO": 1
+    },
+    {
+        "NOMBRE": "FACUNDO",
+        "PUNTAJE": 100,
+        "PUESTO": 2
+    },
+    {
+        "NOMBRE": "CLAUDIA",
+        "PUNTAJE": 90,
+        "PUESTO": 3
+    },
+    {
+        "NOMBRE": "negro",
+        "PUNTAJE": 0,
+        "PUESTO": 10
+    }
 ]

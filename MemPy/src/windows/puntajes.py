@@ -1,7 +1,7 @@
 import PySimpleGUI as sg
 from src.windows import colors
-from src.windows.widgets import exitbar_widget, separator_widget
-from src.components.posiciones import positions
+from src.windows.widgets import exitbar_widget
+from src.components.posiciones import posiciones
 
 def build(username,puntaje):
     title = sg.Text(
@@ -20,7 +20,10 @@ def build(username,puntaje):
             [sg.Text(text= 'POSICIONES',background_color=colors.PRIMARY_LIGHT,text_color=colors.WHITE,font=('times', 30, 'bold'))],         
             [sg.Text(text= '*' * 80, background_color=colors.PRIMARY_LIGHT, text_color=colors.BLACK, font=('times', 10, 'bold'))],
             [sg.Text(text= '  JUGADOR                 PUNTAJE              PUESTO', background_color=colors.PRIMARY_LIGHT, text_color=colors.WHITE, font=('times', 15, 'bold'))],   
-            [sg.Text(text= positions(),background_color=colors.PRIMARY_LIGHT, text_color=colors.BLACK, font=('times', 20, 'bold'))],
+            [sg.Table(values=[posiciones(username,puntaje)][:],max_col_width=1, 
+            auto_size_columns=True,num_rows=5,row_height=5,background_color=colors.PRIMARY_LIGHT,
+             text_color=colors.WHITE, font=('times',10,'bold'))
+            ],
             [title]
         ],
         background_color=colors.PRIMARY_LIGHT,
