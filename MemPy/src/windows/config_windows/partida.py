@@ -11,9 +11,9 @@ def build():
         text='Tamaño del Tablero',
         key='-CASILLAS-',
         values=[
+            '4x4', 
             '6x6', 
-            '8x8', 
-            '10x10'
+            '8x8'
         ],
         default='6x6'
     )

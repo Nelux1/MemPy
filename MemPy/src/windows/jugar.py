@@ -2,7 +2,7 @@ import os
 import PySimpleGUI as sg
 from src.windows import colors
 from src.windows.widgets import exitbar_widget, separator_widget
-from src.components.tiempos import cuadros
+from src.components.tiempos import cuadros, pistas
 
 
 
@@ -35,7 +35,7 @@ def build(username,configu,n):
             [sg.Text(text_color=colors.BLACK,size= (6,1), background_color=colors.BACKGROUND, key='-REAL_TIME-',font=('times',15),justification='center')],
             [sg.Text('Elementos encontrados {} de {}', background_color=colors.BACKGROUND, text_color=colors.BLACK, font=('times', 15, 'bold'))],
             [separator_widget.invisible_horizontal(colors.BACKGROUND, 10)],
-            [sg.Button('PISTA',font=('times'), button_color=colors.BLACK)],
+            [sg.Button('PISTA',font=('times'), button_color=colors.BLACK, visible= pistas(configu,n))],
         ],
 
 

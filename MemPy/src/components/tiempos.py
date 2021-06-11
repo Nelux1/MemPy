@@ -1,5 +1,11 @@
 """manipulacion de funciones de configuraciones"""
 
+def pistas(p,n):
+  if p[n]["-PISTAS-"]== True:
+    pista=True
+  else:
+   pista=False
+  return pista   
           
 def tiempos(t,nivel):
  minutos=0   
@@ -16,11 +22,11 @@ def tiempos(t,nivel):
  return minutos
 
 def cuadros(c,nivel):
- if c[nivel]["-CASILLAS-"] == '6x6': 
+ if c[nivel]["-CASILLAS-"] == '4x4': 
+   casilla=4
+ elif c[nivel]["-CASILLAS-"] == '6x6':
    casilla=6
  elif c[nivel]["-CASILLAS-"] == '8x8':
    casilla=8
- elif c[nivel]["-CASILLAS-"] == '10x10':
-   casilla=10
  return casilla
 
