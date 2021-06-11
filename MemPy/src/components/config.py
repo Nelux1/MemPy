@@ -3,11 +3,8 @@
     Interactua con las ventanas/loops en components/config_components.
 """
 from src.windows import configuraciones
-
 from src.models.user_repository import UserRepository
-
 from src.components.config_components import mensajes, partida, estilos
-
 
 def start():
     window = configuraciones.build()
@@ -16,7 +13,7 @@ def start():
         event, values = window.read()
 
         if event in ('-SALIR-', '-BACK-'):
-            break
+         break
 
         window.hide()
 

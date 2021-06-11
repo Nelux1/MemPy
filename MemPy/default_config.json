@@ -7,8 +7,9 @@
         "-COINCIDENCIAS-": 2,
         "-ELEMENTOS-": "Imagenes",
         "-PISTAS-": false,
-        "-TIEMPO_MIN-": "2 minutos",
-        "-TEMA-": "Claro"
+        "-TIEMPO_MIN-": "5 minutos",
+        "-TEMA-": "Claro",
+        "-NIVEL-": 1
     },
     {
         "-WIN_MESSAGE-": "¡Ganaste!",
@@ -18,8 +19,9 @@
         "-COINCIDENCIAS-": 2,
         "-ELEMENTOS-": "Imagenes",
         "-PISTAS-": false,
-        "-TIEMPO_MIN-": "2 minutos",
-        "-TEMA-": "Claro"
+        "-TIEMPO_MIN-": "3 minutos",
+        "-TEMA-": "Claro",
+        "-NIVEL-": 2
     },
     {
         "-WIN_MESSAGE-": "¡Ganaste!",
@@ -29,7 +31,8 @@
         "-COINCIDENCIAS-": 2,
         "-ELEMENTOS-": "Imagenes",
         "-PISTAS-": false,
-        "-TIEMPO_MIN-": "2 minutos",
-        "-TEMA-": "Claro"
+        "-TIEMPO_MIN-": "1:30 minutos",
+        "-TEMA-": "Claro",
+        "-NIVEL-": 3
     }
 ]

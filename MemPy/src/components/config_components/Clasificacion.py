@@ -21,9 +21,9 @@ def posiciones(username,puntaje):
 
 def positions():
  lista=[]   
- with open(file= archivo, mode='r', encoding='utf-8') as f:
+ with open(file= arch_puntaje, mode='r', encoding='utf-8') as f:
      try:
-         with open(archivo, 'r') as f:
+         with open(arch_puntaje, 'r') as f:
              data=json.load(f)
              for d in data:        
                  lista.append(d['-NOMBRE-'])

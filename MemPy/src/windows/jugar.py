@@ -2,6 +2,7 @@ import os
 import PySimpleGUI as sg
 from src.windows import colors
 from src.windows.widgets import exitbar_widget, separator_widget
+from src.components.tiempos import cuadros
 
 
 
@@ -11,7 +12,7 @@ cart= os.path.join(
     'inte.png'
 )
 
-def build(username,configu):
+def build(username,configu,n):
     
     title= sg.Text(
     text='MEMPY',
@@ -26,6 +27,8 @@ def build(username,configu):
         layout=[
             [separator_widget.invisible_horizontal(colors.BACKGROUND, 10)],
             [sg.Text(text=f'Jugador: {username}', background_color=colors.BACKGROUND, text_color=colors.BLACK, font=('times', 15, 'bold'))],
+            [sg.Text(text=f'Nivel:', background_color=colors.BACKGROUND, text_color=colors.BLACK, font=('times', 15, 'bold'))]+
+            [sg.Text(text_color=colors.BLACK,size= (6,1), background_color=colors.BACKGROUND, key='-NIV-',font=('times',15),justification='center')],
             [sg.Text(text='Tiempo:', background_color=colors.BACKGROUND, text_color=colors.BLACK, font=('times', 15, 'bold'))] +
             [sg.Text(text_color=colors.BLACK,size= (6,1), background_color=colors.BACKGROUND, key='-TIMER-',font=('times',15),justification='center')],
             [sg.Text(text='Tiempo total:', background_color=colors.BACKGROUND, text_color=colors.BLACK, font=('times', 15, 'bold'))] +
@@ -45,7 +48,7 @@ def build(username,configu):
                     layout=[    
                     [sg.Button(image_filename=cart,image_size=(50,50), key=f'pieza-{x},{y}',pad= (3,3),button_color=
                     (colors.BACKGROUND,colors.WHITE),mouseover_colors=(colors.BLACK, colors.BLACK)) 
-                    for x in range (8)] for y in range(8)],
+                    for x in range (cuadros(configu,n))] for y in range(cuadros(configu,n))],
                     background_color=colors.BACKGROUND,
                     element_justification='c',
                     expand_y=True,
