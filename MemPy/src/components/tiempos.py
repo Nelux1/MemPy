@@ -1,8 +1,9 @@
 """manipulacion de funciones de configuraciones"""
 
           
-def tiempos(t,nivel):   
- if t[nivel]["-TIEMPO_MIN-"] == "1 minutos":
+def tiempos(t,nivel):
+ minutos=0   
+ if t[nivel]["-TIEMPO_MIN-"] == "1 minuto":
      minutos= 60
  elif t[nivel]["-TIEMPO_MIN-"] == "2 minutos":
      minutos= 120

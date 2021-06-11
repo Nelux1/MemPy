@@ -21,7 +21,6 @@ def start(username,configu):
     window2.close()    
 
     window = jugar.build(username,configu,n)
-    print(configu[n]['-NIVEL-'])
     minutos= tiempos(configu,n)
     start_time= t.time()
     t_cada_paso= 0
@@ -38,12 +37,11 @@ def start(username,configu):
             pieza,cord= event.split('-')
             print(f'{pieza}: {cord}')
             t_cada_paso= t_cada_paso + minutos               
-            minutos= tiempos(configu)
+            minutos= tiempos(configu,n)
 
         if timeformat == '-1:59':
-         popup.build(configu[n]['-LOSS_MESSAGE-']).read()
-         t.sleep(0.5)
-         break
+         popup.build(configu[n]['-LOSS_MESSAGE-']).read(close=True)
+         break   
         
         realtime= t.time() - start_time
         minutos-= 1   
