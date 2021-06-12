@@ -30,3 +30,5 @@ def mostrar_resultados(dia_semana, hora):
         sep='\n',
         font=('times', 15)
     )
+
+mostrar_resultados()

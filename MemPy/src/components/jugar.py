@@ -4,7 +4,7 @@ from src.windows import popup , nivel
 from src.windows import jugar
 from src.components.jugar_config import mensajes, tiempos
 import time as t
-import datetime as dt
+from datetime import datetime as dt
 
 def start(username,configu):
     
@@ -25,8 +25,9 @@ def start(username,configu):
     window = jugar.build(username,configu,n)
     minutos= tiempos(configu,n)
     start_time= t.time()
-    dia_hora= dt.datetime.today()
+    dia_hora= dt.now()
     criterio=Criterios.seleccion_ahora()
+    print(criterio)
     cronometro=0
     t_cada_paso= 0
    
@@ -56,8 +57,7 @@ def start(username,configu):
         realtime= t.time() - start_time
         cronometro+=1
         minutos-= 1
-        niv= n + 1
-                
+        niv= n + 1       
         window['-DIA-HORA-'].update(f'{dia_hora}')   
         window['-REAL_TIME-'].update(f'{round(realtime // 60):02d}:{round(realtime % 60):02d}')
         window['-TIMER-'].update(f'{timeformat}')
