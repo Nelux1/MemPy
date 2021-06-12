@@ -2,7 +2,7 @@ import os
 import PySimpleGUI as sg
 from src.windows import colors
 from src.windows.widgets import exitbar_widget, separator_widget
-from src.components.jugar_config import cuadros, pistas, mensajes
+from src.handlers.jugar_config import cuadros, pistas, mensajes
 
 
 

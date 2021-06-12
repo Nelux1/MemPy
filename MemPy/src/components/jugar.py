@@ -2,7 +2,7 @@
 from src.criterios.criterios import Criterios
 from src.windows import popup , nivel
 from src.windows import jugar
-from src.components.jugar_config import mensajes, tiempos
+from src.handlers.jugar_config import mensajes, tiempos
 import time as t
 from datetime import datetime as dt
 
@@ -25,7 +25,7 @@ def start(username,configu):
     window = jugar.build(username,configu,n)
     minutos= tiempos(configu,n)
     start_time= t.time()
-    dia_hora= dt.now()
+    dia_hora= dt.now().date()
     criterio=Criterios.seleccion_ahora()
     print(criterio)
     cronometro=0

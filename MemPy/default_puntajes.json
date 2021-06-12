@@ -1,17 +1,1 @@
-[
-    {
-        "NOMBRE": "LEONARDO",
-        "PUNTAJE": 150,
-        "PUESTO": 1
-    },
-    {
-        "NOMBRE": "FACUNDO",
-        "PUNTAJE": 100,
-        "PUESTO": 2
-    },
-    {
-        "NOMBRE": "CLAUDIA",
-        "PUNTAJE": 90,
-        "PUESTO": 3
-    }
-]
+[{"NOMBRE": "LEONARDO", "PUNTAJE": 150, "PUESTO": 1}, {"NOMBRE": "FACUNDO", "PUNTAJE": 100, "PUESTO": 2}, {"NOMBRE": "CLAUDIA", "PUNTAJE": 90, "PUESTO": 3}, {"NOMBRE": "NEGRO", "PUNTAJE": 0, "PUESTO": 10}, {"NOMBRE": "NEGRO", "PUNTAJE": 0, "PUESTO": 10}, {"NOMBRE": "NEGRO", "PUNTAJE": 0, "PUESTO": 10}]

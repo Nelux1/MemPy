@@ -2,7 +2,7 @@
 
 def pistas(p,n):
   if p[n]["-PISTAS-"]== True:
-    pista=True
+   pista=True
   else:
    pista=False
   return pista   
