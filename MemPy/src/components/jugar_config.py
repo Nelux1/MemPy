@@ -30,3 +30,16 @@ def cuadros(c,nivel):
    casilla=8
  return casilla
 
+def mensajes (m,nivel):
+  mensaje=''
+  if m[nivel]["-TIMELEFT_MESSAGE-"] == "¡Quedan pocos segundos!":
+    mensaje="¡Quedan pocos segundos!"
+  if m[nivel]["-TIMELEFT_MESSAGE-"] == "Se te termina el tiempo!":
+    mensaje="Se te termina el tiempo!"
+  if m[nivel]["-TIMELEFT_MESSAGE-"] == "toca cualquier ficha rapido!!":
+    mensaje="toca cualquier ficha rapido!!"
+  if m[nivel]["-TIMELEFT_MESSAGE-"] == "¡Mira el tiempo que perdiste!":      
+    mensaje="¡Mira el tiempo que perdiste!"
+  return mensaje  
+
+  

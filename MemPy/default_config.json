@@ -2,7 +2,7 @@
     {
         "-WIN_MESSAGE-": "¡Ganaste!",
         "-LOSS_MESSAGE-": "¡Perdiste!",
-        "-TIMELEFT_MESSAGE-": "¡Quedan {} segundos!",
+        "-TIMELEFT_MESSAGE-": "¡Quedan pocos segundos!",
         "-CASILLAS-": "4x4",
         "-COINCIDENCIAS-": 2,
         "-ELEMENTOS-": "Imagenes",
@@ -14,7 +14,7 @@
     {
         "-WIN_MESSAGE-": "¡Ganaste!",
         "-LOSS_MESSAGE-": "¡Perdiste!",
-        "-TIMELEFT_MESSAGE-": "¡Quedan {} segundos!",
+        "-TIMELEFT_MESSAGE-": "¡Quedan pocos segundos!",
         "-CASILLAS-": "6x6",
         "-COINCIDENCIAS-": 2,
         "-ELEMENTOS-": "Imagenes",
@@ -26,7 +26,7 @@
     {
         "-WIN_MESSAGE-": "¡Ganaste!",
         "-LOSS_MESSAGE-": "¡Perdiste!",
-        "-TIMELEFT_MESSAGE-": "¡Quedan {} segundos!",
+        "-TIMELEFT_MESSAGE-": "¡Quedan pocos segundos!",
         "-CASILLAS-": "8x8",
         "-COINCIDENCIAS-": 2,
         "-ELEMENTOS-": "Imagenes",

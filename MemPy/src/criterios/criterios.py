@@ -1,6 +1,5 @@
-
+"""criterios para eleccion de fichas de juego"""
 import datetime
-
 from src.criterios.datasets import pokemon, marvel, dc, simpsons
 from src.criterios.datasets import steam, tv_shows, spotify, disney
 

@@ -1,6 +1,5 @@
 """Ventana que permite elegir y visualizar los distintos criterios."""
 import PySimpleGUI as sg
-
 from src.windows import colors
 from src.windows.widgets import option_widget
 

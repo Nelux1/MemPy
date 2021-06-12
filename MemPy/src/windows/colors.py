@@ -5,5 +5,6 @@ PRIMARY_DARK = '#2980b9'
 
 BLACK = '#212121'
 WHITE = '#ffffff'
+RED= '#ff0000'
 
 BACKGROUND = '#ecf0f1'

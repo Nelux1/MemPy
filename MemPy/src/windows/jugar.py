@@ -2,7 +2,7 @@ import os
 import PySimpleGUI as sg
 from src.windows import colors
 from src.windows.widgets import exitbar_widget, separator_widget
-from src.components.tiempos import cuadros, pistas
+from src.components.jugar_config import cuadros, pistas, mensajes
 
 
 
@@ -26,7 +26,12 @@ def build(username,configu,n):
     column_info = sg.Column(
         layout=[
             [separator_widget.invisible_horizontal(colors.BACKGROUND, 10)],
+            [sg.Text(f'{mensajes(configu,n)}',key='-POCO-TIEMPO-', background_color=colors.BACKGROUND, text_color=colors.RED, font=('times',15, 'bold'),visible=False)],
             [sg.Text(text=f'Jugador: {username}', background_color=colors.BACKGROUND, text_color=colors.BLACK, font=('times', 15, 'bold'))],
+            [sg.Text(text=f'Inicio:', background_color=colors.BACKGROUND, text_color=colors.BLACK, font=('times', 15, 'bold'))]+
+            [sg.Text(text_color=colors.BLACK,size= (6,1), background_color=colors.BACKGROUND, key='-DIA-HORA-',font=('times',15),justification='center')],
+            [sg.Text(text=f'Tiempo x ficha:', background_color=colors.BACKGROUND, text_color=colors.BLACK, font=('times', 15, 'bold'))]+
+            [sg.Text(text_color=colors.BLACK,size= (6,1), background_color=colors.BACKGROUND, key='-TIEMPO-PASO-',font=('times',15),justification='center')],
             [sg.Text(text=f'Nivel:', background_color=colors.BACKGROUND, text_color=colors.BLACK, font=('times', 15, 'bold'))]+
             [sg.Text(text_color=colors.BLACK,size= (6,1), background_color=colors.BACKGROUND, key='-NIV-',font=('times',15),justification='center')],
             [sg.Text(text='Tiempo:', background_color=colors.BACKGROUND, text_color=colors.BLACK, font=('times', 15, 'bold'))] +

@@ -38,12 +38,12 @@ def build():
         text='Mensaje del Tiempo Restante',
         key='-TIMELEFT_MESSAGE-',
         values=[
-            '¡Quedan {} segundos!', 
-            'Tiempo restante: {}', 
-            'Faltan {} segundos para terminar', 
-            '¡Mira el tiempo que perdiste! {}'
+            '¡Quedan pocos segundos!', 
+            'Se te termina el tiempo!', 
+            'toca cualquier ficha rapido!!', 
+            '¡Mira el tiempo que perdiste!'
         ],
-        default='¡Quedan {} segundos!',
+        default='¡Quedan pocos segundos!',
     )
 
     return base.build(
