@@ -23,7 +23,9 @@ def start():
                            UserRepository.current_user.puntaje)
         elif event == '-JUGAR-':
             jugar.start(UserRepository.current_user.username , 
-                        UserRepository.current_user.config )
+                        UserRepository.current_user.config ,
+                        UserRepository.current_user.age , 
+                        UserRepository.current_user.gender )
 
         window.un_hide()
 

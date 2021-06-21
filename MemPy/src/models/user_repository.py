@@ -30,6 +30,14 @@ class UserRepository:
         return None
 
     @classmethod
+    def obtener_edad(cls,edad):
+        """retorna la edad del usuario"""
+        for user in cls.get_usuarios():
+         if user['age'] == edad:
+             return User(**edad)
+        return None         
+
+    @classmethod
     def escribir_usuarios(cls, users):
         """"Escribe la lista de usuarios recibida por parámetros."""
         with open(file=cls.json_path, mode='w', encoding='utf-8') as f:
@@ -42,6 +50,14 @@ class UserRepository:
            if points['puntaje'] == puntaje:
                return User(**points)
        return None
+
+    @classmethod
+    def obtener_genero(cls,genero):
+       """Retorna el genero del usuario"""
+       for gender in cls.get_usuarios():
+           if gender['gender'] == genero:
+               return User(**gender)
+       return None   
     
     @classmethod
     def obtener_config(cls,configu):
@@ -57,6 +73,7 @@ class UserRepository:
         with open(file=cls.json_path, mode='w', encoding='utf-8') as f:
             json.dump(points, f)           
     
+   
     @classmethod
     def agregar_usuario(cls, user):
         """Agrega el usuario al archivo json."""
@@ -79,6 +96,12 @@ class UserRepository:
                 users[i] = cls.current_user.to_dict()
                 break
             if users[i]['config'] == cls.current_user.config:
+                users[i] = cls.current_user.to_dict()
+                break
+            if users[i]['age'] == cls.current_user.config:
+                users[i] = cls.current_user.to_dict()
+                break
+            if users[i]['gender'] == cls.current_user.config:
                 users[i] = cls.current_user.to_dict()
                 break
         cls.escribir_usuarios(users)

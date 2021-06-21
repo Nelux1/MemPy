@@ -1,4 +1,7 @@
-"""manipulacion de funciones de configuraciones"""
+"""manipulacion de funciones del juego con las configuraciones del mismo"""
+
+
+
 
 def pistas(p,n):
   if p[n]["-PISTAS-"]== True:
@@ -42,4 +45,12 @@ def mensajes (m,nivel):
     mensaje="¡Mira el tiempo que perdiste!"
   return mensaje  
 
-  
+def can_palabras_adivinar(palab):
+  cant=0
+  if palab == 4:
+    cant= 8
+  if palab == 6:
+    cant= 18
+  if palab == 8: 
+    cant=32
+  return cant
