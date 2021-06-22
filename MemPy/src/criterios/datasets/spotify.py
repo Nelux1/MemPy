@@ -26,6 +26,9 @@ def get_artista_con_genero_año_popularidad(genero, años, popularidad):
         x['Year']) in años and int(x['Popularity']) >= popularidad), dicc_musica))
     return list(set(map(lambda nom: nom['Artist'], data_juego)))
 
+def get_cancion_con_duracion_popularidad(duracion, popularidad):
+    data_juego = list(filter(lambda x: (int(x['Length (Duration)']) in duracion and int(x['Popularity']) <= popularidad), dicc_musica))
+    return list(map(lambda nom: nom['Title'], data_juego))
 
 criterios = {
     'criterio1': {
@@ -47,5 +50,17 @@ criterios = {
         'criterio': 'Nombres de las canciones mas populares de los Rolling Stones del año 1969 hasta 1980',
         'funcion': get_cancion_con_artista_año,
         'parametros': ('The Rolling Stones', list(range(1969, 1981, 1)))
+    },
+    'criterio5': {
+        'criterio': 'Nombres de las canciones con popularidad menor o igual  50 y de duracion en segundos entre 150 y 900',
+        'funcion': get_cancion_con_duracion_popularidad,
+        'parametros': (list(range(150,900,1)),50)
+    },
+    'criterio6': {
+        'criterio': 'Nombres de las canciones con popularidad menor a 70 y de duracion en segundos entre 400 y 800',
+        'funcion': get_cancion_con_duracion_popularidad,
+        'parametros': (list(range(400,800,1)),70)
     }
 }
+
+print(criterios['criterio6']['funcion'](*criterios['criterio6']['parametros']))

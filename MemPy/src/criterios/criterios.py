@@ -1,5 +1,6 @@
 """criterios para eleccion de fichas de juego"""
 import datetime
+import random
 from src.criterios.datasets import pokemon, marvel, dc, simpsons
 from src.criterios.datasets import steam, tv_shows, spotify, disney
 
@@ -40,13 +41,13 @@ class Criterios:
             },
         5: {
                 ('madrugada', ): dc.criterios['criterio1'],
-                ('mañana', ): simpsons.criterios['criterio1'],
+                ('mañana', ): spotify.criterios['criterio5'],
                 ('tarde', ): pokemon.criterios['criterio3'],
                 ('noche', ): dc.criterios['criterio2']
             },
         6: {
-                ('madrugada', 'mañana'): simpsons.criterios['criterio2'],
-                ('tarde', 'noche'): simpsons.criterios['criterio3'],
+                ('madrugada', 'mañana'): spotify.criterios['criterio6'],
+                ('tarde', 'noche'): steam.criterios['criterio3'],
             }
     }
 
@@ -59,7 +60,7 @@ class Criterios:
 
     @classmethod
     def seleccion_en(cls, dia_semana, hora):
-        """Retorna la seleccion para el dia y la hora dadas.
+        """Retorna la seleccion reducida de palabras para el dia y la hora dadas.
         
             Parametros
             ---------
@@ -67,17 +68,18 @@ class Criterios:
                     entre 0 y 6, siendo lunes el 0
                 hora : int
                     entre 0 y 24
-
+            
             Return 
             ------
                 tuple -> (<nombre del criterio> : str, <lista de resultados> : list)
         """
         rango_horario = cls.get_rango_horario(hora)
         seleccion_hoy = cls.criterios[dia_semana]
-
         for keys, values in seleccion_hoy.items():
             if rango_horario in keys:
-                return (values['criterio'], values['funcion'](*values['parametros']))
+                lista_criterios = values['funcion'](*values['parametros'])
+                lista_reducida_criterios = random.sample(lista_criterios, k=8)
+                return (values['criterio'], lista_reducida_criterios)
 
     @classmethod
     def seleccion_ahora(cls):
@@ -99,3 +101,4 @@ class Criterios:
         for keys, values in cls.horas.items():
             if hora >= keys[0] and hora < keys[1]:
                 return values
+
