@@ -11,11 +11,11 @@ def build():
         text='Tamaño del Tablero',
         key='-CASILLAS-',
         values=[
-            '4x4', 
-            '6x6', 
-            '8x8'
+            '4x2', 
+            '4x3', 
+            '4x4'
         ],
-        default='6x6'
+        default='4x2'
     )
 
     coincidencias = option_widget.build(

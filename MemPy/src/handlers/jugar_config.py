@@ -25,12 +25,12 @@ def tiempos(t,nivel):
  return minutos
 
 def cuadros(c,nivel):
- if c[nivel]["-CASILLAS-"] == '4x4': 
+ if c[nivel]["-CASILLAS-"] == '4x2': 
+   casilla=2
+ elif c[nivel]["-CASILLAS-"] == '4x3':
+   casilla=3
+ elif c[nivel]["-CASILLAS-"] == '4x4':
    casilla=4
- elif c[nivel]["-CASILLAS-"] == '6x6':
-   casilla=6
- elif c[nivel]["-CASILLAS-"] == '8x8':
-   casilla=8
  return casilla
 
 def mensajes (m,nivel):

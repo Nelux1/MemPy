@@ -28,8 +28,6 @@ def build(username,configu,n):
             [separator_widget.invisible_horizontal(colors.BACKGROUND, 10)],
             [sg.Text(f'{mensajes(configu,n)}',key='-POCO-TIEMPO-', background_color=colors.BACKGROUND, text_color=colors.RED, font=('times',15, 'bold'),visible=False)],
             [sg.Text(text=f'Jugador: {username}', background_color=colors.BACKGROUND, text_color=colors.BLACK, font=('times', 15, 'bold'))],
-            [sg.Text(text=f'Inicio:', background_color=colors.BACKGROUND, text_color=colors.BLACK, font=('times', 15, 'bold'))]+
-            [sg.Text(text_color=colors.BLACK,size= (6,1), background_color=colors.BACKGROUND, key='-DIA-HORA-',font=('times',15),justification='right')],
             [sg.Text(text=f'Tiempo x ficha:', background_color=colors.BACKGROUND, text_color=colors.BLACK, font=('times', 15, 'bold'))]+
             [sg.Text(text_color=colors.BLACK,size= (6,1), background_color=colors.BACKGROUND, key='-TIEMPO-PASO-',font=('times',15),justification='center')],
             [sg.Text(text=f'Nivel:', background_color=colors.BACKGROUND, text_color=colors.BLACK, font=('times', 15, 'bold'))]+
@@ -46,16 +44,14 @@ def build(username,configu,n):
         
         background_color=colors.BACKGROUND,
         element_justification='c',
-        expand_y=True,
     ) 
     game_column = sg.Column(
                     layout=[    
-                    [sg.Button(image_filename=cart,image_size=(50,50), key=f'pieza-{x},{y}',pad= (3,3),button_color=
+                    [sg.Button(image_filename=cart,image_size=(70,70), key=f'pieza-{x},{y}',pad= (3,3),button_color=
                     (colors.BACKGROUND,colors.WHITE),mouseover_colors=(colors.BLACK, colors.BLACK)) 
-                    for x in range (cuadros(configu,n))] for y in range(cuadros(configu,n))],
+                    for x in range (4)] for y in range(cuadros(configu,n))],
                     background_color=colors.BACKGROUND,
                     element_justification='c',
-                    expand_y=True,
                     pad=(20, 10)
                 )
     layout=[

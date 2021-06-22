@@ -9,8 +9,8 @@ archivo_csv=open(archivo,"a")
 data=csv.reader(archivo_csv,delimiter=',')
 writer=csv.writer(archivo_csv)
 
-def guardando_data(nombre,edad,genero,tiempo,num_partida,nivel,palabras_adivinar,evento,estado,palabra):   
-    usuario=[nombre,edad,genero,tiempo,num_partida,nivel,palabras_adivinar,evento,estado,palabra]
+def guardando_data(nombre,edad,genero,tiempo,num_partida,nivel,palabras_adivinar,evento,estado,palabra,dia_hora):   
+    usuario=[nombre,edad,genero,tiempo,num_partida,nivel,palabras_adivinar,evento,estado,palabra,dia_hora]
     writer.writerow(usuario)
     archivo_csv.close() 
     return usuario
