@@ -47,10 +47,10 @@ def mensajes (m,nivel):
 
 def can_palabras_adivinar(palab):
   cant=0
-  if palab == 4:
+  if palab == 2:
+    cant= 4
+  if palab == 3:
+    cant= 6
+  if palab == 4: 
     cant= 8
-  if palab == 6:
-    cant= 18
-  if palab == 8: 
-    cant=32
   return cant

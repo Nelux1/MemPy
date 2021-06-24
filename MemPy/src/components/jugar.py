@@ -1,24 +1,24 @@
 """ventana de juego"""
+from tkinter.constants import DISABLED
 from src.criterios.criterios import Criterios
 from src.windows import popup , nivel
 from src.windows import jugar
+from src.handlers.eleccion_palabras import play
 from src.handlers.jugar_config import cuadros, tiempos, can_palabras_adivinar
 from src.components.almacenamiento import guardando_data
 from src.handlers.eleccion_palabras import palabras
 import time as t
-from src.windows import colors
-from datetime import datetime as dt
+from itertools import cycle
 import os
 
-ficha= os.path.join(
+cart= os.path.join(
     'resources', 
     'icons', 
-    'outline_close_black_48dp.png'
+    'inte.png'
 )
 
 def start(username,configu,age,gender):
     
-   
     num_de_partida=1
     window2= nivel.popup_nivel()
     while True:
@@ -33,9 +33,7 @@ def start(username,configu,age,gender):
           n=2
           break
     window2.close()    
-    
-   
-    window = jugar.build(username,configu,n)
+       
     
     minutos= tiempos(configu,n)
     start_time= t.time()
@@ -46,24 +44,36 @@ def start(username,configu,age,gender):
     cronometro=0
     t_cada_paso= 0
     cant_de_palabras= can_palabras_adivinar(cuadros(configu,n))
-    print('\nLISTA DE PALABRAS REPETIDAS\n')
-    palabras(cant_de_palabras,criterio)
     evento='Inicio_partida'
     estado='ok'
+
+    board_data= [[" "]* 4 for _i in range (cuadros(configu,n))]
+
+    window = jugar.build(username,configu,n,board_data)
+    toque=0
 
     while True:
         event, _values = window.read(timeout=1000)
         
+        player_1={"value":'QUE?'}
+        player_2={"value": ''}
+
+        turn=cycle([player_1,player_2])
         mins, secs = divmod(minutos, 60)
         timeformat = '{:02d}:{:02d}'.format(mins, secs)
-
+        palabras(cant_de_palabras,criterio)
+        
         if event == '-SALIR-':
             break
         elif event.startswith("pieza-") :
-            pieza,cord= event.split('-')
-            print(f'{pieza}: {cord}')
-            window[event].update('DAMOS',image_filename=None,button_color=colors.BLACK)
-            """FUNCION QUE COMPRUEBA PIEZA CON PIEZA"""
+            player=next(turn)
+            board_data=play(player,window,event,board_data,toque)
+            window.refresh()
+            toque+=1
+            if toque == 2:
+             t.sleep(1)
+             window[event].update('',image_filename=cart,image_size=(70,70))
+             window.refresh()
             t_cada_paso= cronometro + t_cada_paso
             cronometro=0                
             minutos= tiempos(configu,n)

@@ -1,4 +1,5 @@
 import os
+from tkinter.constants import DISABLED
 import PySimpleGUI as sg
 from src.windows import colors
 from src.windows.widgets import exitbar_widget, separator_widget
@@ -12,7 +13,7 @@ cart= os.path.join(
     'inte.png'
 )
 
-def build(username,configu,n):
+def build(username,configu,n,board_data):
     
     title= sg.Text(
     text='MEMPY',
@@ -47,13 +48,14 @@ def build(username,configu,n):
     ) 
     game_column = sg.Column(
                     layout=[    
-                    [sg.Button(image_filename=cart,image_size=(70,70), key=f'pieza-{x},{y}',pad= (3,3),button_color=
-                    (colors.BACKGROUND,colors.WHITE),mouseover_colors=(colors.BLACK, colors.BLACK)) 
-                    for x in range (4)] for y in range(cuadros(configu,n))],
+                    [sg.Button(board_data[x][y], key=f'pieza-{x}-{y}',image_filename=cart,image_size=(70,70),pad= (3,3),button_color=
+                    (colors.BACKGROUND,colors.WHITE))
+                    for x in range (cuadros(configu,n))] for y in range(4)],
                     background_color=colors.BACKGROUND,
                     element_justification='c',
                     pad=(20, 10)
                 )
+
     layout=[
         [exitbar_widget.build(colors.PRIMARY_DARK)],
         [title],

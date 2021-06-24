@@ -2,39 +2,43 @@ import PySimpleGUI as sg
 from src.windows import colors
 from src.windows.widgets import exitbar_widget
 from src.components.posiciones import posiciones
-import random
-import string
+import os
+import csv
+import pandas as pd
+
+archivo=os.path.join(os.getcwd(),'posiciones.csv')
+archivo_csv=open(archivo,"a")
+writer=csv.writer(archivo_csv)
 
 def build(username,puntaje):
-        def word():
-         return ''.join(random.choice(string.ascii_lowercase) for i in range(10))
-        def number(max_val=1000):
-            return random.randint(0, max_val)
-
-        def make_table(num_rows, num_cols):
-            data = [[j for j in range(num_cols)] for i in range(num_rows)]
-            data[0] = [word() for __ in range(num_cols)]
-            for i in range(1, num_rows):
-                data[i] = [word(), *[number() for i in range(num_cols - 1)]]
-            return data
-
-        # ------ Make the Table Data ------
-        data = make_table(num_rows=15, num_cols=6)
-        headings = [str(data[0][x])+'     ..' for x in range(len(data[0]))]
-
-        # ------ Window Layout ------
-        return sg.Window(
-            title='Puntajes',
-            layout = [
-            [sg.Table(values=data[1:][:], headings=headings, max_col_width=25,
-                            # background_color='light blue',
-                            auto_size_columns=True,
-                            display_row_numbers=True,
+    usuario=[username,puntaje]
+    writer.writerow(usuario)
+    data = []
+    header_list = []
+    archivo_csv=open(archivo,"r")
+    df = pd.read_csv(archivo_csv, sep=',')
+    df = df.sort_values('PUNTOS',ascending=False)
+    data = df.values.tolist()               
+    header_list = df.iloc[0].tolist()
+    data = df[0:].values.tolist()
+    with open(archivo, "r") as file:
+         reader = csv.reader(file)
+         header_list = next(reader)  
+    layout = [
+        [sg.Table(values=data,
+                  headings=header_list,
+                  header_text_color=colors.BLACK,
+                            header_background_color=colors.PRIMARY_DARK,
+                            header_font=('Courier',30),
+                            max_col_width=25,
+                            pad=(5,5),
+                            auto_size_columns=False,
+                            row_height=50,
+                            font=('Courier',30),
                             justification='right',
-                            num_rows=10,
-                            alternating_row_color='lightyellow',
-                            key='-TABLE-',
-                            row_height=10,
-                            tooltip='POSICIONES')]
-                ]
-        )            
+                            alternating_row_color=colors.PRIMARY_LIGHT,
+                            background_color=colors.BACKGROUND,
+                            text_color=colors.BLACK,
+                            num_rows=min(50, 50))]]
+    
+    return sg.Window('POSICIONES', layout, grab_anywhere=False,size=(500,300))

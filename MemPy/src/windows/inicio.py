@@ -11,7 +11,7 @@ from src.windows.widgets import exitbar_widget, separator_widget
 HOME_ICON = os.path.join(
     'resources', 
     'icons', 
-    'outline_home_black_48dp.png'
+    'oculta.png'
 )
 
 
@@ -77,7 +77,6 @@ def button(text, key):
         key=key, 
         font=('courier', 10), 
         size=(18, 2), 
-        button_color=(colors.WHITE, colors.BLACK), 
-        mouseover_colors=(colors.BLACK, colors.PRIMARY_LIGHT),
+        button_color=(colors.WHITE, colors.BLACK),
         pad=((10, 10), (0, 0))
     )

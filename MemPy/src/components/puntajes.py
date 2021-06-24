@@ -1,3 +1,4 @@
+from PySimpleGUI.PySimpleGUI import Window
 from src.windows import puntajes
 
 
@@ -7,7 +8,7 @@ def start(username,puntaje):
     while True:
         event, values = window.read()
 
-        if event == '-SALIR-':
+        if event == '-SALIR-' or Window.close:
             break
 
     window.close()

@@ -54,6 +54,5 @@ def option_button(text, key):
         key=key,
         font=('courier', 16),
         button_color=(colors.WHITE, colors.BLACK),
-        mouseover_colors=(colors.BLACK, colors.PRIMARY_LIGHT),
         pad=(0, 10),
     )
