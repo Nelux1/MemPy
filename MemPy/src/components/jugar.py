@@ -43,18 +43,18 @@ def start(username,configu,age,gender,puntaje):
     cant_de_palabras= can_palabras_adivinar(cuadros(configu,n))
     evento='Inicio_partida'
     estado='ok'
-
-
+    
     board_data= [[" "]* 4 for _i in range (cuadros(configu,n))]
 
     window = jugar.build(username,configu,n,board_data)
     toque=0
     lista=palabras(cant_de_palabras,criterio)
+    
 
     while True:
         event, _values = window.read(timeout=1000)
         
-        player_1={"value":tablero(lista,cuadros(configu,n),board_data)}
+        player_1={"value":tablero(lista,event)}
         player_2={"value": ''}
 
         turn=cycle([player_1,player_2])
@@ -63,6 +63,7 @@ def start(username,configu,age,gender,puntaje):
         timeformat = '{:02d}:{:02d}'.format(mins, secs)
         
         if event == '-SALIR-':
+            evento='cancelada'
             break
         elif event.startswith("pieza-") :
             player=next(turn)
@@ -81,8 +82,11 @@ def start(username,configu,age,gender,puntaje):
             minutos= tiempos(configu,n)
             window['-POCO-TIEMPO-'].update(visible=False) 
             estado='ok'
-       
-
+        elif event == "-ABANDONAR-":
+            popup.build('USTED A ABANDONADO LA PARTIDA!\n perdera los puntos ganados').read(close=True)
+            evento='abandonada'
+            puntaje=0
+            break
         realtime= t.time() - start_time
         cronometro+=1
         minutos-= 1

@@ -15,15 +15,44 @@ def palabras(cant,palab):
  lista= random.sample(p1,k=cant)
  lista2=lista
  lista.extend(lista2)
- lista= lista.sort()
  return lista
 
-def tablero (lista,cant,board_data):
-    for x in range (4):
-        for y in range (cant):
-         if board_data[int(x)][int(y)] == 'pieza: 0,0':
-             board_data= 'PROBANDO'
-    return board_data
+def tablero (lista,event):
+     l=''
+     if event.startswith("pieza-") :         
+         if event == 'pieza-0-0':
+             l= lista[0] 
+         elif event == 'pieza-0-1':
+             l= lista[3]
+         elif event == 'pieza-0-2':
+             l= lista[4]
+         elif event == 'pieza-0-3':
+             l= lista[1]
+         elif event == 'pieza-1-0':
+             l= lista[2]
+         elif event == 'pieza-1-1':
+             l=lista[7]
+         elif event == 'pieza-1-2':             
+             l=lista[6]
+         elif event == 'pieza-1-3':
+             l=lista[5]
+         elif event == 'pieza-2-0':
+             l=lista[8]
+         elif event == 'pieza-2-1':
+             l=lista[11]
+         elif event == 'pieza-2-2':
+             l=lista[9]
+         elif event == 'pieza-2-3':
+             l=lista[10]
+         elif event == 'pieza-3-0':
+             l=lista[14]
+         elif event == 'pieza-3-1':
+             l=lista[12]
+         elif event == 'pieza-3-2':
+             l=lista[13]
+         elif event == 'pieza-3-3':
+             l=lista[15]                                                    
+         return l
 
 def play(player, window, event, board_data, toque):
     """

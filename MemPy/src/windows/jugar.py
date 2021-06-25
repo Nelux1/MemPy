@@ -1,7 +1,7 @@
 import os
 import PySimpleGUI as sg
 from src.windows import colors
-from src.windows.widgets import exitbar_widget, separator_widget
+from src.windows.widgets import exitbar_widget, separator_widget ,abandonar_widget
 from src.handlers.jugar_config import cuadros, pistas, mensajes
 
 
@@ -38,6 +38,7 @@ def build(username,configu,n,board_data):
             [sg.Text(text_color=colors.BLACK,size= (6,1), background_color=colors.BACKGROUND, key='-REAL_TIME-',font=('times',15),justification='center')],
             [sg.Text('Elementos encontrados {} de {}', background_color=colors.BACKGROUND, text_color=colors.BLACK, font=('times', 15, 'bold'))],
             [sg.Button('PISTA',font=('times'), button_color=colors.BLACK, visible= pistas(configu,n),size= (3,1))],
+            
         ],
 
 
@@ -57,10 +58,10 @@ def build(username,configu,n,board_data):
 
     layout=[
         [exitbar_widget.build(colors.PRIMARY_DARK)],
-        [title],
+        [title]+[abandonar_widget.build(colors.BACKGROUND)],
         [separator_widget.invisible_horizontal(colors.BACKGROUND, 3)],
         [sg.Text(background_color=colors.BACKGROUND, size=(3, None)), column_info, game_column, sg.Text(background_color=colors.BACKGROUND, size=(2, None))],
-        [separator_widget.invisible_horizontal(colors.BACKGROUND, 3)]
+        [separator_widget.invisible_horizontal(colors.BACKGROUND, 3)]  
     ]
     
     
