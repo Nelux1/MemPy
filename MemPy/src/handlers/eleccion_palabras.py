@@ -14,8 +14,16 @@ def palabras(cant,palab):
  p1= list(palab[1])
  lista= random.sample(p1,k=cant)
  lista2=lista
- lista.extend(lista2)  
- return print(lista)
+ lista.extend(lista2)
+ lista= lista.sort()
+ return lista
+
+def tablero (lista,cant,board_data):
+    for x in range (4):
+        for y in range (cant):
+         if board_data[int(x)][int(y)] == 'pieza: 0,0':
+             board_data= 'PROBANDO'
+    return board_data
 
 def play(player, window, event, board_data, toque):
     """

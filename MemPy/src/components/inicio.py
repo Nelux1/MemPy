@@ -25,7 +25,8 @@ def start():
             jugar.start(UserRepository.current_user.username , 
                         UserRepository.current_user.config ,
                         UserRepository.current_user.age , 
-                        UserRepository.current_user.gender )
+                        UserRepository.current_user.gender ,
+                        UserRepository.current_user.puntaje )
 
         window.un_hide()
 

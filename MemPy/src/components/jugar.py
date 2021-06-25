@@ -1,12 +1,10 @@
 """ventana de juego"""
-from tkinter.constants import DISABLED
 from src.criterios.criterios import Criterios
-from src.windows import popup , nivel
+from src.windows import popup , nivel, puntajes
 from src.windows import jugar
-from src.handlers.eleccion_palabras import play
+from src.handlers.eleccion_palabras import play, tablero , palabras
 from src.handlers.jugar_config import cuadros, tiempos, can_palabras_adivinar
-from src.components.almacenamiento import guardando_data
-from src.handlers.eleccion_palabras import palabras
+from src.components.almacenamiento import guardando_data, puntos
 import time as t
 from itertools import cycle
 import os
@@ -17,9 +15,10 @@ cart= os.path.join(
     'inte.png'
 )
 
-def start(username,configu,age,gender):
+def start(username,configu,age,gender,puntaje):
     
     num_de_partida=1
+
     window2= nivel.popup_nivel()
     while True:
       event,_values= window2.read()
@@ -39,37 +38,40 @@ def start(username,configu,age,gender):
     start_time= t.time()
     dia_hora= Criterios.dia_semana_y_hora()
     criterio=Criterios.seleccion_ahora()
-    for crit in criterio:
-     print(crit)
     cronometro=0
     t_cada_paso= 0
     cant_de_palabras= can_palabras_adivinar(cuadros(configu,n))
     evento='Inicio_partida'
     estado='ok'
 
+
     board_data= [[" "]* 4 for _i in range (cuadros(configu,n))]
 
     window = jugar.build(username,configu,n,board_data)
     toque=0
+    lista=palabras(cant_de_palabras,criterio)
 
     while True:
         event, _values = window.read(timeout=1000)
         
-        player_1={"value":'QUE?'}
+        player_1={"value":tablero(lista,cuadros(configu,n),board_data)}
         player_2={"value": ''}
 
         turn=cycle([player_1,player_2])
+        
         mins, secs = divmod(minutos, 60)
         timeformat = '{:02d}:{:02d}'.format(mins, secs)
-        palabras(cant_de_palabras,criterio)
         
         if event == '-SALIR-':
             break
         elif event.startswith("pieza-") :
             player=next(turn)
+            #_prefix,x ,y= event.split("-")
+            #print(f'pieza: {x},{y}')
             board_data=play(player,window,event,board_data,toque)
             window.refresh()
             toque+=1
+            puntaje+=1
             if toque == 2:
              t.sleep(1)
              window[event].update('',image_filename=cart,image_size=(70,70))
@@ -93,10 +95,13 @@ def start(username,configu,age,gender):
         if timeformat == '00:00':
          popup.build(configu[n]['-LOSS_MESSAGE-']).read(close=True)
          num_de_partida+=1
+         evento='Tiempo agotado'
+         puntaje=0
          break   
         if timeformat == '00:10':
          window['-POCO-TIEMPO-'].update(visible=True)
         
     palabra='todavia no hay'
     print(guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia_hora))
+    print(puntos(username,puntaje))
     window.close()

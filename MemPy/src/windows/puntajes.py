@@ -1,18 +1,14 @@
 import PySimpleGUI as sg
 from src.windows import colors
 from src.windows.widgets import exitbar_widget
-from src.components.posiciones import posiciones
 import os
 import csv
 import pandas as pd
 
 archivo=os.path.join(os.getcwd(),'posiciones.csv')
-archivo_csv=open(archivo,"a")
-writer=csv.writer(archivo_csv)
+
 
 def build(username,puntaje):
-    usuario=[username,puntaje]
-    writer.writerow(usuario)
     data = []
     header_list = []
     archivo_csv=open(archivo,"r")

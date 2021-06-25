@@ -1,5 +1,4 @@
 import os
-from tkinter.constants import DISABLED
 import PySimpleGUI as sg
 from src.windows import colors
 from src.windows.widgets import exitbar_widget, separator_widget
