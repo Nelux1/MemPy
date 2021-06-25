@@ -63,4 +63,3 @@ criterios = {
     }
 }
 
-print(criterios['criterio6']['funcion'](*criterios['criterio6']['parametros']))

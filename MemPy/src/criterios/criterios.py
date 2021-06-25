@@ -78,8 +78,7 @@ class Criterios:
         for keys, values in seleccion_hoy.items():
             if rango_horario in keys:
                 lista_criterios = values['funcion'](*values['parametros'])
-                lista_reducida_criterios = random.sample(lista_criterios, k=8)
-                return (values['criterio'], lista_reducida_criterios)
+                return (values['criterio'], lista_criterios)
 
     @classmethod
     def seleccion_ahora(cls):

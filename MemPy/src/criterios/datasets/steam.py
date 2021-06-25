@@ -40,7 +40,7 @@ criterios = {
     'criterio3': {
         'criterio': 'Nombres de desarrolladoras con juegos del genero RPG menores a $30 de precio, y mas de 5000 positivos',
         'funcion': get_developer_con_genero_precio_positivos,
-        'parametros': ('RPG', 30, 10000)
+        'parametros': ('RPG', 30, 5000)
     },
     'criterio4': {
         'criterio': 'Nombres de juegos desarrollados por Bethesda Game Studios y publicados por Bethesda Softworks',
@@ -48,3 +48,4 @@ criterios = {
         'parametros': ('Bethesda Softworks', 'Bethesda Game Studios')
     }
 }
+

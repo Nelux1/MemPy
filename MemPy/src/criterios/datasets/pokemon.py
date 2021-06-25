@@ -39,5 +39,3 @@ criterios = {
         'parametros': ('grass')
     }
 }
-
-print(criterios['criterio3']['funcion'](criterios['criterio3']['parametros']))
