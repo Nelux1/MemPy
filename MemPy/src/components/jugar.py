@@ -49,16 +49,11 @@ def start(username,configu,age,gender,puntaje):
     window = jugar.build(username,configu,n,board_data)
     toque=0
     lista=palabras(cant_de_palabras,criterio)
-    
+    print(criterio)
 
     while True:
-        event, _values = window.read(timeout=1000)
-        
-        player_1={"value":tablero(lista,event)}
-        player_2={"value": ''}
-
-        turn=cycle([player_1,player_2])
-        
+        event, _values = window.read(timeout=1000)       
+        player={"value":tablero(lista,event)}
         mins, secs = divmod(minutos, 60)
         timeformat = '{:02d}:{:02d}'.format(mins, secs)
         
@@ -66,7 +61,7 @@ def start(username,configu,age,gender,puntaje):
             evento='cancelada'
             break
         elif event.startswith("pieza-") :
-            player=next(turn)
+           
             #_prefix,x ,y= event.split("-")
             #print(f'pieza: {x},{y}')
             board_data=play(player,window,event,board_data,toque)

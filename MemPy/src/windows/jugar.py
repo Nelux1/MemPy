@@ -1,5 +1,6 @@
 import os
 import PySimpleGUI as sg
+from PySimpleGUI.PySimpleGUI import theme_text_color
 from src.windows import colors
 from src.windows.widgets import exitbar_widget, separator_widget ,abandonar_widget
 from src.handlers.jugar_config import cuadros, pistas, mensajes
@@ -73,6 +74,7 @@ def build(username,configu,n,board_data):
         finalize=True,
         keep_on_top=True,
         no_titlebar=True
+        
     ) 
     
     
