@@ -86,6 +86,7 @@ def start(username,configu,age,gender,puntaje):
             window.refresh()
             if toque == 1:
              palabra=player["value"]
+             guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora)
              p=event
             if toque == 2:
              palabra2= player["value"]
@@ -111,6 +112,7 @@ def start(username,configu,age,gender,puntaje):
         elif event == "-ABANDONAR-":
             popup.build('USTED A ABANDONADO LA PARTIDA!\n perdera los puntos ganados').read(close=True)
             evento='abandonada'
+            guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora)
             puntaje=0
             break
         realtime= t.time() - start_time
@@ -126,6 +128,7 @@ def start(username,configu,age,gender,puntaje):
          popup.build(configu[n]['-LOSS_MESSAGE-']).read(close=True)
          num_de_partida+=1
          evento='Tiempo agotado'
+         guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora)
          puntaje=0
          break   
         if timeformat == '00:10':
@@ -133,6 +136,7 @@ def start(username,configu,age,gender,puntaje):
         if encontrada == cant_de_palabras:
            popup.build(configu[n]['-WIN_MESSAGE-']).read(close=True)
            evento='Fin'
+           guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora)
            puntaje+=50
            break                                       
     print(guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora))
