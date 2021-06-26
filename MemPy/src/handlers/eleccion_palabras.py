@@ -7,6 +7,16 @@ roja= os.path.join(
     'icons', 
     'rojo.png'
 )
+cart= os.path.join(
+    'resources', 
+    'icons', 
+    'inte.png'
+)
+acierto= os.path.join(
+    'resources', 
+    'icons', 
+    'outline_close_black_48dp.png'
+)
 
 
 def palabras(cant,palab):
@@ -21,7 +31,7 @@ def tablero (lista,event):
      l=''
      if event.startswith("pieza-") :         
          if event == 'pieza-0-0':
-             lista[0]=lista[0][:7]
+             lista[0]=lista[0][:7].lstrip()
              l= lista[0].upper()
          elif event == 'pieza-0-1':
              lista[3]=lista[3][:7]
@@ -70,9 +80,9 @@ def tablero (lista,event):
              l=lista[15].upper()                                            
          return l
 
-def play(player, window, event, board_data, toque):
+def play(player, window, event, board_data):
     """
-    Ejecuta una jugada sobre el tablero para un jugador:
+    Ejecuta una jugada sobre el tablero:
     - Actualiza el tablero visual
     - Agrega el valor en board_data
     - Chequea si hay un ganador
@@ -80,11 +90,40 @@ def play(player, window, event, board_data, toque):
     window[event].update(player["value"],image_filename=roja)
     _prefix, x, y = event.split("-")
     board_data[int(x)][int(y)] = player["value"]
-    if toque == 2:
 
-     toque = 0
-
+   #winner = check_win(board_data, player["value"])
+    
     return board_data
 
+#def check_win(window,player,event,palabra,palabra2,toque,p,p2):
+    """
+    Chequea si se cumple alguna de las jugadas ganadoras
+    """
+    if toque == 1:
+     palabra=player["value"]
+     p=event
+    elif toque == 2:
+     palabra2= player["value"]
+     p2=event
+     toque=0
+    if palabra != palabra2:
+     estado='error'    
+     window[p].update("",image_filename=cart,image_size=(90,80))
+     window[p2].update("",image_filename=cart,image_size=(90,80))
+    elif palabra == palabra2:
+     window[p].update("",image_filename=acierto,image_size=(90,80))
+     window[p2].update("",image_filename=acierto,image_size=(90,80))
 
 
+#def check_play(win_play, board, value):
+    """
+    Chequea la si una jugada ganadora esta completa
+    """
+    # res = []
+    # for x, y in win_play:
+    #     res.append(board[x][y] == value)
+
+    # return all(res)
+
+   # return all(board[x][y] == value for x, y in win_play)  
+    

@@ -1,4 +1,5 @@
-Usuarie - nick,usuarie -edad,usuarie -genero,Tiempo,Partida,nivel,Cantidad total de palabras a adivinar,Nombre de evento,Estado ,Palabra,dia y hora
-Pepe,23,M,2.144343614578247,1,1,4,cancelada,ok,todavia no hay,5,18
-Carlos,21,F,2.9869885444641113,1,1,4,cancelada,ok,todavia no hay,5,18
-Rodrigo,34,M,1.970494031906128,1,1,4,abandonada,ok,todavia no hay,5,18
+Usuarie - nick,usuarie -edad,usuarie -genero,Tiempo,Partida,nivel,Cantidad total de palabras a adivinar,Nombre de evento,Estado ,Palabra,dia,hora
+Pepe,23,M,2.144343614578247,1,1,4,cancelada,ok,todavia no hay,5,18
+Carlos,21,F,2.9869885444641113,1,1,4,cancelada,ok,todavia no hay,5,18
+Rodrigo,34,M,1.970494031906128,1,1,4,abandonada,ok,todavia no hay,5,18
+
