@@ -71,15 +71,11 @@ def start(username,configu,age,gender,puntaje):
             evento='cancelada'
             puntaje=0
             break
-        elif event.startswith("pieza-") :
-<<<<<<< HEAD
-           
+        elif event.startswith("pieza-") :         
             #=_prefix,x ,y= event.split("-")
             #print(f'pieza: {x},{y}')
-            board_data=play(player,window,event,board_data,toque)
+            board_data=play(player,window,event,board_data)
             window.refresh()
-=======
->>>>>>> fbcd8902628d5ade3fc001d5439f0ede4616c6c3
             toque+=1
             puntaje+=1
             _prefix, x, y = event.split("-")
@@ -134,17 +130,11 @@ def start(username,configu,age,gender,puntaje):
          break   
         if timeformat == '00:10':
          window['-POCO-TIEMPO-'].update(visible=True)
-<<<<<<< HEAD
-        
-    palabra='todavia no hay'
-    print(guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora))
-=======
         if encontrada == cant_de_palabras:
            popup.build(configu[n]['-WIN_MESSAGE-']).read(close=True)
            evento='Fin'
            puntaje+=50
-           break                                   
-    print(guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia_hora))
->>>>>>> fbcd8902628d5ade3fc001d5439f0ede4616c6c3
+           break                                       
+    print(guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora))
     print(puntos(username,puntaje))
     window.close()
