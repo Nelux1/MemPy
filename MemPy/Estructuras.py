@@ -25,9 +25,3 @@ def diccionario_coordenadas(coordenadas, palabras):
         palabras.remove(palabra)
     return diccionario
 
-
-print(pasando_lista(4))
-print(armando_coordenadas(4,2))
-coordenada = armando_coordenadas(4,2)
-lista = pasando_lista(4)
-print(diccionario_coordenadas(coordenada, lista))

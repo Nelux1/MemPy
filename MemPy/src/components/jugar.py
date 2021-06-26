@@ -38,6 +38,8 @@ def start(username,configu,age,gender,puntaje):
     start_time= t.time()
     dia_hora= Criterios.dia_semana_y_hora()
     criterio=Criterios.seleccion_ahora()
+    dia = dia_hora[0]
+    hora = dia_hora[1]
     cronometro=0
     t_cada_paso= 0
     cant_de_palabras= can_palabras_adivinar(cuadros(configu,n))
@@ -62,7 +64,7 @@ def start(username,configu,age,gender,puntaje):
             break
         elif event.startswith("pieza-") :
            
-            #_prefix,x ,y= event.split("-")
+            #=_prefix,x ,y= event.split("-")
             #print(f'pieza: {x},{y}')
             board_data=play(player,window,event,board_data,toque)
             window.refresh()
@@ -101,6 +103,6 @@ def start(username,configu,age,gender,puntaje):
          window['-POCO-TIEMPO-'].update(visible=True)
         
     palabra='todavia no hay'
-    print(guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia_hora))
+    print(guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora))
     print(puntos(username,puntaje))
     window.close()
