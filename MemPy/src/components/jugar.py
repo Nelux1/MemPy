@@ -48,8 +48,11 @@ def start(username,configu,age,gender,puntaje):
     t_cada_paso= 0
     cant_de_palabras= can_palabras_adivinar(cuadros(configu,n))
     evento='Inicio_partida'
-    estado='ok'
+    estado=''
     palabra=''
+    niv= n + 1
+    realtime=t.time()  
+    guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora)
     palabra2=''
     p,p2='',''
     toque=0
@@ -86,20 +89,23 @@ def start(username,configu,age,gender,puntaje):
             window.refresh()
             if toque == 1:
              palabra=player["value"]
-             guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora)
              p=event
             if toque == 2:
              palabra2= player["value"]
              p2=event
              toque=0
              if palabra != palabra2:
-                 estado='error'    
+                 estado='error'
+                 evento='intento'
+                 guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora)    
                  t.sleep(0.5)
                  window[p].update("",image_filename=cart,image_size=(90,80))
                  window[p2].update("",image_filename=cart,image_size=(90,80))
                  window.refresh()
              elif palabra == palabra2:
                  estado='ok'
+                 evento='intento'
+                 guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora)
                  encontrada+=1
                  t.sleep(0.5)
                  puntaje+=10
@@ -112,13 +118,13 @@ def start(username,configu,age,gender,puntaje):
         elif event == "-ABANDONAR-":
             popup.build('USTED A ABANDONADO LA PARTIDA!\n perdera los puntos ganados').read(close=True)
             evento='abandonada'
+            palabra=''
             guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora)
             puntaje=0
             break
         realtime= t.time() - start_time
         cronometro+=1
-        minutos-= 1
-        niv= n + 1        
+        minutos-= 1      
         window['-REAL_TIME-'].update(f'{round(realtime // 60):02d}:{round(realtime % 60):02d}')
         window['-TIMER-'].update(f'{timeformat}')
         window['-TIEMPO-PASO-'].update(f'{round(t_cada_paso // 60):02d}:{round(t_cada_paso % 60):02d}')
@@ -127,7 +133,9 @@ def start(username,configu,age,gender,puntaje):
         if timeformat == '00:00':
          popup.build(configu[n]['-LOSS_MESSAGE-']).read(close=True)
          num_de_partida+=1
-         evento='Tiempo agotado'
+         evento='fin'
+         estado='timeout'
+         palabra=''
          guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora)
          puntaje=0
          break   
@@ -135,7 +143,9 @@ def start(username,configu,age,gender,puntaje):
          window['-POCO-TIEMPO-'].update(visible=True)
         if encontrada == cant_de_palabras:
            popup.build(configu[n]['-WIN_MESSAGE-']).read(close=True)
-           evento='Fin'
+           evento='fin'
+           estado='finalizada'
+           palabra=''
            guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora)
            puntaje+=50
            break                                       
