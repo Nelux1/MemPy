@@ -36,6 +36,8 @@ def build(username,configu,n,board_data):
             [sg.Text(text_color=colors.BLACK,size= (6,1), background_color=colors.BACKGROUND, key='-TIMER-',font=('times',15),justification='center')],
             [sg.Text(text='Tiempo total:', background_color=colors.BACKGROUND, text_color=colors.BLACK, font=('times', 15, 'bold'))] +
             [sg.Text(text_color=colors.BLACK,size= (6,1), background_color=colors.BACKGROUND, key='-REAL_TIME-',font=('times',15),justification='center')],
+            [sg.Text(text='Palabras:',text_color=colors.BLACK,size= (8,1), background_color=colors.BACKGROUND,font=('times',15,'bold'))],
+            [sg.Text(text='',text_color=colors.BLACK,size= (6,1), background_color=colors.BACKGROUND, key='-ENCONTRADOS-',font=('times',15,'bold'))],
             [sg.Button('PISTA',font=('times'), button_color=colors.BLACK, visible= pistas(configu,n),size= (3,1))],
             
         ],
@@ -58,9 +60,9 @@ def build(username,configu,n,board_data):
     layout=[
         [exitbar_widget.build(colors.PRIMARY_DARK)],
         [title]+[abandonar_widget.build(colors.BACKGROUND)],
-        [separator_widget.invisible_horizontal(colors.BACKGROUND, 3)],
+        [separator_widget.invisible_horizontal(colors.BACKGROUND, 1)],
         [sg.Text(background_color=colors.BACKGROUND, size=(3, None)), column_info, game_column, sg.Text(background_color=colors.BACKGROUND, size=(2, None))],
-        [separator_widget.invisible_horizontal(colors.BACKGROUND, 3)]  
+        [separator_widget.invisible_horizontal(colors.BACKGROUND, 5)]   
     ]
     
     

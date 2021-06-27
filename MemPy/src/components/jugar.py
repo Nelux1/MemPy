@@ -130,6 +130,7 @@ def start(username,configu,age,gender,puntaje):
         window['-TIMER-'].update(f'{timeformat}')
         window['-TIEMPO-PASO-'].update(f'{round(t_cada_paso // 60):02d}:{round(t_cada_paso % 60):02d}')
         window['-NIV-'].update(f'{niv}')
+        window['-ENCONTRADOS-'].update(f'{encontrada} de {cant_de_palabras}')
         
         if timeformat == '00:00':
          popup.build(configu[n]['-LOSS_MESSAGE-']).read(close=True)

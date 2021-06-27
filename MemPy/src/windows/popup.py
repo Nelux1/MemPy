@@ -6,6 +6,7 @@ from src.windows.widgets import separator_widget
 
 
 def build(mensaje):
+    
     return sg.Window(
         title='MemPy',
         layout=[
