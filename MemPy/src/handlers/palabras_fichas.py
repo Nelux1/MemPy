@@ -21,7 +21,7 @@ acierto= os.path.join(
 pista=os.path.join(
     'resources',
     'icons',
-    'outline_home_black_48dp.png'
+    'lupa.png'
 
 )
 
