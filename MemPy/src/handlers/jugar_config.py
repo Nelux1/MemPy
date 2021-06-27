@@ -53,4 +53,4 @@ def can_palabras_adivinar(palab):
     cant= 6
   if palab == 4: 
     cant= 8
-  return cant
+  return cant 

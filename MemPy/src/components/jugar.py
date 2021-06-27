@@ -1,13 +1,20 @@
 """ventana de juego"""
+from calendar import c
 from src.criterios.criterios import Criterios
 from src.windows import popup , nivel
 from src.windows import jugar
-from src.handlers.eleccion_palabras import play, tablero , palabras 
+from src.handlers.palabras_fichas import play, tablero , palabras , pista_boton 
 from src.handlers.jugar_config import cuadros, tiempos, can_palabras_adivinar
 from src.components.almacenamiento import guardando_data, puntos
 import time as t
 import os
 
+pista=os.path.join(
+    'resources',
+    'icons',
+    'outline_home_black_48dp.png'
+
+)
 cart= os.path.join(
     'resources', 
     'icons', 
@@ -56,14 +63,14 @@ def start(username,configu,age,gender,puntaje):
     palabra2=''
     p,p2='',''
     toque=0
-    
+    c=0
     board_data= [[" "]* 4 for _i in range (cuadros(configu,n))]
-
     window = jugar.build(username,configu,n,board_data)
     toque=0
     encontrada=0
     lista=palabras(cant_de_palabras,criterio)
-    
+    print(lista)
+
     while True:
         event, _values = window.read(timeout=1000)       
         player={"value":tablero(lista,event)}
@@ -74,17 +81,11 @@ def start(username,configu,age,gender,puntaje):
             evento='cancelada'
             puntaje=0
             break
-        elif event.startswith("pieza-") :         
-            #=_prefix,x ,y= event.split("-")
-            #print(f'pieza: {x},{y}')
-            board_data=play(player,window,event,board_data)
-            window.refresh()
+        elif event.startswith("pieza-") :       
             toque+=1
             puntaje+=1
-            _prefix, x, y = event.split("-")
             board_data=play(player,window,event,board_data)
             window.refresh()
-            #check_win(window,player,event,palabra,palabra2,toque,p,p2)
             t.sleep(1)
             window.refresh()
             if toque == 1:
@@ -109,8 +110,8 @@ def start(username,configu,age,gender,puntaje):
                  encontrada+=1
                  t.sleep(0.5)
                  puntaje+=10
-                 window[p].update("",image_filename=acierto,image_size=(90,80))
-                 window[p2].update("",image_filename=acierto,image_size=(90,80))    
+                 window[p].update("",image_filename=acierto,image_size=(90,80),disabled=True)
+                 window[p2].update("",image_filename=acierto,image_size=(90,80),disabled=True)    
             t_cada_paso= cronometro + t_cada_paso
             cronometro=0                
             minutos= tiempos(configu,n)
@@ -143,12 +144,20 @@ def start(username,configu,age,gender,puntaje):
          window['-POCO-TIEMPO-'].update(visible=True)
         if encontrada == cant_de_palabras:
            popup.build(configu[n]['-WIN_MESSAGE-']).read(close=True)
+           if t_cada_paso < 30.00:
+             puntaje+=1000
+           elif t_cada_paso < 60.00:
+             puntaje+=500      
            evento='fin'
            estado='finalizada'
            palabra=''
-           guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora)
            puntaje+=50
-           break                                       
-    print(guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora))
+           guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora)
+           break
+        if event == 'PISTA':
+         puntaje-=20   
+         c+=1
+         pista_boton(c,window,cant_de_palabras)
+    print(guardando_data(username,age,gender,realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora))
     print(puntos(username,puntaje))
     window.close()

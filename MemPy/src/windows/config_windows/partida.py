@@ -21,8 +21,8 @@ def build():
     coincidencias = option_widget.build(
         text='Coincidencias a buscar',
         key='-COINCIDENCIAS-',
-        values=[2, 3, 4, 5],
-        default=2
+        values=[2, 3],
+        default='2'
     )
 
     tipo_elementos = option_widget.build(
@@ -30,8 +30,8 @@ def build():
         key='-ELEMENTOS-',
         values=[
             'Palabras', 
-            'Imágenes', 
-            'Palabras e Imágenes'
+            'Imágenes (Proximamente)', 
+            'Palabras e Imágenes(Proximamente)'
         ],
         default='Palabras'
     )
