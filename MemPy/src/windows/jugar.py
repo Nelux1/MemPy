@@ -50,7 +50,7 @@ def build(username,configu,n,board_data):
             [sg.Text(text_color=colors.BLACK,size= (6,1), background_color=colors.BACKGROUND, key='-REAL_TIME-',font=('times',15),justification='center')],
             [sg.Text(text='Palabras:',text_color=colors.BLACK,size= (8,1), background_color=colors.BACKGROUND,font=('times',15,'bold'))],
             [sg.Text(text='',text_color=colors.BLACK,size= (6,1), background_color=colors.BACKGROUND, key='-ENCONTRADOS-',font=('times',15,'bold'))],
-            [sg.Button('PISTA',font=('times'), button_color=colors.BLACK, visible= pistas(configu,n),size= (3,1))],
+            [sg.Button('PISTA',font=('times'), button_color=colors.BLACK, visible= pistas(configu,n),size= (5,1))],
             [separator_widget.invisible_horizontal(colors.BACKGROUND, 4)]
         ],
 

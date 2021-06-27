@@ -477,3 +477,35 @@ NEGRO,34,M,1624807821.1882777,1,1,8,Inicio_partida,,,6,12
 NEGRO,34,M,30.483514308929443,1,1,8,cancelada,,,6,12
 NEGRO,34,M,1624807875.9882853,1,1,8,Inicio_partida,,,6,12
 NEGRO,34,M,59.541282176971436,1,1,8,cancelada,,,6,12
+carlos,23,M,1624819120.5635684,1,1,4,Inicio_partida,,,6,15
+carlos,23,M,1.9392671585083008,1,1,4,intento,ok,CD PROJ,6,15
+carlos,23,M,4.538003206253052,1,1,4,intento,error,RADICAL,6,15
+carlos,23,M,7.696263074874878,1,1,4,intento,ok,RADICAL,6,15
+carlos,23,M,11.837239742279053,1,1,4,intento,ok,UBISOFT,6,15
+carlos,23,M,14.382978200912476,1,1,4,intento,ok,SQUARE ,6,15
+carlos,23,M,15.903998851776123,1,1,4,fin,finalizada,,6,15
+carlos,23,M,15.903998851776123,1,1,4,fin,finalizada,,6,15
+carlos,23,M,1624819138.7205493,1,1,4,Inicio_partida,,,6,15
+carlos,23,M,2.31449818611145,1,1,4,intento,error,CD PROJ,6,15
+carlos,23,M,3.8600094318389893,1,1,4,abandonada,error,,6,15
+carlos,23,M,3.8600094318389893,1,1,4,abandonada,error,,6,15
+carlos,23,M,1624819158.7095358,1,1,4,Inicio_partida,,,6,15
+carlos,23,M,3.082972526550293,1,1,4,cancelada,,,6,15
+Carlos,23,M,1624819222.0214927,1,1,4,Inicio_partida,,,6,15
+Carlos,23,M,1.9136192798614502,1,1,4,intento,ok,UBISOFT,6,15
+Carlos,23,M,5.488946437835693,1,1,4,abandonada,ok,,6,15
+Carlos,23,M,5.488946437835693,1,1,4,abandonada,ok,,6,15
+Carlos,23,M,1624819283.9012532,1,1,4,Inicio_partida,,,6,15
+Carlos,23,M,38.90608334541321,1,1,4,intento,ok,RADICAL,6,15
+Carlos,23,M,43.542052268981934,1,1,4,intento,ok,OBSIDIA,6,15
+Carlos,23,M,52.1080322265625,1,1,4,cancelada,ok,OBSIDIA,6,15
+Carlos,23,M,1624819536.0460198,1,1,4,Inicio_partida,,,6,15
+Carlos,23,M,2.0980796813964844,1,1,4,cancelada,,,6,15
+carlos,23,M,1624819587.8849509,1,1,4,Inicio_partida,,,6,15
+carlos,23,M,7.014897584915161,1,1,4,intento,error,INTERPL,6,15
+carlos,23,M,8.554995059967041,1,1,4,abandonada,error,,6,15
+carlos,23,M,8.554995059967041,1,1,4,abandonada,error,,6,15
+carlos,23,M,1624819604.4559286,1,1,4,Inicio_partida,,,6,15
+carlos,23,M,3.111191987991333,1,1,4,cancelada,,,6,15
+carlos,23,M,1624819672.7558372,1,1,4,Inicio_partida,,,6,15
+carlos,23,M,2.0970003604888916,1,1,4,cancelada,,,6,15
