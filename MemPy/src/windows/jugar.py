@@ -12,6 +12,12 @@ cart= os.path.join(
     'inte.png'
 )
 
+TABLERO_ICON= os.path.join(
+    'resources', 
+    'icons', 
+    'copa.png'
+)
+
 def build(username,configu,n,board_data):
     
     title= sg.Text(
@@ -22,10 +28,16 @@ def build(username,configu,n,board_data):
     size=(30,2),
     justification='c'
     )
-    
+    copa = sg.Image(
+        filename=TABLERO_ICON, 
+        background_color=colors.BACKGROUND
+    )
+
     column_info = sg.Column(
         layout=[
-            [separator_widget.invisible_horizontal(colors.BACKGROUND, 10)],
+            [separator_widget.invisible_horizontal(colors.BACKGROUND, 5)],
+            [copa],
+            [separator_widget.invisible_horizontal(colors.BACKGROUND, 2)],
             [sg.Text(f'{mensajes(configu,n)}',key='-POCO-TIEMPO-', background_color=colors.BACKGROUND, text_color=colors.RED, font=('times',15, 'bold'),visible=False)],
             [sg.Text(text=f'Jugador: {username}', background_color=colors.BACKGROUND, text_color=colors.BLACK, font=('times', 15, 'bold'))],
             [sg.Text(text=f'Tiempo x ficha:', background_color=colors.BACKGROUND, text_color=colors.BLACK, font=('times', 15, 'bold'))]+
@@ -39,7 +51,7 @@ def build(username,configu,n,board_data):
             [sg.Text(text='Palabras:',text_color=colors.BLACK,size= (8,1), background_color=colors.BACKGROUND,font=('times',15,'bold'))],
             [sg.Text(text='',text_color=colors.BLACK,size= (6,1), background_color=colors.BACKGROUND, key='-ENCONTRADOS-',font=('times',15,'bold'))],
             [sg.Button('PISTA',font=('times'), button_color=colors.BLACK, visible= pistas(configu,n),size= (3,1))],
-            
+            [separator_widget.invisible_horizontal(colors.BACKGROUND, 4)]
         ],
 
 
@@ -60,7 +72,6 @@ def build(username,configu,n,board_data):
     layout=[
         [exitbar_widget.build(colors.PRIMARY_DARK)],
         [title]+[abandonar_widget.build(colors.BACKGROUND)],
-        [separator_widget.invisible_horizontal(colors.BACKGROUND, 1)],
         [sg.Text(background_color=colors.BACKGROUND, size=(3, None)), column_info, game_column, sg.Text(background_color=colors.BACKGROUND, size=(2, None))],
         [separator_widget.invisible_horizontal(colors.BACKGROUND, 5)]   
     ]
