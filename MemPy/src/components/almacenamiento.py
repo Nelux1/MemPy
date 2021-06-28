@@ -10,7 +10,7 @@ archivo=os.path.join(os.getcwd(),'datos_estadisticos.csv')
 
 
 def guardando_data(nombre,edad,genero,tiempo,num_partida,nivel,palabras_adivinar,evento,estado,palabra,dia,hora):
-    archivo_csv=open(archivo,"a")
+    archivo_csv=open(archivo,"a",newline='')
     writer=csv.writer(archivo_csv)
     usuario=[nombre,edad,genero,tiempo,num_partida,nivel,palabras_adivinar,evento,estado,palabra,dia,hora]
     writer.writerow(usuario)
@@ -18,7 +18,7 @@ def guardando_data(nombre,edad,genero,tiempo,num_partida,nivel,palabras_adivinar
     return usuario
 
 def puntos (username,puntaje):
-  archivo_csv2=open(archivo2,"a")
+  archivo_csv2=open(archivo2,"a",newline='')
   writer2=csv.writer(archivo_csv2)
   usuario=[username,puntaje]
   writer2.writerow(usuario)
