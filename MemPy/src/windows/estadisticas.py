@@ -8,7 +8,7 @@ def build():
     title = sg.Text(
         text='ESTADÍSTICAS',
         font=('times', 30, 'bold'),
-        background_color=colors.PRIMARY_LIGHT,
+        background_color=colors.PRIMARY_DARK,
         text_color=colors.WHITE,
         size=(25, 1),
         justification='c'
@@ -19,11 +19,27 @@ def build():
         layout=[
             [exitbar_widget.build(colors.PRIMARY_DARK)],
             [title],
-            [separator_widget.estilo2(colors.PRIMARY_LIGHT, colors.WHITE)],
+            [option_button('Top 10 palabras', '-TOP-')],
+            [option_button('Partidas por estado', '-PARTIDA-')],
+            [option_button('Finalizadas por genero', '-GENERO-')],
+            [option_button('Volver', '-BACK-')],
+            [separator_widget.invisible_horizontal(colors.BACKGROUND, 2)],
         ],
-        background_color=colors.PRIMARY_LIGHT,
         no_titlebar=True,
-        element_justification='c',
         keep_on_top=True,
+        element_justification='c',
+        background_color=colors.BACKGROUND,
         finalize=True
     )
+
+def option_button(text, key):
+    """Botones utilizados unicamente por esta ventana."""
+    return sg.Button(
+        button_text=text,
+        key=key,
+        font=('courier', 16),
+        button_color=(colors.WHITE, colors.BLACK),
+        pad=(0, 10),
+    )
+
+     

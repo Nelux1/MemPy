@@ -75,15 +75,10 @@ def play(player, window, event, board_data, toque):
     Ejecuta una jugada sobre el tablero para un jugador:
     - Actualiza el tablero visual
     - Agrega el valor en board_data
-    - Chequea si hay un ganador
     """
     window[event].update(player["value"],image_filename=roja)
     _prefix, x, y = event.split("-")
     board_data[int(x)][int(y)] = player["value"]
-    if toque == 2:
-
-     toque = 0
-
     return board_data
 
 

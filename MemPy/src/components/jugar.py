@@ -1,5 +1,7 @@
 """ventana de juego"""
 from calendar import c
+
+from PySimpleGUI.PySimpleGUI import WIN_CLOSED
 from src.criterios.criterios import Criterios
 from src.windows import popup , nivel
 from src.windows import jugar
@@ -159,6 +161,5 @@ def start(username,configu,age,gender,puntaje):
          puntaje-=20   
          c+=1
          pista_boton(c,window,cant_de_palabras)
-    print(guardando_data(username,age,gender,realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora))
     print(puntos(username,puntaje))
     window.close()

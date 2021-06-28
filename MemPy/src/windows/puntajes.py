@@ -1,6 +1,5 @@
 import PySimpleGUI as sg
 from src.windows import colors
-from src.windows.widgets import exitbar_widget
 import os
 import csv
 import pandas as pd
