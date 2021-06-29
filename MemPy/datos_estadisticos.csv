@@ -1,2 +1,36 @@
 Usuarie - nick,usuarie -edad,usuarie -genero,Tiempo,Partida,nivel,Cantidad total de palabras a adivinar,Nombre de evento,Estado,Palabra,dia,hora
-
+Mariana,23,F,1625008369.0202622,1,1,4,Inicio_partida,,,1,20
+Mariana,23,F,1.8331475257873535,1,1,4,intento,error,SNOW DO,1,20
+Mariana,23,F,156.09173345565796,1,1,4,intento,error,SNOW DO,1,20
+Mariana,23,F,158.95188927650452,1,1,4,intento,ok,TURNER ,1,20
+Mariana,23,F,161.51780724525452,1,1,4,intento,ok,SNOW DO,1,20
+Mariana,23,F,164.53270602226257,1,1,4,intento,ok,RATATOU,1,20
+Mariana,23,F,167.07506608963013,1,1,4,intento,ok,101 DAL,1,20
+Mariana,23,F,168.60825109481812,1,1,4,fin,finalizada,,1,20
+Natalia,22,M,1625008561.1208868,1,1,4,Inicio_partida,,,1,20
+Natalia,22,M,1.7271111011505127,1,1,4,intento,ok,CARS,1,20
+Natalia,22,M,4.2940380573272705,1,1,4,intento,ok,FLUBBER,1,20
+Natalia,22,M,7.155524730682373,1,1,4,intento,ok,THE PRI,1,20
+Natalia,22,M,9.994896650314331,1,1,4,intento,ok,THE SAN,1,20
+Natalia,22,M,11.521012306213379,1,1,4,fin,finalizada,,1,20
+Natalia,22,M,1625008575.3403776,1,1,4,Inicio_partida,,,1,20
+Natalia,22,M,1.505749225616455,1,1,4,intento,error,TURNER ,1,20
+Natalia,22,M,4.066637754440308,1,1,4,intento,error,ALADDIN,1,20
+Natalia,22,M,5.615036964416504,1,1,4,abandonada,error,,1,20
+Natalia,22,M,1625008584.4359994,1,1,4,Inicio_partida,,,1,20
+Natalia,22,M,1.6826577186584473,1,1,4,intento,error,SWEET H,1,20
+Carlos,23,M,1625008608.483896,1,1,4,Inicio_partida,,,1,20
+Carlos,23,M,2.0921638011932373,1,1,4,intento,ok,CARS,1,20
+Carlos,23,M,4.658452272415161,1,1,4,intento,error,THE HAU,1,20
+Carlos,23,M,7.5605480670928955,1,1,4,intento,ok,THE HAU,1,20
+Carlos,23,M,10.457461833953857,1,1,4,intento,ok,FATHER ,1,20
+Carlos,23,M,13.344074726104736,1,1,4,intento,ok,ALADDIN,1,20
+Carlos,23,M,14.866828441619873,1,1,4,fin,finalizada,,1,20
+Carlos,23,M,1625008625.6076717,1,1,4,Inicio_partida,,,1,20
+Carlos,23,M,1.6551072597503662,1,1,4,intento,ok,FREAKY ,1,20
+Carlos,23,M,3.1657919883728027,1,1,4,abandonada,ok,,1,20
+Carlos,23,M,1625010057.3919423,1,1,4,Inicio_partida,,,1,20
+Carlos,23,M,2.883272409439087,1,1,4,intento,error,WHO FRA,1,20
+Carlos,23,M,5.4372782707214355,1,1,4,intento,error,RATATOU,1,20
+Carlos,23,M,8.019008159637451,1,1,4,intento,error,RATATOU,1,20
+Carlos,23,M,10.796269178390503,1,1,4,intento,ok,BEVERLY,1,20

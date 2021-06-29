@@ -1,3 +1,4 @@
+from numpy.core.shape_base import block
 import pandas as pd
 import os
 from matplotlib import pyplot as plt
@@ -13,9 +14,10 @@ def top_10_palabras():
 def porcentaje_por_estado():
     datos= data_set.groupby(["Nombre de evento"])["Nombre de evento"].count()
     datos= datos.drop(["Inicio_partida","intento"], axis=0)
-    etiquetas= 'Abandonadas','Canceladas', 'Finalizadas'
-    explosion = (0,0,0.1)
-    colores=['red','orange','green']
+    print(datos)
+    etiquetas= datos.index.tolist()
+    explosion = (0,0.1)
+    colores=['red','orange']
     plt.pie(datos,labels= etiquetas,shadow='true', autopct="%1.1f%%",explode=explosion,colors=colores)
     plt.axis('equal')
     plt.legend(title="Estados de partidas", loc= 'lower right')
