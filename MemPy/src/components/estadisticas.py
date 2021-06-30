@@ -12,7 +12,7 @@ def start():
         window.hide()
 
         if event == 'Top 10 palabras':
-            break
+            graficos.top_10_palabras()
         elif event == '-PARTIDA-':
             graficos.porcentaje_por_estado()
         elif event == '-GENERO-':

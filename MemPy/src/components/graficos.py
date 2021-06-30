@@ -1,5 +1,6 @@
 from numpy.core.shape_base import block
 import pandas as pd
+from IPython.display import display
 import os
 from matplotlib import pyplot as plt
 
@@ -9,18 +10,18 @@ data_set = pd.read_csv(datos_path)
 def top_10_palabras():
     palabras_ok = data_set[data_set["Estado"]== "ok"]
     top_10= palabras_ok.groupby(["Palabra"])["Estado"].count().sort_values(ascending=False).head(10)
-    return top_10
+    return display(top_10)
 
 def porcentaje_por_estado():
     datos= data_set.groupby(["Nombre de evento"])["Nombre de evento"].count()
     datos= datos.drop(["Inicio_partida","intento"], axis=0)
     etiquetas= datos.index.tolist()
     explosion = (0,0.1)
-    colores=['red','orange']
+    colores=['red','green']
     plt.pie(datos,labels= etiquetas,shadow='true', autopct="%1.1f%%",explode=explosion,colors=colores)
     plt.axis('equal')
     plt.legend(title="Estados de partidas", loc= 'lower right')
-    plt.show()
+    plt.show(block=False)
     return
 
 def porcentaje_fin_genero():
@@ -31,5 +32,5 @@ def porcentaje_fin_genero():
     plt.pie(finalizadas_gen,labels=etiquetas,shadow='true,', autopct='%1.1f%%', colors= colores)
     plt.axis('equal')
     plt.legend(title='Partidas finalizadas por genero', loc= 'lower right')
-    plt.show()
+    plt.show(block=False)
     return 
