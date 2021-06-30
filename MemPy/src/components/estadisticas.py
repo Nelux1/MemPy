@@ -16,7 +16,7 @@ def start():
         elif event == '-PARTIDA-':
             graficos.porcentaje_por_estado()
         elif event == '-GENERO-':
-            graficos.porcentaje_por_estado()
+            graficos.porcentaje_fin_genero()
 
         window.un_hide()
     window.close()
