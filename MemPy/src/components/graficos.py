@@ -14,7 +14,6 @@ def top_10_palabras():
 def porcentaje_por_estado():
     datos= data_set.groupby(["Nombre de evento"])["Nombre de evento"].count()
     datos= datos.drop(["Inicio_partida","intento"], axis=0)
-    print(datos)
     etiquetas= datos.index.tolist()
     explosion = (0,0.1)
     colores=['red','orange']
