@@ -46,3 +46,201 @@ Dylan,24,M,1625011272.1826699,1,1,4,Inicio_partida,,,1,21
 Dylan,24,M,1.6722805500030518,1,1,4,intento,error,101 DAL,1,21
 Carlos,23,M,1625012147.160453,1,1,4,Inicio_partida,,,1,21
 Carlos,23,M,1625012147.160453,1,1,4,abandonada,,,1,21
+NEGRO,34,M,1626200327.4723725,1,1,4,Inicio_partida,,,1,15
+NEGRO,34,M,2.547667980194092,1,1,4,intento,ok,CONVERS,1,15
+NEGRO,34,M,1626200546.1094248,1,1,4,Inicio_partida,,,1,15
+NEGRO,34,M,2.7302873134613037,1,1,4,intento,ok,UNDONE,1,15
+NEGRO,34,M,6.940890550613403,1,1,4,intento,error,MADE IN,1,15
+NEGRO,34,M,9.990750551223755,1,1,4,intento,error,LORENA,1,15
+NEGRO,34,M,17.324220657348633,1,1,4,abandonada,error,,1,15
+NEGRO,34,M,1626200569.078073,1,1,4,Inicio_partida,,,1,15
+NEGRO,34,M,6.255853891372681,1,1,4,intento,ok,LORENA,1,15
+NEGRO,34,M,11.01554822921753,1,1,4,intento,error,MADE IN,1,15
+negro,34,M,1626888310.0800939,1,1,4,Inicio_partida,,,2,14
+negro,34,M,2.3724372386932373,1,1,4,intento,ok,RAM JAM,2,14
+negro,34,M,4.895265579223633,1,1,4,abandonada,ok,,2,14
+negro,34,M,1626888343.5672162,1,1,8,Inicio_partida,,,2,14
+negro,34,M,4.673535585403442,1,1,8,intento,ok,RAM JAM,2,14
+negro,34,M,9.674275398254395,1,1,8,intento,ok,STATUS ,2,14
+negro,34,M,11.20488452911377,1,1,8,abandonada,ok,,2,14
+NEGRO,34,M,1626907907.3674054,1,1,4,Inicio_partida,,,2,19
+
+negro,34,M,1627167837.1470666,1,2,6,Inicio_partida,,,5,20
+negro,34,M,2.578626871109009,1,2,6,intento,error,resources/datasets/images/imagenes_anime/Barakamon_resize.png,5,20
+negro,34,M,6.72802734375,1,2,6,intento,error,resources/datasets/images/imagenes_anime/Nobunaga Concerto_resize.png,5,20
+negro,34,M,11.198983907699585,1,2,6,intento,error,resources/datasets/images/imagenes_anime/Mr. Osomatsu_resize.png,5,20
+negro,34,M,14.231102466583252,1,2,6,intento,ok,resources/datasets/images/imagenes_anime/Nobunaga Concerto_resize.png,5,20
+negro,34,M,17.69710087776184,1,2,6,intento,error,resources/datasets/images/imagenes_anime/School Babysitters_resize.png,5,20
+negro,34,M,54.6042799949646,1,2,6,intento,error,resources/datasets/images/imagenes_anime/Nogizaka Haruka no Himitsu - Purezza -_resize.png,5,20
+negro,34,M,57.977190256118774,1,2,6,intento,error,resources/datasets/images/imagenes_anime/Mr. Osomatsu_resize.png,5,20
+negro,34,M,60.90722107887268,1,2,6,intento,ok,resources/datasets/images/imagenes_anime/Mr. Osomatsu_resize.png,5,20
+negro,34,M,64.13688731193542,1,2,6,intento,ok,resources/datasets/images/imagenes_anime/Hamatora_resize.png,5,20
+negro,34,M,65.73823404312134,1,2,6,abandonada,ok,,5,20
+negro,34,M,1627168842.543687,1,1,8,Inicio_partida,,,5,20
+negro,34,M,1627168904.6509683,1,1,4,Inicio_partida,,,5,20
+negro,34,M,1627169480.354573,1,1,4,Inicio_partida,,,5,20
+negro,34,M,1627169583.0582333,1,1,4,Inicio_partida,,,5,20
+negro,34,M,1627169970.6785424,1,1,4,Inicio_partida,,,5,20
+negro,34,M,1627170014.7423627,1,1,4,Inicio_partida,,,5,20
+negro,34,M,1627170327.5642474,1,1,4,Inicio_partida,,,5,20
+negro,34,M,1627170383.0098112,1,1,4,Inicio_partida,,,5,20
+negro,34,M,2.8203530311584473,1,1,4,intento,ok,SPARTA ,5,20
+negro,34,M,6.296023845672607,1,1,4,intento,ok,D'KAY D,5,20
+negro,34,M,9.818346738815308,1,1,4,intento,error,SLIG (N,5,20
+negro,34,M,13.841990232467651,1,1,4,intento,error,JOSHUA ,5,20
+negro,34,M,17.19729733467102,1,1,4,intento,ok,JOSHUA ,5,20
+negro,34,M,20.50597620010376,1,1,4,intento,ok,SLIG (N,5,20
+negro,34,M,22.079514026641846,1,1,4,fin,finalizada,,5,20
+negro,34,M,1627170544.2378757,1,1,4,Inicio_partida,,,5,20
+negro,34,M,2.126187562942505,1,1,4,intento,ok,TOMAR-R,5,20
+negro,34,M,7.315753936767578,1,1,4,intento,ok,PRESTON,5,20
+negro,34,M,10.915873527526855,1,1,4,intento,ok,CLERIC ,5,20
+negro,34,M,13.800848245620728,1,1,4,intento,ok,IMPERIE,5,20
+negro,34,M,15.318209648132324,1,1,4,fin,finalizada,,5,20
+negro,34,M,1627170567.0774245,1,2,4,Inicio_partida,,,5,20
+negro,34,M,2.2131547927856445,1,2,4,intento,ok,resources/datasets/images/imagenes_anime/Servant x Service_resize.png,5,20
+negro,34,M,7.416723966598511,1,2,4,intento,error,resources/datasets/images/imagenes_anime/Barakamon_resize.png,5,20
+negro,34,M,10.418305397033691,1,2,4,intento,ok,resources/datasets/images/imagenes_anime/Barakamon_resize.png,5,20
+negro,34,M,13.61825942993164,1,2,4,intento,ok,resources/datasets/images/imagenes_anime/Is It Wrong to Try to Pick Up Girls in a Dungeon?_resize.png,5,20
+negro,34,M,16.518088579177856,1,2,4,intento,ok,resources/datasets/images/imagenes_anime/Keep Your Hands Off Eizouken!_resize.png,5,20
+negro,34,M,18.035651445388794,1,2,4,fin,finalizada,,5,20
+negro,34,M,1627244196.0755324,1,1,4,Inicio_partida,,,6,17
+negro,34,M,1627244253.9787524,1,1,4,Inicio_partida,,,6,17
+negro,34,M,5.754080533981323,1,1,4,intento,error,UBISOFT,6,17
+negro,34,M,9.694169759750366,1,1,4,intento,error,UBISOFT,6,17
+negro,34,M,12.876060247421265,1,1,4,intento,ok,UBISOFT,6,17
+negro,34,M,1627244423.8134913,1,1,4,Inicio_partida,,,6,17
+negro,34,M,1627244574.429363,1,1,4,Inicio_partida,,,6,17
+negro,34,M,1627244631.7887151,1,1,4,Inicio_partida,,,6,17
+negro,34,M,8.338869571685791,1,1,4,abandonada,,,6,17
+negro,34,M,1627244665.3129113,1,1,4,Inicio_partida,,,6,17
+negro,34,M,2.3371260166168213,1,1,4,abandonada,,,6,17
+negro,34,M,1627244694.5740674,1,1,4,Inicio_partida,,,6,17
+negro,34,M,16.267141342163086,1,1,4,intento,ok,INTERPL,6,17
+negro,34,M,19.81683588027954,1,1,4,intento,ok,RADICAL,6,17
+negro,34,M,22.76687788963318,1,1,4,intento,ok,CD PROJ,6,17
+negro,34,M,25.71675181388855,1,1,4,intento,ok,UBISOFT,6,17
+negro,34,M,27.23675560951233,1,1,4,fin,finalizada,,6,17
+negro,34,M,1627244777.0670989,1,1,4,Inicio_partida,,,6,17
+negro,34,M,10.34659218788147,1,1,4,intento,error,UBISOFT,6,17
+negro,34,M,22.58312702178955,1,1,4,intento,ok,OBSIDIA,6,17
+negro,34,M,26.528949737548828,1,1,4,intento,ok,UBISOFT,6,17
+negro,34,M,30.945029497146606,1,1,4,intento,ok,BIOWARE,6,17
+negro,34,M,33.49547219276428,1,1,4,intento,error,BIOWARE,6,17
+negro,34,M,36.06002640724182,1,1,4,intento,ok,OBSIDIA,6,17
+negro,34,M,38.544548988342285,1,1,4,fin,finalizada,,6,17
+negro,34,M,1627244854.1160429,1,1,4,Inicio_partida,,,6,17
+negro,34,M,1627336959.024638,1,1,4,Inicio_partida,,,0,19
+negro,34,M,2.1265411376953125,1,1,4,intento,ok,RENO MY,0,19
+negro,34,M,7.359603643417358,1,1,4,intento,error,TALES B,0,19
+negro,34,M,10.557889461517334,1,1,4,intento,ok,TALES B,0,19
+negro,34,M,13.879581451416016,1,1,4,intento,error,THE LAS,0,19
+negro,34,M,17.024693965911865,1,1,4,intento,ok,THE LAS,0,19
+negro,34,M,20.2238507270813,1,1,4,intento,ok,HUNTERS,0,19
+negro,34,M,21.74263906478882,1,1,4,fin,finalizada,,0,19
+negro,34,M,1627337000.5626512,1,2,4,Inicio_partida,,,0,19
+negro,34,M,1.9692373275756836,1,2,4,intento,ok,MERLÍ,0,19
+negro,34,M,4.7547876834869385,1,2,4,abandonada,ok,,0,19
+negro,34,M,1627337046.2553284,1,1,4,Inicio_partida,,,0,19
+negro,34,M,2.1022298336029053,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Re:ZERO -Starting Life in Another World-_resize.png,0,19
+negro,34,M,5.120086193084717,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/To Be Heroine_resize.png,0,19
+NEGRO,34,M,1627337313.14703,1,2,4,Inicio_partida,,,0,19
+NEGRO,34,M,1.9283812046051025,1,2,4,intento,ok,resources/datasets/images/imagenes_anime/Ninja Girl & Samurai Master_resize.png,0,19
+NEGRO,34,M,5.044912576675415,1,2,4,intento,ok,resources/datasets/images/imagenes_anime/Mob Psycho 100_resize.png,0,19
+NEGRO,34,M,8.072770833969116,1,2,4,intento,ok,resources/datasets/images/imagenes_anime/Fullmetal Alchemist: Brotherhood_resize.png,0,19
+NEGRO,34,M,11.023222923278809,1,2,4,intento,ok,resources/datasets/images/imagenes_anime/Majin Bone_resize.png,0,19
+NEGRO,34,M,12.541847229003906,1,2,4,fin,finalizada,,0,19
+NEGRO,34,M,1627337364.022038,1,2,4,Inicio_partida,,,0,19
+NEGRO,34,M,1.8870422840118408,1,2,4,intento,ok,MARVEL',0,19
+NEGRO,34,M,4.835770606994629,1,2,4,intento,ok,DEVLOK ,0,19
+NEGRO,34,M,7.778652667999268,1,2,4,intento,ok,THE LAS,0,19
+NEGRO,34,M,12.071345806121826,1,2,4,intento,ok,STORIES,0,19
+NEGRO,34,M,13.593181371688843,1,2,4,fin,finalizada,,0,19
+negro,34,M,1627340144.5192,1,1,4,Inicio_partida,,,0,19
+negro,34,M,1627340204.1170142,1,2,6,Inicio_partida,,,0,19
+NEGRO,34,M,1627340260.4499993,1,1,4,Inicio_partida,,,0,19
+NEGRO,34,M,1627340409.9451864,1,1,4,Inicio_partida,,,0,20
+negro,34,M,1627340775.4702313,1,1,4,Inicio_partida,,,0,20
+negro,34,M,1627340809.9683115,1,1,4,Inicio_partida,,,0,20
+negro,34,M,4.273076772689819,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/World Trigger_resize.png,0,20
+negro,34,M,7.739959478378296,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/A Certain Scientific Railgun_resize.png,0,20
+negro,34,M,11.229125499725342,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/gen:LOCK_resize.png,0,20
+negro,34,M,14.89883804321289,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/GeGeGe no Kitaro_resize.png,0,20
+negro,34,M,16.419394731521606,1,1,4,fin,finalizada,,0,20
+negro,34,M,1627340832.0338888,1,2,6,Inicio_partida,,,0,20
+negro,34,M,1627341254.8195374,1,3,8,Inicio_partida,,,0,20
+negro,34,M,2.773149251937866,1,3,8,intento,error,resources/datasets/images/imagenes_anime/Attack on Titan_resize.png,0,20
+negro,34,M,7.60351824760437,1,3,8,intento,error,resources/datasets/images/imagenes_anime/Squishy! Black Clover_resize.png,0,20
+NEGRO,34,M,1627341503.8013206,1,1,4,Inicio_partida,,,0,20
+NEGRO,34,M,2.1750049591064453,1,1,4,intento,ok,ONE-PUN,0,20
+NEGRO,34,M,7.620942115783691,1,1,4,intento,ok,CLUB DE,0,20
+NEGRO,34,M,12.855159044265747,1,1,4,intento,ok,CALL MY,0,20
+NEGRO,34,M,16.979947805404663,1,1,4,intento,ok,THE LAS,0,20
+NEGRO,34,M,18.501442670822144,1,1,4,fin,finalizada,,0,20
+NEGRO,34,M,1627341526.6295657,1,2,6,Inicio_partida,,,0,20
+NEGRO,34,M,2.4443342685699463,1,2,6,intento,error,resources/datasets/images/imagenes_anime/GeGeGe no Kitaro_resize.png,0,20
+NEGRO,34,M,12.053771734237671,1,2,6,abandonada,error,,0,20
+NEGRO,34,M,1627341610.053314,1,1,4,Inicio_partida,,,0,20
+NEGRO,34,M,2.4080700874328613,1,1,4,intento,ok,FAUDA,0,20
+NEGRO,34,M,1627341681.737164,1,2,6,Inicio_partida,,,0,20
+NEGRO,34,M,2.245055675506592,1,2,6,intento,error,resources/datasets/images/imagenes_anime/Black Clover (Dublagens Internacionais)_resize.png,0,20
+NEGRO,34,M,11.6365385055542,1,2,6,intento,error,resources/datasets/images/imagenes_anime/Majin Bone_resize.png,0,20
+NEGRO,34,M,15.610517740249634,1,2,6,abandonada,error,,0,20
+NEGRO,34,M,1627341884.4506073,1,2,6,Inicio_partida,,,0,20
+NEGRO,34,M,2.2150936126708984,1,2,6,intento,error,resources/datasets/images/imagenes_anime/Black Clover (Dublagens Internacionais)_resize.png,0,20
+NEGRO,34,M,8.675111293792725,1,2,6,intento,error,resources/datasets/images/imagenes_anime/Yowamushi Pedal_resize.png,0,20
+NEGRO,34,M,1627341950.681005,1,1,4,Inicio_partida,,,0,20
+NEGRO,34,M,2.4394474029541016,1,1,4,intento,ok,MAKING ,0,20
+NEGRO,34,M,5.959618806838989,1,1,4,abandonada,ok,,0,20
+negro,34,M,1627342087.6274998,1,1,4,Inicio_partida,,,0,20
+NEGRO,34,M,1627342170.4710228,1,1,4,Inicio_partida,,,0,20
+NEGRO,34,M,3.653395175933838,1,1,4,intento,error,SCHITT',0,20
+NEGRO,34,M,7.5064990520477295,1,1,4,intento,ok,SCHITT',0,20
+NEGRO,34,M,11.095769882202148,1,1,4,intento,ok,SENSE8,0,20
+NEGRO,34,M,1627342250.0769894,1,1,4,Inicio_partida,,,0,20
+NEGRO,34,M,3.1599934101104736,1,1,4,intento,error,NARCOS,0,20
+NEGRO,34,M,7.16400146484375,1,1,4,intento,ok,NARCOS,0,20
+NEGRO,34,M,11.944820642471313,1,1,4,intento,ok,LORDS A,0,20
+NEGRO,34,M,15.83622670173645,1,1,4,intento,ok,RAJA RA,0,20
+NEGRO,34,M,20.117451906204224,1,1,4,intento,ok,SHARK,0,20
+NEGRO,34,M,21.635331392288208,1,1,4,fin,finalizada,,0,20
+NEGRO,34,M,1627342277.8718598,1,2,6,Inicio_partida,,,0,20
+NEGRO,34,M,2.7380547523498535,1,2,6,intento,error,resources/datasets/images/imagenes_anime/Attack on Titan_resize.png,0,20
+NEGRO,34,M,24.491809844970703,1,2,6,intento,error,resources/datasets/images/imagenes_anime/Attack on Titan_resize.png,0,20
+NEGRO,34,M,29.122490167617798,1,2,6,intento,error,resources/datasets/images/imagenes_anime/Fullmetal Alchemist: Brotherhood_resize.png,0,20
+NEGRO,34,M,33.60798692703247,1,2,6,intento,error,resources/datasets/images/imagenes_anime/Re:ZERO -Starting Life in Another World-_resize.png,0,20
+NEGRO,34,M,36.20149254798889,1,2,6,intento,error,resources/datasets/images/imagenes_anime/Anime Crimes Division_resize.png,0,20
+NEGRO,34,M,39.97925424575806,1,2,6,intento,ok,resources/datasets/images/imagenes_anime/Fullmetal Alchemist: Brotherhood_resize.png,0,20
+NEGRO,34,M,43.652843713760376,1,2,6,intento,error,resources/datasets/images/imagenes_anime/Attack on Titan_resize.png,0,20
+NEGRO,34,M,46.67299842834473,1,2,6,intento,ok,resources/datasets/images/imagenes_anime/Mob Psycho 100_resize.png,0,20
+NEGRO,34,M,49.75930905342102,1,2,6,intento,error,resources/datasets/images/imagenes_anime/Re:ZERO -Starting Life in Another World-_resize.png,0,20
+NEGRO,34,M,52.69123864173889,1,2,6,intento,ok,resources/datasets/images/imagenes_anime/Anime Crimes Division_resize.png,0,20
+NEGRO,34,M,55.856773138046265,1,2,6,intento,error,resources/datasets/images/imagenes_anime/Symphogear_resize.png,0,20
+NEGRO,34,M,58.45425319671631,1,2,6,intento,ok,resources/datasets/images/imagenes_anime/Symphogear_resize.png,0,20
+NEGRO,34,M,61.422868967056274,1,2,6,intento,error,resources/datasets/images/imagenes_anime/Re:ZERO -Starting Life in Another World-_resize.png,0,20
+NEGRO,34,M,64.5395085811615,1,2,6,intento,ok,resources/datasets/images/imagenes_anime/Attack on Titan_resize.png,0,20
+NEGRO,34,M,67.48681998252869,1,2,6,intento,ok,resources/datasets/images/imagenes_anime/Re:ZERO -Starting Life in Another World-_resize.png,0,20
+NEGRO,34,M,69.00870442390442,1,2,6,fin,finalizada,,0,20
+NEGRO,34,M,1627860223.1803906,1,1,4,Inicio_partida,,,6,20
+NEGRO,34,M,3.802689552307129,1,1,4,intento,ok,OBSIDIA,6,20
+NEGRO,34,M,9.248330116271973,1,1,4,intento,ok,INTERPL,6,20
+NEGRO,34,M,10.773534059524536,1,1,4,abandonada,ok,,6,20
+NEGRO,34,M,1627860251.7043703,1,1,8,Inicio_partida,,,6,20
+NEGRO,34,M,2.319061279296875,1,1,8,intento,error,resources/datasets/images/imagenes_anime/Izumo: Flash of a Brave Sword_resize.png,6,20
+NEGRO,34,M,7.526780366897583,1,1,8,intento,ok,resources/datasets/images/imagenes_anime/Izumo: Flash of a Brave Sword_resize.png,6,20
+NEGRO,34,M,10.987192153930664,1,1,8,intento,error,resources/datasets/images/imagenes_anime/Rainy Cocoa sideG_resize.png,6,20
+NEGRO,34,M,13.983751058578491,1,1,8,intento,error,resources/datasets/images/imagenes_anime/Mischievous Kiss - The Movie_resize.png,6,20
+NEGRO,34,M,17.026832818984985,1,1,8,intento,error,resources/datasets/images/imagenes_anime/The Adventures of the Little Prince_resize.png,6,20
+NEGRO,34,M,22.25550365447998,1,1,8,intento,ok,resources/datasets/images/imagenes_anime/8 Man After_resize.png,6,20
+NEGRO,34,M,25.65489912033081,1,1,8,intento,error,resources/datasets/images/imagenes_anime/The Irresponsible Galaxy Tylor_resize.png,6,20
+NEGRO,34,M,28.603819370269775,1,1,8,intento,error,resources/datasets/images/imagenes_anime/Shinobi Girl_resize.png,6,20
+NEGRO,34,M,31.534462451934814,1,1,8,intento,ok,resources/datasets/images/imagenes_anime/Naruto Shippuden the Movie: The Lost Tower_resize.png,6,20
+NEGRO,34,M,34.77641415596008,1,1,8,intento,ok,resources/datasets/images/imagenes_anime/Mischievous Kiss - The Movie_resize.png,6,20
+NEGRO,34,M,37.80872702598572,1,1,8,intento,error,resources/datasets/images/imagenes_anime/Shinobi Girl_resize.png,6,20
+NEGRO,34,M,41.00820994377136,1,1,8,intento,error,resources/datasets/images/imagenes_anime/The Adventures of the Little Prince_resize.png,6,20
+NEGRO,34,M,43.75486779212952,1,1,8,intento,ok,resources/datasets/images/imagenes_anime/The Irresponsible Galaxy Tylor_resize.png,6,20
+NEGRO,34,M,46.437970876693726,1,1,8,intento,error,resources/datasets/images/imagenes_anime/Rainy Cocoa sideG_resize.png,6,20
+NEGRO,34,M,49.27330255508423,1,1,8,intento,ok,resources/datasets/images/imagenes_anime/The Adventures of the Little Prince_resize.png,6,20
+NEGRO,34,M,52.41540336608887,1,1,8,intento,ok,resources/datasets/images/imagenes_anime/Rainy Cocoa sideG_resize.png,6,20
+NEGRO,34,M,55.57510948181152,1,1,8,intento,ok,resources/datasets/images/imagenes_anime/Shinobi Girl_resize.png,6,20
+NEGRO,34,M,57.10040211677551,1,1,8,fin,finalizada,,6,20

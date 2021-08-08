@@ -23,7 +23,7 @@ def build():
         'Elegir nivel a configurar',
        '-NIVEL-',
         [1, 2, 3],
-        1
+        '-NIVEL-'
     )
 
     return sg.Window(

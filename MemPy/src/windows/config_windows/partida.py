@@ -30,8 +30,7 @@ def build():
         key='-ELEMENTOS-',
         values=[
             'Palabras', 
-            'Imágenes (Proximamente)', 
-            'Palabras e Imágenes(Proximamente)'
+            'Imagenes'
         ],
         default='Palabras'
     )

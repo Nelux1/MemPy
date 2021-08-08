@@ -9,7 +9,7 @@ from src.handlers.jugar_config import cuadros, pistas, mensajes
 cart= os.path.join(
     'resources', 
     'icons', 
-    'inte.png'
+    'oculta9.png'
 )
 
 TABLERO_ICON= os.path.join(
@@ -61,12 +61,12 @@ def build(username,configu,n,board_data):
     ) 
     game_column = sg.Column(
                     layout=[    
-                    [sg.Button(board_data[x][y], key=f'pieza-{x}-{y}',image_filename=cart,image_size=(70,70),pad= (3,3),button_color=
+                    [sg.Button(board_data[x][y], key=f'pieza-{x}-{y}',image_filename=cart,image_size=(90,90),pad= (3,3),button_color=
                     (colors.BACKGROUND,colors.WHITE))
                     for x in range (cuadros(configu,n))] for y in range(4)],
                     background_color=colors.BACKGROUND,
                     element_justification='c',
-                    pad=(20, 10)
+                    pad=(10, 10)
                 )
 
     layout=[
@@ -85,7 +85,7 @@ def build(username,configu,n,board_data):
         finalize=True,
         keep_on_top=True,
         no_titlebar=True
-        
+
     ) 
     
     

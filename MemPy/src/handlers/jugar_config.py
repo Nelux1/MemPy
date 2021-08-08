@@ -1,8 +1,5 @@
 """manipulacion de funciones del juego con las configuraciones del mismo"""
 
-
-
-
 def pistas(p,n):
   if p[n]["-PISTAS-"]== True:
    pista=True

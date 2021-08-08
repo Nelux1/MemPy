@@ -1,6 +1,7 @@
 """aca se van a ramdonizar las palabras de los criterios dependiendo las casillas del nivel"""
 import random
 import os
+import random
 
 roja= os.path.join(
     'resources', 

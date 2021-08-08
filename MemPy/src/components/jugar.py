@@ -3,6 +3,7 @@ from calendar import c
 
 from PySimpleGUI.PySimpleGUI import WIN_CLOSED
 from src.criterios.criterios import Criterios
+from src.criterios.criterios_image import Criterios_i 
 from src.windows import popup , nivel
 from src.windows import jugar
 from src.handlers.palabras_fichas import play, tablero , palabras , pista_boton 
@@ -10,6 +11,7 @@ from src.handlers.jugar_config import cuadros, tiempos, can_palabras_adivinar
 from src.components.almacenamiento import guardando_data, puntos
 import time as t
 import os
+from src.windows import colors
 
 pista=os.path.join(
     'resources',
@@ -20,12 +22,12 @@ pista=os.path.join(
 cart= os.path.join(
     'resources', 
     'icons', 
-    'inte.png'
+    'oculta9.png'
 )
 acierto= os.path.join(
     'resources', 
     'icons', 
-    'outline_close_black_48dp.png'
+    'outline_close_black_48dp9.png'
 )
 
 def start(username,configu,age,gender,puntaje):
@@ -46,11 +48,16 @@ def start(username,configu,age,gender,puntaje):
           break
     window2.close()    
        
-    
+    dia_hora=Criterios.dia_semana_y_hora()
     minutos= tiempos(configu,n)
     start_time= t.time()
-    dia_hora= Criterios.dia_semana_y_hora()
-    criterio=Criterios.seleccion_ahora()
+    img=True
+    criterio=[]
+    if configu[n]["-ELEMENTOS-"] == "Imagenes":  
+     criterio=Criterios_i.seleccion_ahora()
+    elif configu[n]["-ELEMENTOS-"] == "Palabras":
+     criterio=Criterios.seleccion_ahora()
+     img=False 
     dia = dia_hora[0]
     hora = dia_hora[1]
     cronometro=0
@@ -70,12 +77,12 @@ def start(username,configu,age,gender,puntaje):
     window = jugar.build(username,configu,n,board_data)
     toque=0
     encontrada=0
-    lista=palabras(cant_de_palabras,criterio)
+    lista=palabras(cant_de_palabras,criterio,img)
     print(lista)
 
     while True:
         event, _values = window.read(timeout=1000)       
-        player={"value":tablero(lista,event)}
+        player={"value":tablero(lista,event,img)}
         mins, secs = divmod(minutos, 60)
         timeformat = '{:02d}:{:02d}'.format(mins, secs)
         
@@ -86,7 +93,7 @@ def start(username,configu,age,gender,puntaje):
         elif event.startswith("pieza-") :       
             toque+=1
             puntaje+=1
-            board_data=play(player,window,event,board_data)
+            board_data=play(player,window,event,board_data,img)
             window.refresh()
             t.sleep(1)
             window.refresh()
@@ -102,8 +109,8 @@ def start(username,configu,age,gender,puntaje):
                  evento='intento'
                  guardando_data(username,age,gender, realtime,num_de_partida,niv,cant_de_palabras,evento,estado,palabra,dia,hora)    
                  t.sleep(0.5)
-                 window[p].update("",image_filename=cart,image_size=(90,80))
-                 window[p2].update("",image_filename=cart,image_size=(90,80))
+                 window[p].update("",image_filename=cart,image_size=(110,100),button_color=(colors.BACKGROUND,colors.WHITE))
+                 window[p2].update("",image_filename=cart,image_size=(110,100),button_color=(colors.BACKGROUND,colors.WHITE))
                  window.refresh()
              elif palabra == palabra2:
                  estado='ok'
@@ -112,8 +119,8 @@ def start(username,configu,age,gender,puntaje):
                  encontrada+=1
                  t.sleep(0.5)
                  puntaje+=10
-                 window[p].update("",image_filename=acierto,image_size=(90,80),disabled=True)
-                 window[p2].update("",image_filename=acierto,image_size=(90,80),disabled=True)    
+                 window[p].update("",image_filename=acierto,image_size=(110,100),disabled=True,button_color=(colors.BACKGROUND,colors.WHITE))
+                 window[p2].update("",image_filename=acierto,image_size=(110,100),disabled=True,button_color=(colors.BACKGROUND,colors.WHITE))    
             t_cada_paso= cronometro + t_cada_paso
             cronometro=0                
             minutos= tiempos(configu,n)
