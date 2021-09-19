@@ -100,9 +100,9 @@ def start(username,configu,age,gender,puntaje):
             if toque == 1:
              palabra=player["value"]
              p=event
-            if toque == 2:
+            if toque == 2:  
              palabra2= player["value"]
-             p2=event
+             p2=event    
              toque=0
              if palabra != palabra2:
                  estado='error'

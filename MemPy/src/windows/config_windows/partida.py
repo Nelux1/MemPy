@@ -21,7 +21,7 @@ def build():
     coincidencias = option_widget.build(
         text='Coincidencias a buscar',
         key='-COINCIDENCIAS-',
-        values=[2, 3],
+        values=['2','3 (proximamente)'],
         default='2'
     )
 

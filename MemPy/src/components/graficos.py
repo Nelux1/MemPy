@@ -1,16 +1,22 @@
-from numpy.core.shape_base import block
 import pandas as pd
-from IPython.display import display
 import os
 from matplotlib import pyplot as plt
+from src.windows import top_10
 
 datos_path = os.path.join("datos_estadisticos.csv")
 data_set = pd.read_csv(datos_path)
 
 def top_10_palabras():
-    palabras_ok = data_set[data_set["Estado"]== "ok"]
-    top_10= palabras_ok.groupby(["Palabra"])["Estado"].count().sort_values(ascending=False).head(10)
-    return display(top_10)
+    
+    window= top_10.build()
+
+    while True:
+        event,values= window.read()
+        if event == '-SALIR-' or window.close:
+            break
+
+    window.close()
+
 
 def porcentaje_por_estado():
     datos= data_set.groupby(["Nombre de evento"])["Nombre de evento"].count()

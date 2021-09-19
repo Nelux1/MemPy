@@ -61,7 +61,7 @@ def build(username,configu,n,board_data):
     ) 
     game_column = sg.Column(
                     layout=[    
-                    [sg.Button(board_data[x][y], key=f'pieza-{x}-{y}',image_filename=cart,image_size=(90,90),pad= (3,3),button_color=
+                    [sg.Button(board_data[x][y], key=f'pieza-{x}-{y}', image_filename=cart,image_size=(90,90),pad= (3,3),button_color=
                     (colors.BACKGROUND,colors.WHITE))
                     for x in range (cuadros(configu,n))] for y in range(4)],
                     background_color=colors.BACKGROUND,
@@ -83,6 +83,7 @@ def build(username,configu,n,board_data):
         background_color=colors.BACKGROUND,
         element_justification='c',
         finalize=True,
+        size=(800,700),
         keep_on_top=True,
         no_titlebar=True
 

@@ -244,3 +244,153 @@ NEGRO,34,M,49.27330255508423,1,1,8,intento,ok,resources/datasets/images/imagenes
 NEGRO,34,M,52.41540336608887,1,1,8,intento,ok,resources/datasets/images/imagenes_anime/Rainy Cocoa sideG_resize.png,6,20
 NEGRO,34,M,55.57510948181152,1,1,8,intento,ok,resources/datasets/images/imagenes_anime/Shinobi Girl_resize.png,6,20
 NEGRO,34,M,57.10040211677551,1,1,8,fin,finalizada,,6,20
+negro,34,M,1628452997.5679696,1,1,4,Inicio_partida,,,6,17
+negro,34,M,1628453052.90554,1,1,4,Inicio_partida,,,6,17
+negro,34,M,1628453059.1582804,1,1,4,Inicio_partida,,,6,17
+negro,34,M,1628453150.3018947,1,1,4,Inicio_partida,,,6,17
+negro,34,M,6.513882875442505,1,1,4,intento,error,resources/datasets/images/imagenes_anime/DYNAMIC CHORD_resize.png,6,17
+negro,34,M,10.311603546142578,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Osomatsu-kun_resize.png,6,17
+negro,34,M,14.012511730194092,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/DYNAMIC CHORD_resize.png,6,17
+negro,34,M,18.288435697555542,1,1,4,intento,error,resources/datasets/images/imagenes_anime/Naruto Shippuden the Movie: Blood Prison_resize.png,6,17
+negro,34,M,1628453203.581763,1,1,4,Inicio_partida,,,6,17
+negro,34,M,5.522573232650757,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Swan Lake_resize.png,6,17
+negro,34,M,8.676059484481812,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Inuyasha the Movie:  Affections Touching Across Time_resize.png,6,17
+negro,34,M,11.753501892089844,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Inuyasha the Movie 2: The Castle Beyond the Looking Glass_resize.png,6,17
+negro,34,M,14.688891410827637,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Crunchyroll Convention Highlights_resize.png,6,17
+negro,34,M,16.206374883651733,1,1,4,fin,finalizada,,6,17
+negro,34,M,1628453251.3269775,1,1,4,Inicio_partida,,,6,17
+negro,34,M,4.325138807296753,1,1,4,intento,error,resources/datasets/images/imagenes_anime/The Adventures of the Little Prince_resize.png,6,17
+negro,34,M,7.924743413925171,1,1,4,intento,error,resources/datasets/images/imagenes_anime/The Adventures of the Little Prince_resize.png,6,17
+negro,34,M,10.462487936019897,1,1,4,abandonada,error,,6,17
+negro,34,M,1628453292.689493,1,1,4,Inicio_partida,,,6,17
+negro,34,M,2.6039137840270996,1,1,4,intento,error,resources/datasets/images/imagenes_anime/Shinobi Girl_resize.png,6,17
+negro,34,M,7.085951805114746,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Inuyasha the Movie 3: Swords of an Honorable Ruler_resize.png,6,17
+negro,34,M,11.10423493385315,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Rozen Maiden Zurückspulen_resize.png,6,17
+negro,34,M,14.467108488082886,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Zo Zo Zombie_resize.png,6,17
+negro,34,M,17.46228837966919,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Shinobi Girl_resize.png,6,17
+negro,34,M,18.98800778388977,1,1,4,fin,finalizada,,6,17
+negro,34,M,1628453353.371806,1,1,4,Inicio_partida,,,6,17
+negro,34,M,2.7245676517486572,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Space Warrior Baldios_resize.png,6,17
+negro,34,M,6.157103538513184,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Shinobi Girl_resize.png,6,17
+negro,34,M,9.2713303565979,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Swan Lake_resize.png,6,17
+negro,34,M,12.69916319847107,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Onimusha: Dawn of Dreams_resize.png,6,17
+negro,34,M,14.217593669891357,1,1,4,fin,finalizada,,6,17
+negro,34,M,1628453370.540137,1,3,8,Inicio_partida,,,6,17
+negro,34,M,2.322800874710083,1,3,8,intento,error,resources/datasets/images/imagenes_anime/Inuyasha the Movie 2: The Castle Beyond the Looking Glass_resize.png,6,17
+negro,34,M,6.324418544769287,1,3,8,intento,error,resources/datasets/images/imagenes_anime/Crunchyroll Convention Highlights_resize.png,6,17
+negro,34,M,10.275755882263184,1,3,8,intento,error,resources/datasets/images/imagenes_anime/Captain Harlock: Arcadia of my Youth_resize.png,6,17
+negro,34,M,13.315539360046387,1,3,8,intento,ok,resources/datasets/images/imagenes_anime/Crunchyroll Convention Highlights_resize.png,6,17
+negro,34,M,19.39559245109558,1,3,8,intento,error,resources/datasets/images/imagenes_anime/The Dragon Lives_resize.png,6,17
+negro,34,M,23.401313543319702,1,3,8,intento,error,resources/datasets/images/imagenes_anime/Onyankopon_resize.png,6,17
+negro,34,M,27.68224334716797,1,3,8,intento,error,resources/datasets/images/imagenes_anime/Captain Harlock: Arcadia of my Youth_resize.png,6,17
+negro,34,M,31.47360062599182,1,3,8,intento,error,resources/datasets/images/imagenes_anime/Osomatsu-kun_resize.png,6,17
+negro,34,M,1628453480.5045285,1,3,8,Inicio_partida,,,6,17
+negro,34,M,2.9817702770233154,1,3,8,intento,error,resources/datasets/images/imagenes_anime/Space Warrior Baldios_resize.png,6,17
+negro,34,M,8.251633644104004,1,3,8,intento,error,resources/datasets/images/imagenes_anime/Inuyasha the Movie 3: Swords of an Honorable Ruler_resize.png,6,17
+negro,34,M,12.22797417640686,1,3,8,intento,error,resources/datasets/images/imagenes_anime/8 Man After_resize.png,6,17
+negro,34,M,16.17589044570923,1,3,8,intento,error,resources/datasets/images/imagenes_anime/The Irresponsible Galaxy Tylor_resize.png,6,17
+negro,34,M,1628453538.4489617,1,3,8,Inicio_partida,,,6,17
+negro,34,M,2.1022157669067383,1,3,8,intento,error,resources/datasets/images/imagenes_anime/Naruto Shippuden the Movie: The Lost Tower_resize.png,6,17
+negro,34,M,1628456901.0214384,1,1,4,Inicio_partida,,,6,18
+negro,34,M,2.1965415477752686,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Rozen Maiden Zurückspulen_resize.png,6,18
+negro,34,M,6.168461322784424,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/The Dragon Lives_resize.png,6,18
+negro,34,M,9.602349281311035,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Psybuster_resize.png,6,18
+negro,34,M,1628457124.023489,1,1,4,Inicio_partida,,,6,18
+negro,34,M,19.627684116363525,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Captain Harlock: Arcadia of my Youth - Endless Orbit SSX_resize.png,6,18
+negro,34,M,21.14995574951172,1,1,4,abandonada,ok,,6,18
+negro,34,M,1628457359.2901466,1,1,4,Inicio_partida,,,6,18
+negro,34,M,2.2367279529571533,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Inuyasha the Movie:  Affections Touching Across Time_resize.png,6,18
+negro,34,M,5.89577841758728,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Magic User's Club OVA_resize.png,6,18
+negro,34,M,10.775784492492676,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Inuyasha the Movie 2: The Castle Beyond the Looking Glass_resize.png,6,18
+negro,34,M,14.377555847167969,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Magic User's Club OVA_resize.png,6,18
+negro,34,M,15.892613172531128,1,1,4,fin,finalizada,,6,18
+negro,34,M,1628457546.4943929,1,1,4,Inicio_partida,,,6,18
+negro,34,M,2.2607064247131348,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Fan Chronicles: Um Documentário Crunchyroll_resize.png,6,18
+negro,34,M,5.952127933502197,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Crunchyroll Convention Highlights_resize.png,6,18
+negro,34,M,9.560946226119995,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Inuyasha the Movie 2: The Castle Beyond the Looking Glass_resize.png,6,18
+negro,34,M,12.524405479431152,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/K: Seven Stories_resize.png,6,18
+negro,34,M,14.041675329208374,1,1,4,fin,finalizada,,6,18
+negro,34,M,1629590600.1042373,1,1,4,Inicio_partida,,,5,21
+negro,34,M,3.4650208950042725,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Keep Your Hands Off Eizouken!_resize.png,5,21
+negro,34,M,6.907774209976196,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Fox Spirit Matchmaker_resize.png,5,21
+negro,34,M,10.098989248275757,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Nogizaka Haruka no Himitsu - Purezza -_resize.png,5,21
+negro,34,M,12.913052320480347,1,1,4,intento,ok,resources/datasets/images/imagenes_anime/Servant x Service_resize.png,5,21
+negro,34,M,14.4274001121521,1,1,4,fin,finalizada,,5,21
+negro,34,M,1629590653.0616853,1,1,8,Inicio_partida,,,5,21
+negro,34,M,2.4945285320281982,1,1,8,intento,error,resources/datasets/images/imagenes_anime/Is the Order a Rabbit?_resize.png,5,21
+negro,34,M,5.844665765762329,1,1,8,intento,error,resources/datasets/images/imagenes_anime/Food Wars! Shokugeki no Soma_resize.png,5,21
+negro,34,M,9.555654287338257,1,1,8,intento,error,resources/datasets/images/imagenes_anime/Oreshura_resize.png,5,21
+negro,34,M,13.801374435424805,1,1,8,intento,error,resources/datasets/images/imagenes_anime/Is the Order a Rabbit?_resize.png,5,21
+negro,34,M,18.272494316101074,1,1,8,intento,error,resources/datasets/images/imagenes_anime/We Never Learn: BOKUBEN_resize.png,5,21
+negro,34,M,28.31621742248535,1,1,8,intento,error,resources/datasets/images/imagenes_anime/Barakamon_resize.png,5,21
+negro,34,M,30.89194416999817,1,1,8,intento,error,resources/datasets/images/imagenes_anime/Hyakko_resize.png,5,21
+negro,34,M,32.4284782409668,1,1,8,abandonada,error,,5,21
+negro,34,M,1630759391.9685674,1,3,8,Inicio_partida,,,5,9
+negro,34,M,2.3525705337524414,1,3,8,intento,error,resources/datasets/images/imagenes_pokemon/espurr_resize.png,5,9
+negro,34,M,4.942667007446289,1,3,8,intento,error,resources/datasets/images/imagenes_pokemon/victini_resize.png,5,9
+negro,34,M,8.37746000289917,1,3,8,intento,error,resources/datasets/images/imagenes_pokemon/grumpig_resize.png,5,9
+negro,34,M,12.078896760940552,1,3,8,intento,error,resources/datasets/images/imagenes_pokemon/musharna_resize.png,5,9
+negro,34,M,15.60906171798706,1,3,8,intento,ok,resources/datasets/images/imagenes_pokemon/espurr_resize.png,5,9
+negro,34,M,19.25193166732788,1,3,8,intento,ok,resources/datasets/images/imagenes_pokemon/duosion_resize.png,5,9
+negro,34,M,23.212090015411377,1,3,8,intento,error,resources/datasets/images/imagenes_pokemon/grumpig_resize.png,5,9
+negro,34,M,26.590121030807495,1,3,8,intento,error,resources/datasets/images/imagenes_pokemon/drowzee_resize.png,5,9
+negro,34,M,29.545469999313354,1,3,8,intento,ok,resources/datasets/images/imagenes_pokemon/victini_resize.png,5,9
+negro,34,M,32.7468695640564,1,3,8,intento,error,resources/datasets/images/imagenes_pokemon/meowstic-male_resize.png,5,9
+negro,34,M,35.834373474121094,1,3,8,intento,error,resources/datasets/images/imagenes_pokemon/grumpig_resize.png,5,9
+negro,34,M,38.403343200683594,1,3,8,intento,ok,resources/datasets/images/imagenes_pokemon/meowstic-male_resize.png,5,9
+negro,34,M,41.49168682098389,1,3,8,intento,ok,resources/datasets/images/imagenes_pokemon/drowzee_resize.png,5,9
+negro,34,M,44.610825061798096,1,3,8,intento,error,resources/datasets/images/imagenes_pokemon/cresselia_resize.png,5,9
+negro,34,M,48.004998445510864,1,3,8,intento,error,resources/datasets/images/imagenes_pokemon/musharna_resize.png,5,9
+negro,34,M,51.2937433719635,1,3,8,intento,ok,resources/datasets/images/imagenes_pokemon/grumpig_resize.png,5,9
+negro,34,M,53.854687452316284,1,3,8,intento,ok,resources/datasets/images/imagenes_pokemon/musharna_resize.png,5,9
+negro,34,M,56.43337607383728,1,3,8,intento,ok,resources/datasets/images/imagenes_pokemon/cresselia_resize.png,5,9
+negro,34,M,57.96189570426941,1,3,8,fin,finalizada,,5,9
+negro,34,M,1630770390.0917342,1,3,8,Inicio_partida,,,5,12
+negro,34,M,6.419428586959839,1,3,8,intento,error,resources/datasets/images/imagenes_simpsons/Sideshow Bob Roberts_resize.png,5,12
+negro,34,M,9.974283218383789,1,3,8,intento,error,resources/datasets/images/imagenes_simpsons/The Boy Who Knew Too Much_resize.png,5,12
+negro,34,M,20.588370323181152,1,3,8,intento,error,resources/datasets/images/imagenes_simpsons/Who Shot Mr. Burns? (Part One)_resize.png,5,12
+negro,34,M,51.15299463272095,1,3,8,intento,error,resources/datasets/images/imagenes_simpsons/Sideshow Bob Roberts_resize.png,5,12
+negro,34,M,54.063140630722046,1,3,8,intento,ok,resources/datasets/images/imagenes_simpsons/The Boy Who Knew Too Much_resize.png,5,12
+negro,34,M,59.07324814796448,1,3,8,intento,error,resources/datasets/images/imagenes_simpsons/Who Shot Mr. Burns? (Part One)_resize.png,5,12
+negro,34,M,1630770677.1530156,1,3,8,Inicio_partida,,,5,12
+negro,34,M,2.137007236480713,1,3,8,intento,ok,resources/datasets/images/imagenes_simpsons/The Springfield Connection_resize.png,5,12
+negro,34,M,5.058281183242798,1,3,8,intento,error,resources/datasets/images/imagenes_simpsons/Who Shot Mr. Burns? (Part One)_resize.png,5,12
+negro,34,M,7.993456840515137,1,3,8,intento,error,resources/datasets/images/imagenes_simpsons/Homer at the Bat_resize.png,5,12
+negro,34,M,10.862696886062622,1,3,8,intento,error,resources/datasets/images/imagenes_simpsons/Much Apu About Nothing_resize.png,5,12
+negro,34,M,13.521905899047852,1,3,8,intento,ok,resources/datasets/images/imagenes_simpsons/Who Shot Mr. Burns? (Part One)_resize.png,5,12
+negro,34,M,16.376766204833984,1,3,8,intento,error,resources/datasets/images/imagenes_simpsons/Homer the Vigilante_resize.png,5,12
+negro,34,M,19.59786081314087,1,3,8,intento,error,resources/datasets/images/imagenes_simpsons/Burns' Heir_resize.png,5,12
+negro,34,M,22.676883220672607,1,3,8,intento,ok,resources/datasets/images/imagenes_simpsons/Burns' Heir_resize.png,5,12
+negro,34,M,25.899434328079224,1,3,8,intento,error,resources/datasets/images/imagenes_simpsons/Homer vs. the Eighteenth Amendment_resize.png,5,12
+negro,34,M,29.418411016464233,1,3,8,intento,error,resources/datasets/images/imagenes_simpsons/Marge vs. the Monorail_resize.png,5,12
+negro,34,M,32.284550189971924,1,3,8,intento,error,resources/datasets/images/imagenes_simpsons/Homer at the Bat_resize.png,5,12
+negro,34,M,35.070486545562744,1,3,8,intento,ok,resources/datasets/images/imagenes_simpsons/Marge vs. the Monorail_resize.png,5,12
+negro,34,M,37.99591875076294,1,3,8,intento,error,resources/datasets/images/imagenes_simpsons/Homer at the Bat_resize.png,5,12
+negro,34,M,40.8693904876709,1,3,8,intento,error,resources/datasets/images/imagenes_simpsons/Homer the Vigilante_resize.png,5,12
+negro,34,M,44.46570658683777,1,3,8,intento,ok,resources/datasets/images/imagenes_simpsons/Homer at the Bat_resize.png,5,12
+negro,34,M,47.356571435928345,1,3,8,intento,error,resources/datasets/images/imagenes_simpsons/Much Apu About Nothing_resize.png,5,12
+negro,34,M,50.10642075538635,1,3,8,intento,ok,resources/datasets/images/imagenes_simpsons/Homer vs. the Eighteenth Amendment_resize.png,5,12
+negro,34,M,52.79576539993286,1,3,8,intento,ok,resources/datasets/images/imagenes_simpsons/Much Apu About Nothing_resize.png,5,12
+negro,34,M,56.467116355895996,1,3,8,intento,ok,resources/datasets/images/imagenes_simpsons/Homer the Vigilante_resize.png,5,12
+negro,34,M,57.98947834968567,1,3,8,fin,finalizada,,5,12
+negro,34,M,1631729670.3094435,1,1,8,Inicio_partida,,,2,15
+negro,34,M,9.784159660339355,1,1,8,intento,error,resources/datasets/images/imagenes_pokemon/combusken_resize.png,2,15
+negro,34,M,15.805541038513184,1,1,8,intento,error,resources/datasets/images/imagenes_pokemon/vulpix_resize.png,2,15
+negro,34,M,19.66591787338257,1,1,8,intento,error,resources/datasets/images/imagenes_pokemon/ninetales_resize.png,2,15
+negro,34,M,22.921926259994507,1,1,8,intento,error,resources/datasets/images/imagenes_pokemon/cyndaquil_resize.png,2,15
+negro,34,M,26.106504917144775,1,1,8,intento,error,resources/datasets/images/imagenes_pokemon/ninetales_resize.png,2,15
+negro,34,M,29.716511964797974,1,1,8,intento,error,resources/datasets/images/imagenes_pokemon/vulpix_resize.png,2,15
+negro,34,M,33.77050518989563,1,1,8,intento,ok,resources/datasets/images/imagenes_pokemon/ninetales_resize.png,2,15
+negro,34,M,37.11855626106262,1,1,8,intento,ok,resources/datasets/images/imagenes_pokemon/moltres_resize.png,2,15
+negro,34,M,42.28571367263794,1,1,8,intento,error,resources/datasets/images/imagenes_pokemon/delphox_resize.png,2,15
+negro,34,M,45.48963952064514,1,1,8,intento,error,resources/datasets/images/imagenes_pokemon/infernape_resize.png,2,15
+negro,34,M,48.66148924827576,1,1,8,intento,ok,resources/datasets/images/imagenes_pokemon/combusken_resize.png,2,15
+negro,34,M,52.40723991394043,1,1,8,intento,error,resources/datasets/images/imagenes_pokemon/emboar_resize.png,2,15
+negro,34,M,56.248650312423706,1,1,8,intento,error,resources/datasets/images/imagenes_pokemon/delphox_resize.png,2,15
+negro,34,M,60.0107057094574,1,1,8,intento,ok,resources/datasets/images/imagenes_pokemon/infernape_resize.png,2,15
+negro,34,M,63.39751195907593,1,1,8,intento,ok,resources/datasets/images/imagenes_pokemon/vulpix_resize.png,2,15
+negro,34,M,66.64307832717896,1,1,8,intento,ok,resources/datasets/images/imagenes_pokemon/emboar_resize.png,2,15
+negro,34,M,69.99049186706543,1,1,8,intento,error,resources/datasets/images/imagenes_pokemon/cyndaquil_resize.png,2,15
+negro,34,M,73.19586038589478,1,1,8,intento,ok,resources/datasets/images/imagenes_pokemon/delphox_resize.png,2,15
+negro,34,M,76.26596856117249,1,1,8,intento,ok,resources/datasets/images/imagenes_pokemon/cyndaquil_resize.png,2,15
+negro,34,M,77.81894207000732,1,1,8,fin,finalizada,,2,15
