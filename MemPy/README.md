@@ -6,7 +6,7 @@
 2. **Clonar el repositorio:**
 
     ```
-    git clone https://gitlab.catedras.linti.unlp.edu.ar/python/entregas/grupo50.git
+    git clone https://git@github.com:Nelux1/MemPy.git
     ```
 ---
 3. **Instalar los requerimientos:**
